@@ -1,0 +1,10 @@
+image: docker.corefacility.ca:5000/ngstar_build:latest
+
+variables:
+  MYSQL_ROOT_PASSWORD: "password"
+
+services:
+  - mysql:latest
+
+test:
+  script: ".ci/test_ngstar.sh"
