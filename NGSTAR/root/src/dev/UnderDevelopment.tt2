@@ -1,0 +1,7 @@
+<main role="main" property="mainContentOfPage" class="container fade in">
+
+    <h1 id="wb-cont">[% c.loc("page.under.development.text") | html %]</h1>
+
+    <button type="button" class="btn btn-primary bkbtn" onClick="history.go(-1);return true;"><span class="glyphicon glyphicon-arrow-left"></span> [% c.loc("shared.back.btn.text") | html %]</button>
+
+</main>

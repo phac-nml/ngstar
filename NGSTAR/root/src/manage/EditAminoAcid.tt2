@@ -1,0 +1,49 @@
+<nav class="breadcrumbs" property="breadcrumb">
+	<div class="container">
+		<div class="row">
+			<ol>
+    			<li><a href="[% c.uri_for(c.controller("Allele").action_for("form")) %]">[% c.loc("home.page.name") %]</a></li>
+                <li><a href="[% c.uri_for(c.controller("Curator").action_for("settings")) %]">[% c.loc("curator.tools.text") %]</a></li>
+				<li><a href="[% c.uri_for(c.controller("Curator").action_for("manage_amino_acids")) %]">[% c.loc("shared.manage.amino.acids.text") %]</a></li>
+                <li><a class="disabled" tabindex="-1" href="#">[% c.loc("shared.edit.amino.acid.text") %]</a></li>
+			</ol>
+		</div>
+	</div>
+</nav>
+
+<main role="main" property="mainContentOfPage" class="container fade in">
+
+	<h1 id="wb-cont">[% c.loc("shared.edit.amino.acid.text") %]</h1>
+
+
+    <form action ="[% c.uri_for(c.controller("Curator").action_for("edit_amino_acid"), aa_db_id) %]">
+		<br>
+	    <div class="form-group">
+	        <div>
+	            <p class="details_labels"><span style="color:#CC0D02;">*</span> [% c.loc("shared.required.field.text") %]</p>
+	        </div>
+	    </div>
+		<br>
+        <div class="form-group row">
+            <div class="col-sm-12">
+                <label class="control-label">[% c.loc("shared.position.text") %] <span style="color:#CC0D02;">*</span></label>
+                    [% form.field('position').render %]
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-12">
+                <label class="control-label">[% c.loc("shared.amino.acid.text") %] <span style="color:#CC0D02;">*</span></label>
+                    [% form.field('amino_acid').render %]
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-3">
+                <button id="submit" class="btn btn-lg btn-primary" type="submit">[% c.loc("shared.save.text") %]</button>
+                <button id="reset" class="btn btn-lg btn-info" type="reset">[% c.loc("shared.clear.text") %]</button>
+            </div>
+        </div>
+
+
+        <button type="button" class="btn btn-primary bkbtn" onClick="history.go(-1);return true;"><span class="glyphicon glyphicon-arrow-left"></span> [% c.loc("shared.back.btn.text") %]</button>
+    </form>
+</main>

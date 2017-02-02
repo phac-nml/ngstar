@@ -1,0 +1,82 @@
+[% str = "" %]
+[% FOREACH key IN error_codes.keys %]
+    [% IF error_codes.$key == 1022 %]
+        [% str = str _  c.loc("batch.add.allele.metadata.error.1022.msg", key)  _ ".<br><br>" %]
+    [% ELSIF error_codes.$key == 1023 %]
+        [% str = str _  c.loc("batch.add.allele.metadata.error.1023.msg", key)  _ ".<br><br>" %]
+    [% ELSIF error_codes.$key == 5001 %]
+        [% str = str _  c.loc("batch.add.allele.metadata.error.5001.msg", key)  _ ".<br><br>" %]
+    [% ELSIF error_codes.$key == 1024 %]
+        [% str = str _  c.loc("batch.add.allele.metadata.error.1024.msg", key)  _ ".<br><br>" %]
+    [% ELSE %]
+        [% str = str _ "" %]
+    [% END %]
+[% END %]
+
+<nav class="breadcrumbs" property="breadcrumb">
+    <div class="container">
+        <div class="row">
+            <ol>
+                <li><a href="[% c.uri_for(c.controller("Allele").action_for("form")) %]">[% c.loc("home.page.name") | html %]</a></li>
+                <li><a href="[% c.uri_for(c.controller("Curator").action_for("settings")) %]">[% c.loc("curator.tools.text") | html %]</a></li>
+                <li><a class="disabled" tabindex="-1" href="#">[% c.loc("shared.batch.add.allele.metadata.text") | html %]</a></li>
+            </ol>
+        </div>
+    </div>
+</nav>
+
+<main role="main" property="mainContentOfPage" class="container fade in">
+
+    [% IF str != "" %]
+        <input type="hidden" id="batch_metadata_err" value="[% str %]" />
+    [% END %]
+
+    <section class="alert alert-info">
+        [% c.loc("batch.add.allele.metadata.example.msg", c.uri_for(c.controller('Allele').action_for('batch_add_metadata_example')) ) %]
+        [% IF batch_metadata_notification  %]
+            <br><br>
+            <strong>[% c.loc("batch.add.allele.metadata.success.msg") %]</strong>
+        [% END %]
+    </section>
+
+    <h1 id="wb-cont">[% c.loc("shared.batch.add.allele.metadata.text") %]</h1>
+
+    <div>
+        <div class="pull-right">
+            <div class="loader" style="display:none;"></div>
+        </div>
+
+        <form enctype="multipart/form-data" class="form-horizontal" method="post" id="batch_add_metadata">
+            <br>
+
+            [% form.field('loci_name_option').render %]
+            [% form.field('csv_metadata').render %]
+
+            <div class="form-group">
+                <label for="my_csv" class="col-sm-2 control-label">[% c.loc("shared.upload.metadata.file.text") | html %] (.txt)</label>
+                <div class="col-sm-10">
+                    <input type="file" id="file1" name="my_csv" style="display:none">
+                    <a href="#" onclick="openFileOption();return false;" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> [% c.loc("shared.browse.text") | html %]</a>
+                </div><div class="col-sm-offset-2 col-sm-10 uploadedFile"> </div>
+            </div>
+
+            [% form.field('csrf').render %]
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-save"></span>  [% c.loc("shared.submit.text") | html %]
+                    </button>
+                    <button type="button" id="reset" onclick="clearBatchAddMetadataForm(); return false;" class="btn btn-info">
+                        <span class="glyphicon glyphicon-remove"></span> [% c.loc("shared.clear.text") | html %]
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <button type="button" class="btn btn-primary bkbtn" onClick="history.go(-1);return true;">
+        <span class="glyphicon glyphicon-arrow-left"></span> [% c.loc("shared.back.btn.text") | html %]
+    </button>
+
+</main>

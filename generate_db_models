@@ -1,0 +1,49 @@
+#!/bin/bash
+
+#Purpose:   Run this program each time the database schema changes to re-generate
+#           the database classes based on the current schema.
+#Usage:     ./generate_db_models -d my_database_name -u my_dbms_username -p my_dbms_password
+
+NO_ARGS=0
+E_OPTERROR=85
+
+dbname=""
+username=""
+password=""
+
+if [ $# -eq "$NO_ARGS" ]
+then
+    echo "Usage: `basename $0` -d database_name -u dbms_username -p dbms_password"
+    exit $E_OPTERROR
+fi
+
+while getopts ":d:a:u:b:p:c" Option
+do
+    case $Option in
+        d   ) dbname="$OPTARG";;
+        u   ) username="$OPTARG";;
+        p   ) password="$OPTARG";;
+        *   ) echo "Unimplemented option chosen.";;
+    esac
+done
+
+echo "dbname=$dbname"
+echo "username=$username"
+
+#this is very tricky with all the quotations, there is probably a much cleaner way to do this
+cmd='make_schema_at("NGSTAR::Schema",{debug=>1},["dbi:mysql:dbname='
+cmd+=$dbname
+cmd+='","' 
+cmd+=$username
+cmd+='","'
+cmd+=$password
+cmd+='"])'
+
+perl -MDBIx::Class::Schema::Loader=make_schema_at,dump_to_dir:./TestObjects -e $cmd
+
+if [ -d "DatabaseObjects/" ]; then
+    rm -r DatabaseObjects/
+fi
+mv TestObjects DatabaseObjects
+
+echo "Done"

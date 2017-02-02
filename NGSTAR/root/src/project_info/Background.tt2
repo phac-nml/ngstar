@@ -1,0 +1,74 @@
+<nav class="breadcrumbs" property="breadcrumb">
+	<div class="container">
+		<div class="row">
+			<ol>
+				<li><a href="[% c.uri_for(c.controller("Allele").action_for("form")) %]">[% c.loc("home.page.name") | html %]</a></li>
+				<li><a class="disabled" tabindex="-1" href="#">[% c.loc("about.ngstar.text") | html %]</a></li>
+			</ol>
+		</div>
+	</div>
+</nav>
+
+<main role="main" property="mainContentOfPage" class="container fade in">
+
+<h1 id="wb-cont">NG-STAR</h1>
+
+<div style="font-size:16px;">
+<br>
+	 <p>(<span class="bold underline-txt">N</span><span class="italic">eisseria <span class="bold underline-txt">g</span>onorrhoeae</span> <span class="bold underline-txt">S</span>equence <span class="bold underline-txt">T</span>yping for <span class="bold underline-txt">A</span>ntimicrobial <span class="bold underline-txt">R</span>esistance): a novel sequenced-based molecular antimicrobial resistance typing scheme for tracking the global dissemination of <span class="italic">N. gonorrhoeae</span> strains.</p>
+
+
+	<p><span class="italic">Neisseria gonorrhoeae</span> is developing resistance to almost all of the antibiotics that are currently available for treatment.  The NG-STAR website offers a standardized method of classifying seven well-characterized genes associated antimicrobial resistance in <span class="italic">N. gonorrhoeae (penA, mtrR, porB, ponA, gyrA, parC and</span> 23S rRNA) to three classes of antibiotics (cephalosporins, macrolides and fluoroquinolones).</p>
+
+	<p>Unique DNA sequences of each resistance gene will be assigned an allele number and the combination of alleles of the seven genes will produce an NG-STAR type.  An entered gene sequence(s) is queried against the database and matching alleles, profiles and curator comments will be displayed that highlight mutations of interest.</p>
+
+	<p>The NG-STAR database and web application is hosted by the Public Health Agency of Canada, National Microbiology Laboratory <a href="mailto:[% curator_email %]" class="file-link bold underline-txt"><span style="font-weight:bold;">([% curator_email | html %])</span></a>. Strain background information such as characterization, antimicrobial resistance levels, and geographical information is available for all allele types and NG-STAR types.</p>
+
+	<p>The goal of NG-STAR is to achieve standardization of the antibiotic resistant genes and gonorrhea strains that, that in combination with existing characterization schemes, will allow public health practitioners around the globe to communicate in a common &quot;molecular language&quot; allowing quicker response and better tracking of new drug-resistant strains of gonorrhea.</p>
+
+	<br>
+
+	<p class="para-headings"><strong>Genes and suggested primers:</strong></p>
+
+	<p><span class="italic">penA</span> - Alterations in penicillin binding-protein 2 (PBP2) (that encode variant forms of the primary target protein of cephalosporins) have been identified.  A major alteration is the acquisition of <span class="italic">penA</span> mosaic sequences from other <span class="italic">Neisseria</span> species, as well as various amino acid substitutions in non-mosaic alleles. Historically, the nomenclature used for the <span class="italic">penA</span> gene has been assigned PBP2 types I to XXXVIII based on amino acid substitutions rather than nucleotide sequence differences. NG-STAR will use this historical amino-acid based nomenclature as a basis for the naming of alleles of <span class="italic">penA</span> and will also be identified as being mosaic or non-mosaic. Namely, when a new amino-acid profile is detected, a sequential whole number will be assigned, and if a new DNA sequence of an existing amino acid profile is detected, a decimal number will be appended (i.e. the 12<sup>th</sup> DNA sequence for <span class="italic">penA</span> type XXXIV may be assigned allele number 34.12).</p>
+	<p><span class="italic">mtrR</span> - Mutations in this promoter and/or coding sequence of the repressor gene which cause over-expression of the MtrCDE efflux pump system (such as the -35A deletion in the promoter, A39T or G45D mutation in the coding region, or the presence of <span class="italic">N. meningitidis</span> like sequences).</p>
+	<p><span class="italic">porB1b</span> - Mutations (also known as the <span class="italic">penB</span> resistance determinant) that alter amino acids G120 and A121 in the outer membrane PorB1b porin result in decreased permeability and decreases susceptibility to antimicrobials. Although the 120/121 mutations apply only to <span class="italic">porB1b, porB1a</span> sequences will also be stored.</p>
+	<p><span class="italic">ponA</span> - Mutations in <span class="italic">ponA</span> (penicillin binding-protein 1, PBP1) have been observed in <span class="italic">N. gonorrhoeae</span> with elevated cephalosporin MICs, although the L421P mutation has not been shown to cause resistance in transformation experiments.</p>
+	<p><span class="italic">gyrA</span> - Mutations in subunit A of DNA gyrase (<span class="italic">gyrA</span>) confer fluoroquinolone resistance in <span class="italic">N. gonorrhoeae</span.</p>
+	<p><span class="italic">parC</span> - Mutations in the ParC subunit of topoisomerase IV (<span class="italic">parC</span>) confer fluoroquinolone resistance in <span class="italic">N. gonorrhoeae</span>.</p>
+	<p>23S rRNA - Mutations in domain V of the 23S rRNA peptidyl-transferase loop confer resistance to azithromycin. The nomenclature for the mutations in 23SrRNA is based on <span class="italic">E.coli</span> numbering: A2059G and C2611T.  Although the number of mutated alleles has been correlated to increasing resistance, a strain with one mutated allele easily and rapidly acquires mutations to all 4 alleles.  Therefore the NG-STAR typing scheme does not distinguish between numbers of alleles mutated.</p>
+	<p>Suggested primers for amplification of genes: <a href="../../static/pdf/table.pdf" class="file-link bold underline-txt" target="blank">[% c.loc("shared.website.primer.table.for.all.genes.text") | html %]</a></p>
+	<br>
+	<p class="para-headings"><strong>How NG-STAR works:</strong></p>
+	<p>Text boxes (one for each gene) are displayed into which the user pastes sequences of each gene.  Alternative options will be added such as batch uploading from a single multi-fasta file, or uploading a whole genome sequence files.  Users may upload sequences of variable lengths, and the system will attempt to locate each sequence in a database of resistance gene sequences.  If the submitted sequence only covers a part of the allele, the user will be presented with a list of possible allele type matches (hits) and encouraged to submit a longer DNA sequence to accurately identify the allele.  If the submitted sequence covers the entire gene, a match will be returned if present in the library.  Each unique match corresponds to an allele.  The combination of allele numbers returned for each gene sequence corresponds to a specific NG-STAR-type that is returned to the user which should be associated with certain antimicrobial resistance characteristics.  If a query returns multiple matches to a library allele (because the query sequence was too short to uniquely match a library sequence), or if no matches were found, no NG-STAR type will be assigned, and an explanation of why no NG-STAR type was possible will be displayed.  For each allele and NG-STAR type match, some general characteristics and background information of that particular allele or NG-STAR type may be displayed (e.g. ponA1 has a L421P mutation, antimicrobial resistance, dates reported and geographical information of a representative reference strain).</p>
+
+	<p>To assign a new allele type for a particular gene, the system automatically presents the user with a prompt to notify the curator.  The user is asked to provide: a sequence (trace file), contact information (email), and available background strain information such as isolation date, source, location and antimicrobial susceptibility profile.  The curator validates the submitted information for the new sequence and updates the online database.  </p>
+
+	<br>
+
+	<p class="para-headings"><strong>Team</strong></p>
+
+	<ul>
+
+	<li>Irene Martin, Michael Mulvey, Walter Demczuk, Irish Medina, Sukhdeep Sidhu, Pam Sawatzky, Amrita Bharat, Gary Van Domselaar (National Microbiology Laboratory, Manitoba, Canada)</li>
+	<li>Vanessa G. Allen (Public Health Ontario, Ontario, Canada)</li>
+	<li>Magnus Unemo (WHO Collaborating Centre for Gonorrhoea and other STIs; &Ouml;rebro University Hospital, Sweden)</li>
+	<li>David A. Whiley (The University of Queensland, Centre for Clinical Research, Queensland, Australia)</li>
+	<li>Jo-Anne Dillon (University of Saskatchewan, Saskatchewan, Canada)</li>
+	<li>Michelle Cole (Public Health England, England, UK)</li>
+
+	</ul>
+
+	<br>
+
+	<p class="para-headings"><strong>NG-STAR Curator</span>:</strong></p>
+	<p style="font-size:17px;">Walter Demczuk (National Microbiology Laboratory, Manitoba, Canada)</p>
+	<p class="para-headings"><strong>Contact:</strong></p>
+	<p style="font-size:17px;"><a href="mailto:[% curator_email %]" class="file-link bold">[% curator_email | html %]</a></p>
+
+
+</div>
+
+<button type="button" class="btn btn-primary bkbtn" onClick="history.go(-1);return true;"><span class="glyphicon glyphicon-arrow-left"></span> [% c.loc("shared.back.btn.text") | html %]</button>
+
+</main>

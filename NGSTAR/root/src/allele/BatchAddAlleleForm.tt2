@@ -1,0 +1,96 @@
+<nav class="breadcrumbs" property="breadcrumb">
+	<div class="container">
+		<div class="row">
+			<ol>
+				<li><a href="[% c.uri_for(c.controller("Allele").action_for("form")) %]">[% c.loc("home.page.name") | html %]</a></li>
+				<li><a href="[% c.uri_for(c.controller("Allele").action_for("view_loci_alleles")) %]">[% c.loc("shared.view.loci.alleles.text") | html %]</a></li>
+				<li><a href="[% c.uri_for(c.controller("Allele").action_for("list_loci_alleles"), prev_loci_name) %]">[% c.loc("shared.list.alleles.text") | html %]</a></li>
+				<li><a class="disabled" tabindex="-1" href="#">[% c.loc("shared.batch.add.alleles.text") | html %]</a></li>
+			</ol>
+		</div>
+	</div>
+</nav>
+
+<main role="main" property="mainContentOfPage" class="container fade in">
+
+	[% str = "" %]
+
+	[% FOREACH key IN error_codes.keys %]
+		[% IF error_codes.$key == 1000 %]
+			[% str = str _ c.loc("batch.add.allele.error.1000.msg", key)  _ "<br><br>" %]
+		[% ELSIF error_codes.$key == 1003 %]
+			[% str = str _ c.loc("batch.add.allele.error.1003.msg", key, loci_name)  _ "<br><br>" %]
+		[% ELSIF error_codes.$key == 1022 %]
+			[% str = str _ c.loc("batch.add.allele.error.1022.msg", key)  _ "<br><br>" %]
+		[% ELSIF error_codes.$key == 5008 %]
+			[% str = str _ c.loc("ui.batch.error.5008")  _ "<br><br>" %]
+		[% ELSIF error_codes.$key == 1002 %]
+			[% str = str _ c.loc("batch.add.allele.error.1002.msg", key)  _ "<br><br>" %]
+		[% ELSIF error_codes.$key == 1025 %]
+			[% str = str _ c.loc("batch.add.allele.error.1025.msg", key)  _ "<br><br>" %]
+		[% ELSIF error_codes.$key == 5000 %]
+			[% str = str _ c.loc("batch.add.allele.error.5000.msg", key)  _ "<br><br>" %]
+		[% ELSIF error_codes.$key == 1026 %]
+			[% str = str _ c.loc("batch.add.allele.error.1026.msg", key)  _ "<br><br>" %]
+		[% ELSIF error_codes.$key == 1004 %]
+			[% str = str _ c.loc("batch.add.allele.error.1004.msg", key)  _ "<br><br>" %]
+		[% ELSIF error_codes.$key == 1006 OR error_codes.$key == 1007 OR error_codes.$key == 1008 OR error_codes.$key == 1009 OR error_codes.$key == 1010 OR error_codes.$key == 1011 OR error_codes.$key == 1012 %]
+			[% str = str _ c.loc("batch.add.allele.wrong.length.msg", key, loci_name)  _ "<br><br>" %]
+		[% ELSE %]
+			[% str = str _ "" %]
+		[% END %]
+	[% END %]
+
+	<br>
+
+	[% IF str != "" %]
+		<input type="hidden" id="batch_allele_err" value="[% str %]" />
+	[% END %]
+
+	<section class="alert alert-info">
+		[% c.loc("batch.add.allele.example.msg", c.uri_for(c.controller('Allele').action_for('batch_add_example'), prev_loci_name) ) %]
+	</section>
+
+	<h1 id="wb-cont">[% c.loc("shared.batch.add.alleles.text") | html %]</h1>
+
+	<div>
+		<div class="pull-right">
+			<div class="loader" style="display:none;"></div>
+		</div>
+
+		<form enctype="multipart/form-data" class="form-horizontal" method="post" id="batch_add_allele">
+
+			<br>
+
+			[% form.field('loci_name_option').render %]
+			[% form.field('fasta_sequences').render %]
+
+			<div class="form-group">
+				<label for="my_file" class="col-sm-2 control-label">[% c.loc("upload.a.fasta.file.text") | html %] (.fasta)</label>
+				<div class="col-sm-10">
+					<input type="file" id="file1" name="my_file" style="display:none">
+					<a href="#" onclick="openFileOption();return false;" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> [% c.loc("shared.browse.text") | html %]</a>
+				</div><div class="col-sm-offset-2 col-sm-10 uploadedFile"> </div>
+			</div>
+
+			[% form.field('csrf').render %]
+
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-primary">
+						<span class="glyphicon glyphicon-save"></span>  [% c.loc("shared.submit.text") | html %]
+					</button>
+					<button type="button" id="reset" onclick="clearBatchAddAlleleForm(); return false;" class="btn btn-info">
+						<span class="glyphicon glyphicon-remove"></span> [% c.loc("shared.clear.text") | html %]
+					</button>
+				</div>
+			</div>
+		</form>
+
+	</div>
+
+	<button type="button" class="btn btn-primary bkbtn" onClick="history.go(-1);return true;">
+		<span class="glyphicon glyphicon-arrow-left"></span> [% c.loc("shared.back.btn.text") | html %]
+	</button>
+
+</main>

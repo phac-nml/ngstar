@@ -1,0 +1,140 @@
+<nav class="breadcrumbs" property="breadcrumb">
+	<div class="container">
+		<div class="row">
+			<ol>
+				<li><a href="[% c.uri_for(c.controller("Allele").action_for("form")) %]">[% c.loc("home.page.name") | html %]</a></li>
+				<li><a href="[% c.uri_for(c.controller("Admin").action_for("settings")) %]">[% c.loc("admin.tools.text") | html %]</a></li>
+				<li><a class="disabled" tabindex="-1" href="#">[% c.loc("shared.manage.user.accounts.text") | html %]</a></li>
+			</ol>
+		</div>
+	</div>
+</nav>
+
+<main role="main" property="mainContentOfPage" class="container fade in">
+
+<h1 id="wb-cont">[% c.loc("ngstar.user.accounts.text") | html %]</h1>
+
+[% IF c.user_exists() and c.check_any_user_role('admin') %]
+
+    [% IF acct_reactivated_notification || acct_deactivated_notification || acct_deleted_notification || successfully_updated_notification || account_created_notification %]
+
+		<section class="alert alert-success">
+
+			[% IF acct_reactivated_notification %]
+		            <strong>[% c.loc("account.reactivate.success.msg", user) %]</strong>
+		    [% ELSIF acct_deactivated_notification %]
+		            <strong>[% c.loc("account.reactivate.success.msg", user) %]</strong>
+		    [% ELSIF acct_deleted_notification %]
+		            <strong>[% c.loc("account.delete.success.msg",user) %]</strong>
+		    [% ELSIF successfully_updated_notification %]
+		            <strong>[% c.loc("account.update.success.msg",user) %]</strong>
+		    [% ELSIF account_created_notification %]
+			    [% IF account_created_notification %]
+		        	<strong>[% c.loc("account.create.success.msg", username) %]</strong>
+			    [% END %]
+		    [% END %]
+
+		</section>
+
+	[% END %]
+
+    <div class="pull-right new-user-btn">
+     <a href="[% c.uri_for(c.controller('Admin').action_for('create_account')) %]" class="btn btn-success" >
+             <span class="glyphicon glyphicon-plus"></span> [% c.loc("new.user.text") | html %]
+     </a>
+    </div>
+
+    [% inactive_members = 0 %]
+
+    <div class="active-users">
+
+		<h2>[% c.loc("active.ngstar.users.text") | html %]</h2>
+
+		<table id="active-users-list" class="table table-bordered">
+
+			<thead>
+				<tr>
+					<th class="table-header" scope="col">[% c.loc("shared.account.username.text") | html %]<i class="glyphicon"></i></th>
+					<th class="table-header" scope="col">[% c.loc("shared.account.email.text") | html %]<i class="glyphicon"></i></th>
+					<th class="table-header" scope="col">[% c.loc("shared.account.access.level.text") | html %]<i class="glyphicon"></i></th>
+					<th class="table-header" scope="col">[% c.loc("shared.options.text") | html %]<i class="glyphicon"></i></th>
+				</tr>
+			</thead>
+
+			<tbody id="itemContainer">
+
+				[% FOREACH user IN userlist %]
+					[% IF user.is_active %]
+					<tr class="non-datatable-tr-color">
+						<td>[% user.user_name %]</td>
+						<td>[% user.email_address %]</td>
+						<td>
+							[% IF user.user_role_id == 1 %]
+								[% c.loc("shared.curator.text") | html %]
+							[% ELSIF user.user_role_id == 0 %]
+								[% c.loc("shared.none.text") | html %]
+							[% ELSE %]
+								[% c.loc("shared.admin.text") | html %]
+							[% END %]
+						</td>
+						<td>
+							[% IF user.user_id == logged_on_user_id %]
+								<a href="[% c.uri_for(c.controller('Account').action_for('settings'), user.user_name) %]" class="btn btn-primary">[% c.loc("shared.edit.text") | html %]</a>
+							[% ELSE %]
+								<a href="[% c.uri_for(c.controller('Admin').action_for('edit_user'), user.user_name) %]" class="btn btn-primary">[% c.loc("shared.edit.text") | html %]</a>
+								<button type="button" class="btn btn-danger" onClick="NGSTAR.confirmAction('[% c.uri_for(c.controller("Admin").action_for("delete_user")) %]','[% user.user_name %]','[% c.loc("confirm.user.delete.msg", user.user_name)%]');">[% c.loc("shared.delete.text") | html %]</button>
+								<button type="button" class="btn btn-default" onClick="NGSTAR.confirmAction('[% c.uri_for(c.controller("Admin").action_for("deactivate_user")) %]','[% user.user_name %]','[% c.loc("confirm.user.deactivate.msg", user.user_name)%]');">[% c.loc("deactivate.text") | html %]</button>
+							[% END %]
+						</td>
+					</tr>
+					[% ELSE %]
+						[% inactive_members = inactive_members + 1 %]
+					[% END %]
+				[% END %]
+
+			</tbody>
+		</table>
+    </div>
+
+    [% IF inactive_members > 0 %]
+        <br><br>
+        <div class="active-users">
+
+            <h3>[% c.loc("inactive.ngstar.users.text") | html %]</h3>
+
+     	   <table id="inactive-users-list" class="table table-bordered">
+
+           <thead>
+               <tr>
+                   <th class="table-header" scope="col">[% c.loc("shared.account.username.text") | html %]<i class="glyphicon"></i></th>
+                   <th class="table-header" scope="col">[% c.loc("shared.account.email.text") | html %]<i class="glyphicon"></i></th>
+                   <th class="table-header" scope="col">[% c.loc("shared.account.access.level.text") | html %]<i class="glyphicon"></i></th>
+                   <th class="table-header" scope="col">[% c.loc("shared.options.text") | html %]<i class="glyphicon"></i></th>
+               </tr>
+           </thead>
+
+		   <tbody id="itemContainer">
+		   		[% FOREACH user IN userlist %]
+					[% IF !user.is_active %]
+						<tr class="non-datatable-tr-color">
+							<td>[% user.user_name  | html%]</td>
+							<td>[% user.email_address  | html%]</td>
+							<td>[% c.loc("shared.none.text") | html %]</td>
+							<td>
+								<a href="[% c.uri_for(c.controller('Admin').action_for('edit_user'), user.user_name) %]" class="btn btn-primary">[% c.loc("shared.edit.text") | html %]</a>
+								<button type="button" class="btn btn-danger" onClick="NGSTAR.confirmAction('[% c.uri_for(c.controller("Admin").action_for("delete_user")) %]','[% user.user_name %]','[% c.loc("confirm.user.delete.msg", user.user_name)%]');">[% c.loc("shared.delete.text") | html %]</button>
+								<button type="button" class="btn btn-default" onClick="NGSTAR.confirmAction('[% c.uri_for(c.controller("Admin").action_for("reactivate_user")) %]','[% user.user_name %]','[% c.loc("confirm.user.reactivate.msg", user.user_name)%]');">[% c.loc("activate.text") | html %]</button>
+							</td>
+						</tr>
+					[% END %]
+				[% END %]
+            </tbody>
+         </table>
+        </div>
+    [% END %]
+[% END %]
+
+<button type="button" class="btn btn-primary bkbtn" onClick="history.go(-1);return true;"><span class="glyphicon glyphicon-arrow-left"></span> [% c.loc("shared.back.btn.text") | html %]</button>
+
+
+</main>

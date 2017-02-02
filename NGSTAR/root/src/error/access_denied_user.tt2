@@ -1,0 +1,15 @@
+<main role="main" property="mainContentOfPage" class="container fade in">
+
+<div class="row mrgn-tp-lg">
+    <div class="col-md-12">
+        <h1><span class="glyphicon glyphicon-warning-sign mrgn-rght-md"></span> [% c.loc("shared.access.denied.text") | html %]</h1>
+        <p>[% c.loc("login.msg") | html %]</p>
+        <ul>
+            <li><a href="[% c.uri_for(c.controller('Login').action_for('index')) %]">[% c.loc("shared.signin.text") | html %]</a></li>
+        </ul>
+    </div>
+</div>
+
+<button type="button" class="btn btn-default bkbtn" onClick="history.go(-1);return true;"><span class="glyphicon glyphicon-arrow-left"></span> [% c.loc("shared.back.btn.text") | html %]</button>
+
+</main>

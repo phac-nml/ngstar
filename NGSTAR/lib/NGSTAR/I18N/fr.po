@@ -1,0 +1,1770 @@
+#FR
+
+msgid "app.title"
+msgstr "NG-STAR"
+
+msgid "app.title.expanded"
+msgstr "<span class='italic'>Neisseria gonorrhoeae</span> - Système de Typage pour la résistance aux Antibiotiques Recherche génétique"
+
+
+#SHARED - any text used >1 time
+
+msgid "shared.signin.text"
+msgstr "Ouverture de session"
+
+msgid "shared.account.settings.text"
+msgstr "Paramètres du compte"
+
+msgid "shared.allele.query.text"
+msgstr "Recherche d'allèles"
+
+msgid "shared.profile.query.text"
+msgstr "Recherche de profils"
+
+msgid "shared.background.text"
+msgstr "Renseignements de base"
+
+msgid "shared.primer.table.text"
+msgstr "Tableau des amorces"
+
+msgid "shared.curator.text"
+msgstr "Conservateur"
+
+msgid "shared.admin.text"
+msgstr "Administrateur"
+
+msgid "shared.terms.text"
+msgstr "Modalités"
+
+msgid "shared.submit.text"
+msgstr "Soumettre"
+
+msgid "shared.send.text"
+msgstr "Envoyer"
+
+msgid "shared.save.text"
+msgstr "Sauvegarder"
+
+msgid "shared.cancel.text"
+msgstr "Annuler"
+
+msgid "shared.clear.text"
+msgstr "Effacer"
+
+msgid "shared.browse.text"
+msgstr "Parcourir"
+
+msgid "shared.notify.curator.text"
+msgstr "Aviser le conservateur"
+
+msgid "shared.back.btn.text"
+msgstr "Retour"
+
+msgid "shared.details.text"
+msgstr "Détails"
+
+msgid "shared.edit.text"
+msgstr "Modifier"
+
+msgid "shared.delete.text"
+msgstr "Supprimer"
+
+msgid "shared.batch.add.profiles.text"
+msgstr "Ajouter des profils NG-STAR en lot"
+
+msgid "shared.add.profile.text"
+msgstr "Ajouter un profil NG-STAR"
+
+msgid "shared.batch.add.alleles.text"
+msgstr "Ajouter des allèles en lot"
+
+msgid "shared.add.allele.text"
+msgstr "Ajouter un allèle"
+
+msgid "shared.forgot.password.text"
+msgstr "Mot de passe oublié"
+
+msgid "shared.edit.allele.text"
+msgstr "Modifier un allèle"
+
+msgid "shared.email.contact.info.label"
+msgstr "Veuillez entrer vos coordonnées"
+
+msgid "shared.loci.name.text"
+msgstr "Nom du locus"
+
+msgid "shared.allele.type.text"
+msgstr "Type d'allèle"
+
+msgid "shared.sequence.text"
+msgstr "Séquence"
+
+msgid "shared.trace.file.text"
+msgstr "Téléverser un fichier trace"
+
+msgid "shared.optional.metadata.label"
+msgstr "Veuillez entrer les métadonnées facultatives"
+
+msgid "shared.collection.date.text"
+msgstr "Date de prélèvement"
+
+msgid "shared.country.text"
+msgstr "Pays d'origine"
+
+msgid "shared.patient.age.text"
+msgstr "Âge du patient"
+
+msgid "shared.patient.gender.text"
+msgstr "Sexe du patient"
+
+msgid "shared.beta.lactamase.text"
+msgstr "Bêta-lactamase"
+
+msgid "shared.isolate.codes.text"
+msgstr "Code(s) de classification de l'isolat"
+
+msgid "shared.isolate.classifications.text"
+msgstr "Classification(s) de l'isolat"
+
+msgid "shared.mics.determination.text"
+msgstr "CMI déterminée par"
+
+msgid "shared.mgl.text"
+msgstr "CMI (mg/L)"
+
+msgid "shared.interpretation.text"
+msgstr "CMI (r/s/i)"
+
+msgid "shared.additional.epi.data.text"
+msgstr "Autres données épidémiologiques"
+
+msgid "shared.profile.type.text"
+msgstr "Type NG-STAR"
+
+msgid "shared.options.text"
+msgstr "Options"
+
+msgid "shared.curator.comments.text"
+msgstr "Commentaires du conservateur"
+
+msgid "shared.add.new.allele.text"
+msgstr "Ajouter un nouvel allèle"
+
+msgid "shared.batch.add.alleles.text"
+msgstr "Ajouter de nouveaux allèles en lot"
+
+msgid "shared.batch.add.allele.metadata.text"
+msgstr "Ajouter des métadonnées sur des allèles en lot"
+
+msgid "shared.batch.add.profile.metadata.text"
+msgstr "Ajouter des métadonnées sur des profils en lot"
+
+msgid "shared.submit.allele.text"
+msgstr "Soumettre un nouvel allèle"
+
+msgid "shared.submit.profile.text"
+msgstr "Soumettre un nouveau profil"
+
+msgid "shared.create.new.account.text"
+msgstr "Créer un nouveau compte"
+
+msgid "shared.reset.password.text"
+msgstr "Réinitialiser le mot de passe"
+
+msgid "shared.change.password.text"
+msgstr "Changer le mot de passe"
+
+msgid "shared.change.username.text"
+msgstr "Changer le nom d'utilisateur"
+
+msgid "shared.change.email.text"
+msgstr "Changer l'adresse de courriel"
+
+msgid "shared.update.email.text"
+msgstr "Mettre à jour l'adresse de courriel"
+
+msgid "shared.update.password.text"
+msgstr "Mettre à jour le mot de passe"
+
+msgid "shared.update.username.text"
+msgstr "Mettre à jour votre nom d'utilisateur"
+
+msgid "shared.password.updated.email.subj"
+msgstr "Mot de passe NG-STAR mis à jour"
+
+msgid "shared.password.updated.email.body"
+msgstr "Mise à jour du mot de passe NG-STAR réussie."
+
+msgid "shared.enter.account.information.text"
+msgstr "Veuillez entrer les renseignements du compte"
+
+msgid "shared.account.access.level.text"
+msgstr "Niveau d'accès"
+
+msgid "shared.account.first.name.text"
+msgstr "Prénom"
+
+msgid "shared.account.last.name.text"
+msgstr "Nom de famille"
+
+msgid "shared.account.ins.name.text"
+msgstr "Nom de l'établissement"
+
+msgid "shared.account.ins.city.text"
+msgstr "Ville où est situé l'établissement"
+
+msgid "shared.account.ins.country.text"
+msgstr "Pays où est situé l'établissement"
+
+msgid "shared.account.username.text"
+msgstr "Nom d'utilisateur"
+
+msgid "shared.account.email.text"
+msgstr "Adresse de courriel"
+
+msgid "shared.account.password.text"
+msgstr "Mot de passe"
+
+msgid "shared.edit.user.account.text"
+msgstr "Modifier le compte d'utilisateur"
+
+msgid "shared.locus.text"
+msgstr "Locus"
+
+msgid "shared.none.text"
+msgstr "Aucun(e)"
+
+msgid "shared.access.denied.text"
+msgstr "Accès non autorisé"
+
+msgid "shared.not.provided.text"
+msgstr "Non fourni(e)"
+
+msgid "shared.male.text"
+msgstr "Homme"
+
+msgid "shared.female.text"
+msgstr "Femme"
+
+msgid "shared.unknown.text"
+msgstr "Inconnu"
+
+msgid "shared.positive.text"
+msgstr "Positif"
+
+msgid "shared.negative.text"
+msgstr "Négatif"
+
+msgid "shared.etest.text"
+msgstr "E-Test"
+
+msgid "shared.agar.dilution.text"
+msgstr "Dilution en gélose"
+
+msgid "shared.disc.diffusion.text"
+msgstr "Diffusion en disque"
+
+msgid "shared.intermediate.text"
+msgstr "Intermédiaire"
+
+msgid "shared.resistant.text"
+msgstr "Résistant"
+
+msgid "shared.susceptible.text"
+msgstr "Sensible"
+
+msgid "shared.batch.add.metadata.instructions.msg"
+msgstr "L'entrée doit débuter avec une ligne d'en-tête, et chaque colonne doit être séparée par une tabulation. Si aucune valeur n'est donnée dans une colonne, insérez-y une tabulation."
+
+msgid "shared.upload.metadata.file.text"
+msgstr "Téléverser un fichier de métadonnées"
+
+msgid "shared.no.text"
+msgstr "Non"
+
+msgid "shared.enter.allele.type.form.error.msg"
+msgstr "Veuillez entrer un type d'allèle"
+
+msgid "shared.enter.sequence.msg"
+msgstr "Veuillez entrer une séquence"
+
+msgid "shared.enter.metadata.msg"
+msgstr "Veuillez entrer des métadonnées."
+
+msgid "shared.enter.first.name.msg"
+msgstr "Veuillez entrer un prénom"
+
+msgid "shared.enter.last.name.msg"
+msgstr "Veuillez entrer un nom de famille"
+
+msgid "shared.enter.ins.name.msg"
+msgstr "Veuillez entrer un nom d'établissement"
+
+msgid "shared.enter.ins.country.msg"
+msgstr "Veuillez entrer le pays où est situé l'établissement"
+
+msgid "shared.enter.ins.city.msg"
+msgstr "Veuillez entrer la ville où est situé l'établissement"
+
+msgid "shared.enter.username.msg"
+msgstr "Veuillez entrer un nom d'utilisateur"
+
+msgid "shared.enter.password.msg"
+msgstr "Veuillez entrer un mot de passe"
+
+msgid "shared.enter.email.address.msg"
+msgstr "Veuillez entrer une adresse de courriel"
+
+msgid "shared.enter.user.identifier.msg"
+msgstr "Veuillez entrer un nom d'utilisateur ou une adresse de courriel"
+
+msgid "shared.mic.val.error.msg"
+msgstr "Veuillez entrer une CMI valide"
+
+msgid "shared.check.age.error.msg"
+msgstr "Veuillez entrer un âge valide. Ce champ ne peut contenir que des chiffres"
+
+msgid "shared.check.city.error.msg"
+msgstr "Veuillez entrer une ville valide. Ce champ ne peut contenir que des lettres et des traits d'union"
+
+msgid "shared.check.collection.date.error.msg"
+msgstr "Veuillez entrer une date valide au format AAAA-MM-JJ. Ce champ ne peut contenir que des chiffres et des traits d'union"
+
+msgid "shared.check.country.error.msg"
+msgstr "Veuillez entrer un pays valide. Ce champ ne peut contenir que des lettres et des traits d'union"
+
+msgid "shared.check.curator.comment.error.msg"
+msgstr "Veuillez entrer des commentaires valides. Ce champ ne peut contenir que des lettres, des chiffres et les caractères spéciaux [ . , : ; / ]"
+
+msgid "shared.check.epi.data.error.msg"
+msgstr "Veuillez entrer des données épidémiologiques valides. Ce champ ne peut contenir que des lettres, des chiffres et les caractères spéciaux [ . , : ; / ]"
+
+msgid "shared.check.email.address.error.msg"
+msgstr "L'adresse de courriel doit avoir le format suivant : utilisateuranonyme@exemple.com"
+
+msgid "shared.check.name.error.msg"
+msgstr "Veuillez entrer un nom valide. Ce champ ne peut contenir que des lettres et les caractères spéciaux [ - ' ]"
+
+msgid "shared.check.password.error.msg"
+msgstr "Please enter a valid password. This field must contain one uppercase letter, one lowercase letter, one number, and one of these special characters [ . - _ ! ]"
+
+msgid "shared.check.signin.password.error.msg"
+msgstr "Veuillez entrer un mot de passe valide. Ce champ ne peut contenir que des lettres, des chiffres et les caractères spéciaux [ . - _ ! ]"
+
+msgid "shared.batch.add.metadata.entry.error.msg"
+msgstr "Please enter metadata in valid tab format. This field only accepts letters, numbers and these special characters [ < > = : + . - _ , ; / ]"
+
+msgid "shared.check.seq.error.msg"
+msgstr "Veuillez entrer une séquence valide. Ce champ ne peut contenir que les lettres [ A, T, C, G ]"
+
+msgid "shared.check.non.dec.type.val.error.msg"
+msgstr "Veuillez entrer un type valide. Ce champ ne peut contenir que des chiffres."
+
+msgid "shared.check.type.val.error.msg"
+msgstr "Veuillez entrer un type valide. Ce champ ne peut contenir que des chiffres et des décimales."
+
+msgid "shared.check.type.range.error.msg"
+msgstr "Veuillez entrer un type compris entre 0 et 999 inclusivement"
+
+msgid "shared.check.username.error.msg"
+msgstr "Veuillez entrer un nom d'utilisateur valide. Ce champ ne peut contenir que des lettres, des chiffres et les caractères spéciaux [ . - _ ]."
+
+msgid "shared.check.user.identifier.error.msg"
+msgstr "Veuillez entrer une adresse de courriel ou un nom d'utilisateur valide. Ce champ ne peut contenir que des lettres, des chiffres et les caractères spéciaux [ @ . - _ ]."
+
+msgid "shared.ok.text"
+msgstr "OK"
+
+msgid "shared.yes.text"
+msgstr "Oui"
+
+msgid "shared.profile.query.results.text"
+msgstr "Résultats de la recherche de profil"
+
+msgid "shared.allele.details.text"
+msgstr "Détails concernant les allèles"
+
+msgid "shared.agree.text"
+msgstr "Convenir d'accepter"
+
+msgid "shared.required.field.text"
+msgstr "Zone obligatoire"
+
+msgid "shared.allele.list.text"
+msgstr "Liste d'allèle"
+
+msgid "shared.profile.list.text"
+msgstr "Liste de profils"
+
+msgid "shared.select.loci.to.view.alleles.text"
+msgstr "sélectionnez le locus pour afficher les allèles"
+
+msgid "shared.batch.add.profiles.example.text"
+msgstr "Exemple d'ajouter des profils en lot"
+
+msgid "shared.batch.add.alleles.example.text"
+msgstr "Exemple d'ajouter des allèles en lot"
+
+msgid "shared.batch.add.profile.metadata.example.text"
+msgstr "Exemple d'ajouter des métadonnées sur des profils en lot"
+
+msgid "shared.manage.user.accounts.text"
+msgstr "Gérer les comptes d'utilisateur"
+
+msgid "shared.email.allele.text"
+msgstr "Envoyer un courriel d'un allèle"
+
+msgid "shared.add.new.profile.text"
+msgstr "Ajouter un nouveau profil"
+
+msgid "shared.edit.profile.text"
+msgstr "Modifier le profil"
+
+msgid "shared.email.profile.text"
+msgstr "Envoyer un courriel d'un profile"
+
+msgid "shared.ngstar.profile.details.text"
+msgstr "Détails concernant les profils NG-STAR"
+
+msgid "shared.404.page.not.found.text"
+msgstr "Erreur 404 - Nous ne pouvons trouver cette page Web"
+
+msgid "shared.website.primer.table.for.all.genes.text"
+msgstr "Table d'amorce pour tous les gènes sur le site web"
+
+msgid "shared.view.loci.alleles.text"
+msgstr "Afficher les locus allèles"
+
+msgid "shared.list.alleles.text"
+msgstr "Listes des allèles"
+
+msgid "shared.list.profiles.text"
+msgstr "Listes des profils"
+
+msgid "shared.select.text"
+msgstr "Sélectionnez"
+
+msgid "shared.date.format"
+msgstr "AAAA-MM-JJ"
+
+msgid "shared.format.text"
+msgstr "Format"
+
+
+#ALLELES
+
+msgid "alleles.text"
+msgstr "Allèles"
+
+msgid "alleles.multifasta.whole.genome.text"
+msgstr "Multi-FASTA/génome entier"
+
+msgid "download.alleles.text"
+msgstr "Télécharger des allèles"
+
+msgid "download.allele.metadata.text"
+msgstr "Télécharger des métadonnées"
+
+msgid "dna.sequences.text"
+msgstr "Veuillez entrer vos séquences d'ADN ci-dessous"
+
+msgid "allele.email.success.text"
+msgstr "Votre allèle a été envoyé au conservateur et sera évalué rapidement. Merci de votre envoi."
+
+msgid "allele.add.info.label"
+msgstr "Veuillez entrer les renseignements au sujet de l'allèle à ajouter"
+
+msgid "email.allele.comments.label"
+msgstr "Veuillez entrer tout commentaire au sujet de l'allèle que vous soumettez"
+
+msgid "email.allele.info.label"
+msgstr "Veuillez entrer les renseignements au sujet de l'allèle à soumettre"
+
+msgid "allele.view.loci"
+msgstr "Veuillez choisir un locus"
+
+msgid "manage.alleles.text"
+msgstr "Gérer les allèles"
+
+msgid "data.content.manage.alleles"
+msgstr "Voir une liste des allèles, voir les détails sur des allèles, modifier et supprimer des allèles"
+
+
+msgid "data.content.add.new.allele"
+msgstr "Ajouter un nouvel allèle à la base de données"
+
+msgid "data.content.batch.add.alleles"
+msgstr "Ajouter en lot de nouveaux allèles à la base de données"
+
+msgid "data.content.batch.add.allele.metadata"
+msgstr "Ajouter en lot des métadonnées sur des allèles à la base de données"
+
+msgid "data.content.submit.allele"
+msgstr "Soumettre un nouvel allèle au conservateur"
+
+msgid "sequence.length.text"
+msgstr "Longueur de la séquence"
+
+msgid "match.type.text"
+msgstr "Type de correspondance"
+
+msgid "submitted.sequence.match.text"
+msgstr "Correspondance avec la séquence soumise"
+
+msgid "full.database.match.text"
+msgstr "Correspondance complète avec la base de données"
+
+msgid "select.allele.for.options.text"
+msgstr "Sélectionner l'allèle pour voir les options"
+
+msgid "allele.submitted.success.msg"
+msgstr "Soumission de l'allèle réussie!"
+
+msgid "allele.deleted.success.msg"
+msgstr "Suppression de l'allèle réussie!"
+
+msgid "batch.alleles.submitted.success.msg"
+msgstr "Soumission d'allèles en lot réussie!"
+
+msgid "allele.edited.success.msg"
+msgstr "Modification de l'allèle de type %1 réussie!"
+
+msgid "no.loci.alleles.currently.exist.msg"
+msgstr "Aucun allèle %1 n'existe actuellement"
+
+msgid "loci.not.exist.msg"
+msgstr "Le nom de locus %1 n'existe pas"
+
+msgid "full.text"
+msgstr "Complet(ète)"
+
+msgid "partial.text"
+msgstr "Partiel(le)"
+
+msgid "batch.add.alleles.instructions.msg"
+msgstr "Dans l'en-tête du fichier FASTA, vous devez fournir au moins le type d'allèle pour chaque séquence. Chaque séquence doit être sur une seule ligne."
+
+msgid "enter.seqs.in.fasta.format.text"
+msgstr "Entrer les séquences au format FASTA"
+
+msgid "upload.a.fasta.file.text"
+msgstr "Téléverser plutôt un fichier FASTA"
+
+msgid "batch.add.allele.metadata.example.text"
+msgstr "Exemple d'ajout de métadonnées en lot"
+
+msgid "batch.add.allele.example.msg"
+msgstr "<strong>Note: </strong> L'entrée/fichier que vous soumettez doit être dans un format particulier et se terminer par une extension <strong>.fasta</strong>. Cliquez <a href= %1 class='alert-link'>ici</a> pour voir un exemple."
+
+msgid "batch.add.allele.wrong.length.msg"
+msgstr "<strong>Erreur dans le fichier FASTA concernant l'allèle de type %1 :</strong> Cette séquence n'est pas de la bonne longueur pour un gène %2. Assurez-vous que vous n'incluez que les séquences de %2."
+
+msgid "batch.add.allele.error.1000.msg"
+msgstr "<strong>FASTA Loci %1 Error:</strong> This loci does not exist. Please make sure that you are entering sequences for a valid loci."
+
+msgid "batch.add.allele.error.1002.msg"
+msgstr "<strong>Erreur dans le fichier FASTA concernant l'allèle de type %1 :</strong> Cette séquence existe déjà dans la base de données. Veuillez supprimer la séquence de l'allèle de type %1 de votre fichier FASTA."
+
+msgid "batch.add.allele.error.1003.msg"
+msgstr "<strong>Erreur dans le fichier FASTA concernant l'allèle de type %1 :</strong> Veuillez entrer un type d'allèle différent. Un allèle %2 du type %1 existe déjà dans la base de données."
+
+msgid "batch.add.allele.error.1004.msg"
+msgstr "<strong>Erreur dans le fichier FASTA concernant l'allèle de type %1 :</strong> Type d'allèle invalide. Veuillez entrer un type d'allèle compris entre 0 et 999."
+
+msgid "batch.add.allele.error.1022.msg"
+msgstr "<strong>Erreur dans le fichier FASTA concernant l'allèle de type %1 :</strong> Veuillez entrer un type d'allèle différent. Un allèle de type %1 existe déjà dans l'entrée FASTA que vous avez fournie."
+
+msgid "batch.add.allele.error.1025.msg"
+msgstr "<strong>Erreur dans le fichier FASTA concernant l'allèle de type %1 :</strong> Séquence en double. Il y a un autre allèle ayant une séquence équivalente dans l'entrée FASTA que vous avez fournie."
+
+msgid "batch.add.allele.error.1026.msg"
+msgstr "<strong>Erreur dans le fichier FASTA concernant l'allèle de type %1 :</strong> Cette séquence renferme des caractères invalides."
+
+msgid "batch.add.allele.error.5000.msg"
+msgstr "<strong>Erreur dans le fichier FASTA concernant l'allèle de type %1 :</strong> Les séquences que vous avez entrées ne sont pas dans un format FASTA valide. Assurez-vous de soumettre les allèles au format FASTA seulement et qu'il n'y a pas de blancs excédentaires ni de lignes brisées."
+
+msgid "batch.add.allele.metadata.success.msg"
+msgstr "Ajout de métadonnées en lot réussi!"
+
+msgid "enter.allele.metadata.tab.format.text"
+msgstr "Entrer les métadonnées sur les allèles au format utilisant des tabulations"
+
+msgid "batch.add.allele.metadata.error.1022.msg"
+msgstr "<strong>Erreur concernant les métadonnées sur un allèle de type %1 :</strong> Un allèle de type %1 existe déjà dans les métadonnées que vous avez fournies. Veuillez supprimer la ou les lignes en double."
+
+msgid "batch.add.allele.metadata.error.1023.msg"
+msgstr "<strong>METADATA Allele Type %1 Error:</strong> Allele with type %1 does not exist. Please add the allele first."
+
+msgid "batch.add.allele.metadata.error.1024.msg"
+msgstr "<strong>Erreur concernant un allèle :</strong> Aucun allèle %1 n'a été trouvé. Avant d'ajouter des métadonnées, veuillez ajouter ces allèles."
+
+msgid "batch.add.allele.metadata.error.5001.msg"
+msgstr "<strong>Erreur concernant le format %1 des métadonnées :</strong>Entrée de métadonnées invalide. Veuillez vous assurer que les valeurs sont séparées par des tabulations  et comportent le bon nombre de champs."
+
+msgid "batch.add.allele.metadata.example.msg"
+msgstr "<strong>Note: </strong> L'entrée/fichier que vous soumettez doit être dans un format particulier et se terminer par une extension <strong>.txt</strong>. Cliquez <a href= %1 class='alert-link'>ici</a> pour voir un exemple."
+
+msgid "allele.type.query.results.text"
+msgstr "Résultats de la recherche de type d'allèle"
+
+msgid "profile.type.result.text"
+msgstr "Résultat concernant le type de profil"
+
+msgid "submit.ngstar.type.to.curator.text"
+msgstr "Soumettre un nouveau type NG-STAR au conservateur"
+
+msgid "submit.allele.types.to.determine.ngstar.type.label"
+msgstr "Soumettre des types d'allèles pour déterminer le type NG-STAR"
+
+msgid "no.ngstar.type.found.partial.alleles.incl.msg"
+msgstr "Aucun type NG-STAR n'a été trouvé parce que les allèles partiels suivants étaient inclus dans la recherche."
+
+msgid "batch.add.allele.fasta.entry.error.msg"
+msgstr "Veuillez entrer des séquences au format FASTA valide. Ce champ n'accepte que les lettres, les chiffres et les caractères [ . - _ > ]"
+
+msgid "no.ngstar.type.found.missing.allele.msg"
+msgstr "Aucun type NG-STAR n'a été trouvé parce que les séquences d'allèles n'ont pas toutes été incluses dans la recherche."
+
+msgid "no.ngstar.type.found.allele.not.found.msg"
+msgstr "Aucun type NG-STAR n'a été trouvé parce que les séquences d'allèles n'ont pas été trouvées."
+
+#atr = Allele Type Result
+
+msgid "atr.partial.matches.msg"
+msgstr "<strong>Remarque: </strong> Des correspondances partielles ont été obtenues à la suite de votre recherche!<br> Pour obtenir un résultat plus précis, vous pouvez soumettre une séquence plus longue."
+
+msgid "atr.partial.match.w.link.msg"
+msgstr "<strong>Remarque: </strong>Une correspondance partielle a été obtenue à la suite de votre recherche. Veuillez soumettre votre allèle <a href= %1 class='alert-link'>ici</a> pour qu'il soit ajouté à la base de données NG-STAR."
+
+msgid "atr.partial.matches.w.link.msg"
+msgstr "<strong>Remarque: </strong>Des correspondances partielles ont été obtenues à la suite de votre recherche. Veuillez soumettre vos allèles <a href= %1 class='alert-link'>ici</a> pour qu'ils soient ajoutés à la base de données NG-STAR."
+
+msgid "atr.no.matches.w.link.msg"
+msgstr "<strong>Remarque: </strong>Aucune correspondance n'a été trouvée à la suite de votre recherche. Veuillez soumettre vos allèles <a href= %1 class='alert-link'>ici</a> pour qu'ils soient ajoutés à la base de données NG-STAR."
+
+msgid "atr.no.match.w.link.msg"
+msgstr "<strong>Remarque: </strong>Aucune correspondance n'a été trouvée à la suite de votre recherche. Veuillez soumettre votre allèle <a href= %1 class='alert-link'>ici</a> pour qu'il soit ajouté à la base de données NG-STAR."
+
+msgid "not.found.text"
+msgstr "Introuvable"
+
+
+#PROFILES
+
+msgid "profiles.text"
+msgstr "Profils"
+
+msgid "download.profiles.text"
+msgstr "Télécharger des profils"
+
+msgid "download.profile.metadata.text"
+msgstr "Télécharger des métadonnées sur des profils"
+
+msgid "csv.text"
+msgstr "Texte séparé par des virgules"
+
+msgid "tsv.text"
+msgstr "Texte séparé par des tabulations"
+
+msgid "select.profile.text"
+msgstr "Choisir un profil NG-STAR pour voir les options"
+
+msgid "enter.profile.query.text"
+msgstr "Veuillez entrer votre recherche de profil ci-dessous"
+
+msgid "profile.submitted.success.text"
+msgstr "Soumission du profil réussie!"
+
+msgid "profile.edit.success.text"
+msgstr "Modification du profil réussie!"
+
+msgid "profile.delete.success.text"
+msgstr "Suppression du profil réussie!"
+
+msgid "no.profiles.exist.text"
+msgstr "Aucun profil n'existe actuellement."
+
+msgid "edit.profile.text"
+msgstr "Modifier le profil NG-STAR"
+
+msgid "edit.profile.metadata.label"
+msgstr "Modifier les métadonnées facultatives"
+
+msgid "email.profile.success.text"
+msgstr "Votre profil a été envoyé au conservateur et sera évalué rapidement. Merci de votre envoi."
+
+msgid "enter.profile.types.label"
+msgstr "Veuillez entrer les types de profils à soumettre"
+
+msgid "profile.comments.text"
+msgstr "Commentaires"
+
+msgid "manage.profiles.text"
+msgstr "Gérer les profils NG-STAR"
+
+msgid "data.content.manage.profiles"
+msgstr "Voir une liste de tous les profils NG-STAR. Modifier ou supprimer des profils NG-STAR"
+
+msgid "add.new.profile.text"
+msgstr "Ajouter un nouveau profil NG-STAR"
+
+msgid "data.content.add.new.profile"
+msgstr "Ajouter un nouveau profil NG-STAR à la base de données"
+
+msgid "batch.add.new.profiles.text"
+msgstr "Ajouter de nouveaux profils NG-STAR en lot"
+
+msgid "data.content.batch.add.new.profiles"
+msgstr "Ajouter en lot de nouveaux profils NG-STAR à la base de données"
+
+msgid "data.content.batch.add.profile.metadata"
+msgstr "Ajouter en lot des métadonnées sur des profils à la base de données"
+
+msgid "data.content.submit.profile"
+msgstr "Soumettre un nouveau profil au conservateur"
+
+msgid "query.text"
+msgstr "Recherche"
+
+msgid "enter.profile.msg"
+msgstr "Veuillez entrer un profil"
+
+msgid "batch.add.profile.entry.error.msg"
+msgstr "Veuillez entrer un profil valide. Ce champ ne peut contenir que des chiffres, des points décimaux et des virgules. Chaque profil doit être sur sa propre ligne."
+
+msgid "batch.add.profile.error.1001"
+msgstr "<strong>Erreur concernant le profil du type NG-STAR %1 :</strong> Vous avez entré un type d'allèle correspondant à un allèle non existant. Veuillez ajouter d'abord l'allèle. "
+
+msgid "batch.add.profile.error.1014"
+msgstr "<strong>Erreur concernant le profil du type NG-STAR %1 :</strong> Veuillez entrer un type d'allèle valide compris entre 0 et 999."
+
+msgid "batch.add.profile.error.1026"
+msgstr "<strong>Erreur concernant le profil du type NG-STAR %1 :</strong> Veuillez entrer le bon nombre de types NG-STAR et de types d'allèles."
+
+msgid "batch.add.profile.error.2002"
+msgstr "<strong>Erreur concernant le profil du type NG-STAR %1 :</strong> Veuillez entrer un profil différent. Ce profil existe déjà dans la base de données."
+
+msgid "batch.add.profile.error.2003"
+msgstr "<strong>Erreur concernant le profil du type NG-STAR %1 :</strong> Veuillez entrer un type NG-STAR différent. Un profil correspondant à ce type NG-STAR existe déjà dans la base de données."
+
+msgid "batch.add.profile.error.2010"
+msgstr "<strong>Erreur concernant le profil du type NG-STAR %1 :</strong> Veuillez entrer des profils ayant le bon format. Voir l'exemple pour déterminer le bon format."
+
+msgid "batch.add.profile.error.2021"
+msgstr "<strong>Erreur concernant le profil du type NG-STAR %1 :</strong> Veuillez entrer un profil différent. Ce profil existe déjà dans l'entrée que vous avez fournie. "
+
+msgid "batch.add.profile.error.2022"
+msgstr "<strong>Erreur concernant le profil du type NG-STAR %1 :</strong> Veuillez entrer un type NG-STAR différent. Un profil correspondant à ce type NG-STAR existe déjà dans l'entrée que vous avez fournie."
+
+msgid "batch.add.profile.error.2023"
+msgstr "<strong>Erreur concernant le profil du type NG-STAR %1 :</strong> Veuillez entrer un type NG-STAR valide compris entre 0 et 999."
+
+msgid "batch.profile.metadata.error.2019"
+msgstr "<strong>Erreur concernant les métadonnées sur le profil du type %1 :</strong> Une séquence du type %1 existe déjà dans les métadonnées que vous avez fournies. Veuillez supprimer les lignes en double."
+
+msgid "batch.profile.metadata.error.2018"
+msgstr "<strong>Erreur concernant les métadonnées sur le profil du type %1 :</strong> Aucune séquence du type %1 n'existe. Veuillez ajouter d'abord le profil."
+
+msgid "batch.profile.metadata.error.5001"
+msgstr "<strong>Erreur concernant le format des métadonnées %1 :</strong> Entrée des métadonnées invalide. Veuillez vous assurer que votre entrée comporte des valeurs séparées par des tabulations et compte le bon nombre de champs."
+
+msgid "batch.profile.metadata.error.2020"
+msgstr "<strong>Erreur concernant les profils :</strong> Aucun profil n'a été trouvé. Avant d'ajouter les métadonnées, veuillez ajouter d'abord ces profils."
+
+#ptr = Profile Type Result
+
+msgid "ptr.no.profiles.found.msg"
+msgstr "<strong>Remarque: </strong>Aucun profil n'a été trouvé. Essayez d'élargir vos critères de recherche."
+
+msgid "ptr.partial.matches.found.msg"
+msgstr "<strong>Remarque: </strong>Aucune correspondance exacte n'a été trouvée. Les correspondances partielles sont affichées ci-dessous."
+
+msgid "num.matching.allele.types.text"
+msgstr "Nombre de types d'allèles correspondants"
+
+msgid "enter.info.for.ngstar.profile.label"
+msgstr "Veuillez entrer les renseignements concernant le profil NG-STAR à ajouter"
+
+msgid "batch.add.profile.csv.example.text"
+msgstr "Exemple de valeurs séparées par des virgules"
+
+msgid "batch.add.profile.upload.file.label"
+msgstr "Téléverser plutôt un ficher de profils NG-STAR"
+
+msgid "batch.add.enter.ngstar.profiles.label"
+msgstr "Entrer les profils NG-STAR"
+
+msgid "batch.add.profile.instructions.msg"
+msgstr "<strong>Remarque: </strong> Le ou les profils NG-STAR que vous soumettez doivent être dans un format particulier et se terminer par une extension <strong>.txt</strong> ou <strong>.csv</strong>. Cliquez <a href= %1 class='alert-link'>ici</a> pour voir un exemple."
+
+msgid "batch.add.profile.metadata.success.msg"
+msgstr "<strong>Ajout en lot des métadonnées sur les profils réussi!</strong>"
+
+msgid "enter.profile.metadata.in.tab.format.label"
+msgstr "Entrez les métadonnées sur les profils dans le format où les valeurs sont séparées par des tabulations."
+
+msgid "batch.add.profile.metadata.instructions.msg"
+msgstr "<strong>Remarque: </strong>L'entrée/fichier que vous soumettez doit être dans un format particulier et se terminer par une extension <strong>.txt</strong>. Cliquez <a href= %1 class='alert-link'>ici</a> pour voir un exemple."
+
+msgid "batch.add.profile.success.msg"
+msgstr "Ajout des profils en lot réussi!"
+
+msgid "pena.format"
+msgstr "format de penA"
+
+
+#ACCOUNT
+
+msgid "signout.text"
+msgstr "Fermeture de session"
+
+msgid "curator.tools.text"
+msgstr "Outils du conservateur"
+
+msgid "admin.tools.text"
+msgstr "Outils de l'administrateur"
+
+msgid "signout.success.msg"
+msgstr "Fermeture de session réussie!"
+
+msgid "create.text"
+msgstr "Créer"
+
+msgid "update.text"
+msgstr "Mettre à jour"
+
+msgid "activate.text"
+msgstr "Activer"
+
+msgid "deactivate.text"
+msgstr "Désactiver"
+
+msgid "new.user.text"
+msgstr "Nouvel utilisateur"
+
+msgid "data.content.create.new.account"
+msgstr "Créer un compte d'administrateur ou de conservateur"
+
+msgid "manage.accounts.text"
+msgstr "Gérer les comptes"
+
+msgid "data.content.manage.accounts"
+msgstr "Modifier ou supprimer les comptes d'utilisateurs"
+
+msgid "please.signin.text"
+msgstr "Veuillez ouvrir une session"
+
+msgid "curator.signin.msg"
+msgstr "Vous devez ouvrir une session à titre de conservateur pour avoir accès aux fonctionnalités réservées au conservateur"
+
+msgid "invalid.credentials.msg"
+msgstr "Nom d'utilisateur ou mot de passe invalide! Veuillez essayer de nouveau"
+
+msgid "password.update.success.msg"
+msgstr "Changement de mot de passe réussi!"
+
+msgid "password.reset.instructions"
+msgstr "Un courriel a été envoyé à l'adresse de courriel au dossier. Suivez les instructions du courriel pour réinitialiser votre mot de passe."
+
+msgid "please.enter.email.and.token.text"
+msgstr "Veuillez entrer votre adresse de courriel et le jeton de réinitialisation"
+
+msgid "step.1.text"
+msgstr "Étape 1 de 4"
+
+msgid "step.3.text"
+msgstr "Étape 3 de 4"
+
+msgid "step.4.text"
+msgstr "Étape 4 de 4"
+
+msgid "enter.user.identifier.msg"
+msgstr "Veuillez entrer votre nom d'utilisateur ou votre adresse de courriel"
+
+msgid "email.update.success.msg"
+msgstr "Changement d'adresse de courriel réussi!"
+
+msgid "update.ngstar.email.text"
+msgstr "Mettre à jour votre courriel NG-STAR"
+
+msgid "password.update.success.msg"
+msgstr "Changement de mot de passe réussi!"
+
+msgid "update.ngstar.password.text"
+msgstr "Mettre à jour votre mot de passe NG-STAR"
+
+msgid "update.password.popover.info"
+msgstr "Le mot de passe doit avoir 6 à 20 caractères. Il doit contenir un chiffre, une lettre majuscule,<br> une lettre minuscule et un des caractères suivants : point ( . ), point d'exclamation ( ! ), <br> barre de soulignement ( _ ) ou tiret ( - )."
+
+msgid "username.update.success.msg"
+msgstr "Changement de mot de passe réussi!"
+
+msgid "update.ngstar.username.text"
+msgstr "Mettre à jour votre nom d'utilisateur NG-STAR"
+
+msgid "create.new.account.heading.1"
+msgstr "Compte d'administrateur"
+
+msgid "create.new.account.heading.1.1"
+msgstr "Peut créer des comptes"
+
+msgid "create.new.account.heading.1.2"
+msgstr "Peut gérer la base de données NG-STAR (ajouter/modifier/supprimer des allèles ou des profils)"
+
+msgid "create.new.account.heading.2"
+msgstr "Compte de conservateur"
+
+msgid "create.new.account.heading.2.1"
+msgstr "Peut gérer la base de données NG-STAR (ajouter/modifier/supprimer des allèles ou des profils)"
+
+msgid "account.confirm.password.text"
+msgstr "Re-enter Password"
+
+msgid "account.status.text"
+msgstr "Statut"
+
+msgid "create.account.password.instructions.text"
+msgstr "Le mot de passe doit avoir 6 à 20 caractères. Il doit contenir un chiffre, une lettre majuscule, une lettre minuscule et un des caractères suivants : point, point d'exclamation, barre de soulignement et/ou tiret"
+
+msgid "create.account.username.instructions.text"
+msgstr "Le nom d'utilisateur doit avoir 5 à 20 caractères. Il peut contenir des lettres, des chiffres, des points, des barres de soulignement et/ou des tirets"
+
+msgid "edit.account.note.text"
+msgstr "*Si l'utilisateur doit réinitialiser son mot de passe, l'aviser d'utiliser le lien « Mot de passe oublié » sur la page d'ouverture de session."
+
+msgid "account.reactivate.success.msg"
+msgstr "Réactivation de l'utilisateur %1 réussie."
+
+msgid "account.deactivate.success.msg"
+msgstr "Désactivation de l'utilisateur %1 réussie."
+
+msgid "account.delete.success.msg"
+msgstr "Suppression de l'utilisateur %1 réussie."
+
+msgid "account.update.success.msg"
+msgstr "Mise à jour de l'information du compte de l'utilisateur %1 réussie."
+
+msgid "account.create.success.msg"
+msgstr "Création du compte de l'utilisateur %1 réussie!"
+
+msgid "confirm.user.delete.msg"
+msgstr "Êtes-vous sûr(e) de vouloir supprimer utilisateur suivant:<br><br>Utilisateur: %1<br>"
+
+msgid "confirm.user.deactivate.msg"
+msgstr "Êtes-vous sûr(e) de vouloir désactiver utilisateur suivant:<br><br>Utilisateur: %1<br>"
+
+msgid "confirm.user.reactivate.msg"
+msgstr "Êtes-vous sûr(e) de vouloir réactiver utilisateur:<br><br>Utilisateur: %1<br>"
+
+msgid "inactive.ngstar.users.text"
+msgstr "Inactiver des utilisateurs de NG-STAR"
+
+msgid "active.ngstar.users.text"
+msgstr "Activer des utilisateurs de NG-STAR"
+
+msgid "inactive.text"
+msgstr "Inactif"
+
+msgid "active.text"
+msgstr "Actif"
+
+msgid "login.as.admin.msg"
+msgstr "Veuillez ouvrir une session en tant qu'administrateur pour pouvoir utiliser cette fonctionnalité"
+
+msgid "login.msg"
+msgstr "Veuillez ouvrir une session pour pouvoir utiliser cette fonctionnalité"
+
+msgid "enter.reset.token.msg"
+msgstr "Veuillez entrer le jeton de réinitialisation"
+
+msgid "token.text"
+msgstr "Jeton"
+
+msgid "check.reset.token.error.message"
+msgstr "Veuillez entrer un jeton de réinitialisation. Ce champ ne peut contenir que des lettres et des chiffres"
+
+msgid "new.username.text"
+msgstr "Nouveau nom d'utilisateur"
+
+msgid "confirm.new.username.text"
+msgstr "Confirmer le nouveau nom d'utilisateur"
+
+msgid "confirm.password.text"
+msgstr "Confirmer le mot de passe"
+
+msgid "confirm.email.text"
+msgstr "Confirmer le adresse de courriel"
+
+msgid "new.email.address.text"
+msgstr "Nouvelle adresse de courriel"
+
+msgid "password.reset.email.subject.text"
+msgstr "Étape 2 sur 4 : Réinitialiser le mot de passe NG-STAR"
+
+msgid "password.reset.email.body.text"
+msgstr "<p>Demande de réinitialisation du mot de passe pour l'application Web NG-STAR. Pour réinitialiser le mot de passe, suivez les instructions qui suivent.</p><br>1) Allez à %1.<br><p>2) Entrez votre adresse de courriel et le jeton de réinitialisation fourni ci-dessous.</p><br><p>Jeton de réinitialisation : %2</p><br><p>Le jeton de réinitialisation est valide pendant 1 heure. Si vous n'avez pas demandé une réinitialisation de votre mot de passe, ne tenez pas compte de ce courriel.</p>"
+
+
+#MISC
+
+msgid "page.under.development.text"
+msgstr "Page en construction"
+
+msgid "error.text"
+msgstr "Erreur"
+
+msgid "text.government.of.canada"
+msgstr "Gouvernement du Canada"
+
+msgid "button.launch.ngstar"
+msgstr "Lancez NG-STAR"
+
+msgid "home.page.name"
+msgstr "Accueil"
+
+msgid "skip.to.main.content"
+msgstr "Passer au contenu principal"
+
+msgid "about.ngstar.text"
+msgstr "Renseignements sur l'application Web NG-STAR"
+
+
+#BROWSER TITLES
+
+msgid "browser.title.update.email"
+msgstr "Mettre à jour votre compte de courriel"
+
+msgid "browser.title.update.password"
+msgstr "Mettre à jour le mot de passe"
+
+msgid "browser.title.update.username"
+msgstr "Mettre à jour votre nom d'utilisateur"
+
+msgid "browser.title.admin.tools"
+msgstr "Outils de l'administrateur"
+
+msgid "browser.title.create.user"
+msgstr "Créer un compte d'utilisateur"
+
+msgid "browser.title.allele.query.results"
+msgstr "Résultats de la recherche d'allèle"
+
+msgid "browser.title.welcome"
+msgstr "Bienvenue à NG-STAR  (Neisseria gonorrhoeae-Sequence Typing for Antimicrobial Resistance)"
+
+msgid "browser.title.batch.add.profiles"
+msgstr "Ajouter des nouveaux profils en lot"
+
+msgid "browser.title.batch.add.profile.metadata"
+msgstr "Ajouter des métadonnées sur des profils en lot"
+
+msgid "browser.title.batch.add.profile.metadata.example"
+msgstr "Exemple d'ajouter des métadonnées sur des profils en lot"
+
+
+#MODAL ERROR MESSAGES
+
+msgid "modal.confirm.error.1000"
+msgstr "Les noms des locus ne correspondent pas. Assurez-vous que vous entrez les séquences correspondant aux locus choisis."
+
+msgid "modal.confirm.error.1001"
+msgstr "Vous avez entré un type d'allèle correspondant à un allèle non existant. Veuillez ajouter d'abord l'allèle. Les allèles suivants n'existent pas : <br><br>%(error_alleles)s.<br>"
+
+msgid "modal.confirm.error.1002"
+msgstr "La séquence que vous avez soumise existe déjà pour le locus %(loci_name)s avec le type d'allèle %(allele_type)s."
+
+msgid "modal.confirm.error.1003"
+msgstr "Veuillez entrer un type d'allèle différent. Une séquence du type %(allele_type)s correspondant au locus %(loci_name)s existe déjà."
+
+msgid "modal.confirm.error.1004"
+msgstr "Le type d'allèle que vous avez entré est invalide pour le locus %(loci_name)s.<br>Le type d'allèle doit être compris entre 0 et 999 inclusivement."
+
+msgid "modal.confirm.error.1005"
+msgstr "Le locus n'existe pas dans le système. Veuillez choisir un locus valide."
+
+msgid "modal.confirm.error.1006"
+msgstr "Veuillez entrer une séquence valide.<br>La séquence penA doit compter 1702 à 1802 caractères."
+
+msgid "modal.confirm.error.1007"
+msgstr "Veuillez entrer une séquence valide.<br>La séquence mtrR doit compter 658 à 758 caractères."
+
+msgid "modal.confirm.error.1008"
+msgstr "Veuillez entrer une séquence valide.<br>La séquence porB doit compter 10 à 110 caractères."
+
+msgid "modal.confirm.error.1009"
+msgstr "Veuillez entrer une séquence valide.<br>La séquence ponA doit compter 25 à 125 caractères."
+
+msgid "modal.confirm.error.1010"
+msgstr "Veuillez entrer une séquence valide.<br>La séquence gyrA doit compter 214 à 314 caractères."
+
+msgid "modal.confirm.error.1011"
+msgstr "Veuillez entrer une séquence valide.<br>La séquence parC doit compter 282 à 382 caractères."
+
+msgid "modal.confirm.error.1012"
+msgstr "Veuillez entrer une séquence valide.<br>La séquence 23S doit compter 517 à 617 caractères."
+
+msgid "modal.confirm.error.1013"
+msgstr "Veuillez entrer le nom du locus et le type dans un format valide. Le format valide consiste en le nom du locus suivi du type sans caractères spéciaux."
+
+msgid "modal.confirm.error.1014"
+msgstr "Veuillez entrer un  type valide. Ce champ ne peut contenir que des nombres et des points (.)."
+
+msgid "modal.confirm.error.1015"
+msgstr "Aucun allèle n'existe actuellement!"
+
+msgid "modal.confirm.error.1016"
+msgstr "Aucune séquence n'a été entrée. Veuillez entrer au moins une séquence."
+
+msgid "modal.confirm.error.1017"
+msgstr "Veuillez entrer une séquence valide. Ce champ ne peut contenir que les lettres [ A, C, T, G ]."
+
+msgid "modal.confirm.error.1018"
+msgstr "Aucun locus trouvé. Veuillez essayer de nouveau."
+
+msgid "modal.confirm.error.1019"
+msgstr "Nom du locus et type d'allèle invalides. Veuillez sélectionner un autre allèle."
+
+msgid "modal.confirm.error.1020"
+msgstr "Aucune donnée n'a été obtenue concernant l'allèle sélectionné. Veuillez sélectionner un autre allèle."
+
+msgid "modal.confirm.error.1021"
+msgstr "L'allèle pour lequel vous essayez d'ajouter des métadonnées n'existe pas actuellement. Veuillez entrer d'abord l'allèle dans le système."
+
+
+msgid "modal.confirm.error.2000"
+msgstr "L'allèle que vous avez modifié fait partie d'un profil NG-STAR.<br>Avant de modifier cet allèle, vous devez supprimer tous les profils NG-STAR qui le renferment."
+
+msgid "modal.confirm.error.2001"
+msgstr "L'allèle que vous supprimez fait partie d'un profil NG-STAR.<br>Avant de supprimer l'allèle : %(allele_to_delete_loci_name)s de type %(allele_type)s, vous devez supprimer tous les profils NG-STAR qui le renferment."
+
+msgid "modal.confirm.error.2003"
+msgstr "Veuillez entrer un type NG-STAR différent. Un profil correspondant à ce type NG-STAR existe déjà."
+
+msgid "modal.confirm.error.2004"
+msgstr "Le profil du type d'allèle entré est invalide. Veuillez vérifier les types d'allèles."
+
+msgid "modal.confirm.error.2005"
+msgstr "Aucun profil n'existe actuellement!"
+
+msgid "modal.confirm.error.2006"
+msgstr "Veuillez entrer un type de séquence valide. Ce champ ne peut renfermer que des chiffres."
+
+msgid "modal.confirm.error.2007"
+msgstr "Le format de téléchargement du profil est invalide. Veuillez essayer de nouveau le téléchargement. "
+
+msgid "modal.confirm.error.2008"
+msgstr "Le format de téléchargement des métadonnées sur le profil est invalide. Veuillez essayer de nouveau le téléchargement."
+
+msgid "modal.confirm.error.2009"
+msgstr "Aucun profil n'a été obtenu. Veuillez essayer de nouveau."
+
+msgid "modal.confirm.error.2010"
+msgstr "Veuillez entrer des profils ayant le bon format. Voir l'exemple pour déterminer le bon format."
+
+msgid "modal.confirm.error.2011"
+msgstr "Veuillez entrer un type NG-STAR différent. Un profil correspondant à ce type NG-STAR existe déjà."
+
+msgid "modal.confirm.error.2012"
+msgstr "Veuillez fournir les profils NG-STAR avant de soumettre."
+
+msgid "modal.confirm.error.2013"
+msgstr "La taille de la recherche de profil est invalide. Veuillez répéter votre recherche."
+
+msgid "modal.confirm.error.2014"
+msgstr "Aucune donnée n'a été obtenue concernant le profil sélectionné. Veuillez sélectionner un autre profil."
+
+msgid "modal.confirm.error.2015"
+msgstr "Le seuil de la recherche de profil est invalide. Veuillez choisir un autre seuil."
+
+msgid "modal.confirm.error.2016"
+msgstr "Aucun profil NG-STAR n'a été trouvé à la suite de votre recherche. Veuillez essayer de nouveau avec des séquences différentes."
+
+msgid "modal.confirm.error.2017"
+msgstr "Le profil pour lequel vous essayez d'ajouter des métadonnées n'existe pas actuellement. Veuillez entrer d'abord le profil dans le système."
+
+msgid "modal.confirm.error.3000"
+msgstr "Veuillez entrer une date valide au format AAAA-MM-JJ."
+
+msgid "modal.confirm.error.3001"
+msgstr "Aucune classification n'a été trouvée. Veuillez essayer de nouveau."
+
+msgid "modal.confirm.error.3002"
+msgstr "Aucun antimicrobien n'a été trouvé. Veuillez essayer de nouveau."
+
+msgid "modal.confirm.error.3003"
+msgstr "Veuillez entrer le bon nombre de champs de métadonnées. Si un champ donné ne renferme aucune information, mettez-y une tabulation."
+
+msgid "modal.confirm.error.3004"
+msgstr "Code(s) de classification invalide(s). Veuillez entrer de nouveau le ou les codes de classification."
+
+msgid "modal.confirm.error.3005"
+msgstr "Pays invalide. Veuillez entrer de nouveau le pays."
+
+msgid "modal.confirm.error.3006"
+msgstr "Ville invalide. Veuillez entrer de nouveau la ville."
+
+msgid "modal.confirm.error.3007"
+msgstr "Âge du patient invalide. Veuillez entrer de nouveau l'âge du patient."
+
+msgid "modal.confirm.error.3008"
+msgstr "Âge du patient invalide. Veuillez entrer de nouveau l'âge du patient."
+
+msgid "modal.confirm.error.3009"
+msgstr "Données épidémiologiques invalides. Veuillez entrer de nouveau les données épidémiologiques."
+
+msgid "modal.confirm.error.3010"
+msgstr "Commentaires invalides. Veuillez entrer de nouveau les commentaires."
+
+msgid "modal.confirm.error.3011"
+msgstr "Bêta-lactamase invalide. Veuillez entrer de nouveau la bêta-lactamase."
+
+msgid "modal.confirm.error.3012"
+msgstr "Le ou les comparateurs sélectionnés pour la CMI sont invalides. Veuillez sélectionner de nouveau un ou des comparateurs pour la CMI."
+
+msgid "modal.confirm.error.3013"
+msgstr "CMI invalide(s). Veuillez entrer de nouveau la ou les CMI."
+
+msgid "modal.confirm.error.3014"
+msgstr "La sélection pour « CMI déterminée par » est invalide. Veuillez effectuer une nouvelle sélection pour « CMI déterminée par »."
+
+msgid "modal.confirm.error.3015"
+msgstr "La sélection des valeurs d'interprétation est invalide. Veuillez sélectionner de nouvelles valeurs d'interprétation."
+
+msgid "modal.confirm.error.3016"
+msgstr "Type(s) d'allèle(s) invalide(s). Veuillez entrer de nouveau le ou les types d'allèles."
+
+msgid "modal.confirm.error.4000"
+msgstr "L'adresse de courriel que vous avez entrée est invalide. Veuillez entrer de nouveau votre adresse de courriel."
+
+msgid "modal.confirm.error.4001"
+msgstr "Cette adresse de courriel est déjà utilisée. Veuillez entrer une autre adresse de courriel."
+
+msgid "modal.confirm.error.4002"
+msgstr "Le jeton que vous avez entré n'existe pas. Veuillez entrer de nouveau votre jeton."
+
+msgid "modal.confirm.error.4003"
+msgstr "Le jeton que vous avez entré est expiré. Veuillez soumettre une nouvelle demande à la page « Mot de passe oublié » pour obtenir un jeton valide."
+
+msgid "modal.confirm.error.4004"
+msgstr "Le jeton que vous avez entré est invalide. Veuillez entrer de nouveau le jeton."
+
+msgid "modal.confirm.error.4005"
+msgstr "Le nom d'utilisateur que vous avez entré est invalide. Veuillez entrer de nouveau votre nom d'utilisateur."
+
+msgid "modal.confirm.error.4006"
+msgstr "Ce nom d'utilisateur est déjà utilisé. Veuillez en entrer un autre."
+
+msgid "modal.confirm.error.4007"
+msgstr "Veuillez entrer une adresse de courriel. Ce champ ne peut pas demeurer vide."
+
+msgid "modal.confirm.error.4008"
+msgstr "Veuillez entrer un jeton de réinitialisation. Ce champ ne peut pas demeurer vide."
+
+msgid "modal.confirm.error.4009"
+msgstr "Le nom d'utilisateur que vous avez entré existe déjà. Veuillez en choisir un autre."
+
+msgid "modal.confirm.error.4010"
+msgstr "L'adresse de courriel entrée existe déjà. <br>Si vous avez oublié votre mot de passe, utilisez le lien « Mot de passe oublié » sur la page d'ouverture de session pour le réinitialiser, ou utilisez une adresse de courriel différente."
+
+msgid "modal.confirm.error.4011"
+msgstr "Les mots de passe entrés ne correspondent pas. Assurez-vous d'entrer deux fois le même mot de passe."
+
+msgid "modal.confirm.error.4012"
+msgstr "Il y a eu une erreur lors de la mise à jour de votre mot de passe. L'utilisateur spécifié est introuvable."
+
+msgid "modal.confirm.error.4013"
+msgstr "Ceci est votre nom d'utilisateur actuel. Veuillez entrer un nom d'utilisateur différent."
+
+msgid "modal.confirm.error.4014"
+msgstr "Ceci est votre adresse de courriel actuelle. Veuillez entrer une adresse de courriel différente."
+
+msgid "modal.confirm.error.4015"
+msgstr "Vous avez déjà utilisé ce mot de passe. Veuillez entrer un mot de passe différent."
+
+msgid "modal.confirm.error.4016"
+msgstr "L'adresse de courriel et/ou le jeton ne correspondent pas. Veuillez entrer de nouveau votre adresse de courriel et le jeton de réinitialisation."
+
+msgid "modal.confirm.error.4017"
+msgstr "Veuillez entrer un mot de passe valide. Ce champ doit contenir une lettre majuscule, une lettre minuscule, un chiffre et un des symboles ( . ) , ( - ) , ( _ )  ou ( ! )."
+
+msgid "modal.confirm.error.4018"
+msgstr "L'ancien mot de passe est incorrect. Veuillez essayer de nouveau."
+
+
+msgid "modal.confirm.error.4019"
+msgstr "Les noms d'utilisateur entrés ne correspondent pas. Veuillez vous assurer d'entrer deux fois le même nom d'utilisateur."
+
+msgid "modal.confirm.error.4020"
+msgstr "Les adresses de courriel entrées ne correspondent pas. Veuillez vous assurer d'entrer deux fois la même adresse de courriel."
+
+msgid "modal.confirm.error.4021"
+msgstr "Un jeton de réinitialisation existe déjà et vous a été transmis à l'adresse de courriel inscrite à votre compte. Veuillez utiliser ce jeton pour réinitialiser votre mot de passe."
+
+msgid "modal.confirm.error.4022"
+msgstr "Le nom d'utilisateur est invalide. Veuillez essayer de nouveau."
+
+msgid "modal.confirm.error.4023"
+msgstr "L'utilisateur spécifié est introuvable."
+
+msgid "modal.confirm.error.4024"
+msgstr "Votre session a été ouverte avec ce compte. La suppression du compte a échoué."
+
+msgid "modal.confirm.error.4025"
+msgstr "Votre session a été ouverte avec ce compte. La désactivation du compte a échoué."
+
+msgid "modal.confirm.error.4026"
+msgstr "Aucun utilisateur à afficher."
+
+msgid "modal.confirm.error.4027"
+msgstr "Aucun détail concernant l'utilisateur sélectionné n'a été obtenu. Veuillez essayer de nouveau."
+
+msgid "modal.confirm.error.4028"
+msgstr "Le prénom que vous avez entré est invalide. Veuillez entrer le prénom de nouveau."
+
+msgid "modal.confirm.error.4029"
+msgstr "Le nom de famille que vous avez entré est invalide. Veuillez entrer le nom de famille de nouveau."
+
+msgid "modal.confirm.error.4030"
+msgstr "Le nom d'utilisateur doit avoir 5 à 20 caractères."
+
+msgid "modal.confirm.error.4031"
+msgstr "Le mot de passe doit avoir 6 à 20 caractères."
+
+msgid "modal.confirm.error.4032"
+msgstr "Le mot de passe de confirmation doit avoir 6 à 20 caractères."
+
+msgid "modal.confirm.error.4033"
+msgstr "Veuillez entrer un mot de passe de confirmation valide. Ce champ doit contenir une lettre majuscule, une lettre minuscule, un chiffre et un des symboles ( . ) , ( - ) , ( _ ) ou ( ! )."
+
+msgid "modal.confirm.error.4034"
+msgstr "Le nom d'établissement que vous avez entré est invalide. Veuillez entrer le nom d'établissement de nouveau."
+
+msgid "modal.confirm.error.4035"
+msgstr "La ville de l'établissement que vous avez entrée est invalide. Veuillez entrer la ville de l'établissement de nouveau."
+
+msgid "modal.confirm.error.4036"
+msgstr "Le pays de l'établissement que vous avez entré est invalide. Veuillez entrer le pays de l'établissement de nouveau."
+
+msgid "modal.confirm.error.5000"
+msgstr "Veuillez entrer des données valides au format FASTA."
+
+msgid "modal.confirm.error.5001"
+msgstr "Veuillez entrer les métadonnées en séparant les valeurs par des tabulations (format TSV)."
+
+msgid "modal.confirm.error.5002"
+msgstr "Mauvais format de fichier. Seuls les fichiers <strong>.txt</strong> sont acceptés."
+
+msgid "modal.confirm.error.5003"
+msgstr "Nom de fichier invalide. Veuillez entrer un nom de fichier valide."
+
+msgid "modal.confirm.error.5004"
+msgstr "Option sélectionnée invalide. Veuillez faire une autre sélection."
+
+msgid "modal.confirm.error.5005"
+msgstr "Format de téléchargement de fichier invalide. Veuillez sélectionner un format de téléchargement valide."
+
+msgid "modal.confirm.error.5006"
+msgstr "Le fichier est trop gros. Veuillez téléverser un fichier de moins de 5,34 Mo."
+
+msgid "modal.confirm.error.5007"
+msgstr "Taille de fichier invalide. Veuillez téléverser un fichier qui n'est pas vide. "
+
+msgid "modal.confirm.error.5008"
+msgstr "Aucune donnée fournie. Veuillez entrer les données dans la zone de texte ou téléverser un fichier."
+
+msgid "modal.confirm.error.5009"
+msgstr "Nom de fichier invalide. Le nom de fichier ne peut contenir que des lettres, des chiffres, des barres de soulignement et des traits d'union. Le nom du fichier doit aussi se terminer par une extension .txt ou .trace."
+
+
+#Isolate Classification Names
+
+msgid "Azithromycin Resistant Neisseria gonorrhoeae"
+msgstr "Neisseria gonorrhoeae résistant à l'azithromycine"
+
+msgid "Neisseria gonorrhoeae with Decreased Susceptiblity to Cefixime"
+msgstr "Neisseria gonorrhoeae présentant une sensibilité réduite au céfixime"
+
+msgid "Ciprofloxacin Resistant Neisseria gonorrhoeae"
+msgstr "Neisseria gonorrhoeae résistant à la ciprofloxacine"
+
+msgid "Chromosomal Mediated Resistant Neisseria gonorrhoeae"
+msgstr "Neisseria gonorrhoeae présentant une résistance à médiation chromosomique"
+
+msgid "Neisseria gonorrhoeae with Decreased Susceptiblity to Ceftriaxone"
+msgstr "Neisseria gonorrhoeae présentant une sensibilité réduite à la ceftriaxone"
+
+msgid "Erythromycin Resistant Neisseria gonorrhoeae"
+msgstr "Neisseria gonorrhoeae résistant à l'érythromycine"
+
+msgid "Penicillin Resistant Neisseria gonorrhoeae"
+msgstr "Neisseria gonorrhoeae résistant à la pénicilline"
+
+msgid "Penicillinase Producing Neisseria gonorrhoeae"
+msgstr "Neisseria gonorrhoeae producteur de pénicillinase"
+
+msgid "Probable Chromosomal Mediated Resistant Neisseria gonorrhoeae"
+msgstr "Neisseria gonorrhoeae présentant probablement une résistance à médiation chromosomique"
+
+msgid "Spectinomycin Resistant Neisseria gonorrhoeae"
+msgstr "Neisseria gonorrhoeae résistant à la spectinomycine"
+
+msgid "Susceptible Isolate"
+msgstr "Isolat sensible"
+
+msgid "Tetracycline Resistant Neisseria gonorrhoeae"
+msgstr "Neisseria gonorrhoeae résistant à la tétracycline"
+
+
+#Anitbiotic Names
+
+msgid "Azithromycin"
+msgstr "Azithromycine"
+
+msgid "Cefixime"
+msgstr "Céfixime"
+
+msgid "Ceftriaxone"
+msgstr "Ceftriaxone"
+
+msgid "Ciprofloxacin"
+msgstr "Ciprofloxacine"
+
+msgid "Erythromycin"
+msgstr "Érythromycine"
+
+msgid "Penicillin"
+msgstr "Pénicilline"
+
+msgid "Spectinomycin"
+msgstr "Spectinomycine"
+
+msgid "Tetracycline"
+msgstr "Tétracycline"
+
+
+#Modals
+
+msgid "please.confirm.text"
+msgstr "Veuillez confirmer"
+
+msgid "delete.profile.text"
+msgstr "Supprimer le profil"
+
+msgid "delete.allele.text"
+msgstr "Supprimer l'allèle"
+
+msgid "batch.add.error.text"
+msgstr "Erreur lors de l'ajout en lot"
+
+
+msgid "batch.allele.query.fasta.entry.error.msg"
+msgstr "Veuillez entrer les séquences selon un format FASTA valide. Ce champ ne peut contenir que des lettres, des chiffres et les caractères spéciaux suivants : [ . _ ]."
+
+msgid "modal.confirm.error.5010"
+msgstr "Les données FASTA entrées contiennent des caractères non valides. Veuillez vous assurer que les données saisies ne contiennent que des lettres, des chiffres et les caractères spéciaux suivants : [ . _ ]."
+
+msgid "modal.confirm.error.6000"
+msgstr "Numéro d'échantillon non valide. Les numéros d'échantillons doivent être supérieurs à 0, sans décimales."
+
+msgid "modal.confirm.error.6001"
+msgstr "Les données FASTA entrées contiennent une séquence non valide. Les séquences ne peuvent contenir que les lettres suivantes : [A, C, T, G]."
+
+msgid "modal.confirm.error.6002"
+msgstr "Les données FASTA entrées contiennent un locus non valide. Les locus acceptés sont : %(loci_names)s"
+
+msgid "modal.confirm.error.6003"
+msgstr "Les données FASTA entrées contiennent un en-tête fasta non valide. Veuillez consulter la page d'exemple d'allèle par lots pour voir des en-têtes valides."
+
+msgid "shared.batch.allele.query.text"
+msgstr "Recherche d'allèles par lots"
+
+msgid "shared.batch.allele.query.example.text"
+msgstr "Exemple de recherche d'allèles par lots"
+
+msgid "shared.sequences.text"
+msgstr "Séquences"
+
+msgid "batch.allele.query.example.instructions.msg"
+msgstr "Pour l'en-tête FASTA, vous devez fournir le nom du locus et le numéro d'échantillon (séparés par un trait de soulignement) pour chaque séquence. Des en-têtes valides sont fournis dans le résultat ci-dessous. Les lignes d'en-tête commencent avec un >"
+
+msgid "batch.allele.query.example.header.1"
+msgstr "Vous devez fournir au moins le nom du locus pour chaque séquence dans l'en-tête FASTA. Des en-têtes valides sont fournis dans les données de sortie ci-dessous. Les lignes d'en-tête commencent par un >."
+
+msgid "batch.allele.query.example.header.2"
+msgstr "Vous devez fournir le nom du locus et les numéros des échantillons dans l'en-tête FASTA. Un numéro d'échantillon ne peut pas être égal à 0. Des en-têtes valides sont fournis dans les données de sortie ci-dessous. Les lignes d'en-tête commencent par un >."
+
+msgid "batch.allele.query.example.header.3"
+msgstr "Vous devez fournir au moins le nom du locus pour chaque séquence dans l'en-tête FASTA. Des en-têtes valides sont fournis dans les données de sortie ci-dessous. Les lignes d'en-tête commencent par un >."
+
+msgid "single.loci.single.sequence.text"
+msgstr "Un locus unique avec une séquence unique"
+
+msgid "single.loci.multiple.sequences.text"
+msgstr "Un locus unique avec de multiples séquences"
+
+msgid "multiple.loci.single.sequences.text"
+msgstr "De multiples locus avec une séquence unique"
+
+msgid "multiple.loci.multiple.sequences.text"
+msgstr "De multiples locus avec de multiples séquences"
+
+msgid "shared.batch.allele.query.results.text"
+msgstr "Résultats de la recherche d'allèles par lots"
+
+msgid "sample.number.text"
+msgstr "Numéro d'échantillon"
+
+msgid "match.type.text"
+msgstr "Type de correspondance"
+
+msgid "not.queried.text"
+msgstr "Recherche non effectuée"
+
+msgid "legend.text"
+msgstr "Légende"
+
+msgid "account.locked.out.msg"
+msgstr "Ce compte a été verrouillé en raison d'un trop grand nombre de tentatives d'ouverture de session. Veuillez ressayer plus tard."
+
+msgid "account.expired.password.msg"
+msgstr "Votre mot de passe est expiré. Veuillez le changer."
+
+msgid "ngstar.user.accounts.text"
+msgstr "Comptes d'utilisateurs NG-STAR"
+
+msgid "shared.batch.profile.query.text"
+msgstr "Recherche de profils par lots"
+
+msgid "shared.upload.a.file.text"
+msgstr "Téléverser un fichier"
+
+msgid "enter.profiles.text"
+msgstr "Entrer les profils"
+
+msgid "modal.confirm.error.2030"
+msgstr "Aucun profil n'a été entré. Veuillez entrer au moins un profil pour faire une interrogation."
+
+msgid "profile.query.details.text"
+msgstr "Détails de la recherche de profils"
+
+msgid "shared.batch.profile.query.results.text"
+msgstr "Résultats de la recherche de profils par lots"
+
+msgid "shared.id.text"
+msgstr "ID"
+
+msgid "batch.profile.query.entry.error.msg"
+msgstr "Les profils contiennent des caractères non valides. Ce champ ne peut contenir que des chiffres et les caractères spéciaux suivants : [ . , ]."
+
+msgid "modal.confirm.error.2031"
+msgstr "Les données de la recherche de profils par lots ne sont pas valides. Veuillez vous assurer que les données saisies sont séparées par des virgules ou par des tabulations, et qu'elles comportent le nombre voulu de colonnes. Chaque ligne doit compter 8 colonnes (1 pour l'ID et 7 pour les 7 locus différents)."
+
+msgid "shared.batch.profile.query.example.text"
+msgstr "Exemple de recherche de profils par lots"
+
+msgid "batch.profile.query.instructions.msg"
+msgstr "Les données saisies doivent être séparées par des virgules ou des tabulations. Chaque ligne doit compter un total de 8 colonnes (1 colonne pour l'ID et 7 colonnes pour les 7 locus différents)."
+
+msgid "batch.profile.query.example.msg"
+msgstr "<strong>Remarque : </strong> Les données d'entrée/le fichier que vous soumettez doit respecter un format particulier et le nom du fichier doit se terminer par l'extension <strong>.txt</strong>. Cliquez <a href= %1 class='alert-link'> ici </a> pour voir un exemple."
+
+msgid "shared.download.csv.text"
+msgstr "Télécharger CSV"
+
+msgid "shared.download.tsv.text"
+msgstr "Télécharger TSV"
+
+msgid "validate.amino.acid.profile.9000"
+msgstr "ID de profil d'acide aminé invalide. L'ID spécifié est introuvable."
+
+msgid "validate.amino.acid.profile.9001"
+msgstr "Veuillez entrer un type Onishi valide. Ce champ accepte les lettres et les chiffres seulement"
+
+msgid "validate.amino.acid.profile.9002"
+msgstr "Veuillez entrer une valeur de mosaïque valide. Ce champ accepte seulement Oui, Non ou Semi"
+
+msgid "validate.amino.acid.profile.9003"
+msgstr "Veuillez entrer un profil d'acide aminé valide. Ce champ accepte seulement les lettres et les points"
+
+msgid "validate.amino.acid.profile.9004"
+msgstr "Veuillez entrer un type Onishi différent. Ce type Onishi existe déjà"
+
+msgid "validate.amino.acid.profile.9005"
+msgstr "Veuillez entrer un profil d'acide aminé différent. Ce profil d'acide aminé existe déjà"
+
+msgid "validate.amino.acid.9006"
+msgstr "Veuillez entrer un acide aminé valide. Ce champ accepte seulement les lettres et les points."
+
+msgid "validate.amino.acid.9007"
+msgstr "Veuillez entrer une position d'acide aminé valide. Ce champ accepte seulement les chiffres."
+
+msgid "validate.amino.acid.9008"
+msgstr "Veuillez entrer un acide aminé différent et une position. Cet acide aminé à cette position existe déjà"
+
+msgid "validate.amino.acid.9009"
+msgstr "Veuillez entrer une position d'acide aminé différente. Cette position d'acide aminé existe déjà"
+
+msgid "shared.semi.text"
+msgstr "Semi"
+
+msgid "enter.amino.acid.profile.onishi.type.text"
+msgstr "Veuillez entrer un type Onishi"
+
+msgid "select.amino.acid.profile.mosaic.text"
+msgstr "Veuillez sélectionner un type de mosaïque"
+
+msgid "enter.amino.acid.profile.text"
+msgstr "Veuillez entrer un profil d'acide aminé"
+
+msgid "shared.manage.amino.acid.profiles.text"
+msgstr "Gérer les profils d'acide aminé"
+
+msgid "shared.add.amino.acid.profile.text"
+msgstr "Ajouter un profil d'acide aminé"
+
+msgid "shared.edit.amino.acid.profile.text"
+msgstr "Modifier un profil d'acide aminé"
+
+msgid "shared.onishi.type.text"
+msgstr "Type Onishi"
+
+msgid "shared.mosaic.text"
+msgstr "Mosaïque"
+
+msgid "shared.amino.acid.profile.text"
+msgstr "Profil d'acide aminé"
+
+msgid "adding.amino.acid.profile.error.text"
+msgstr "Une erreur interne s'est produite en ajoutant le profil d'acide aminé. Veuillez essayer de nouveau."
+
+msgid "editing.amino.acid.profile.error.text"
+msgstr "Le profil d'acide aminé que vous modifiez est introuvable. Il est possible que le profil d'acide aminé ait été enlevé."
+
+msgid "deleting.amino.acid.profile.error.text"
+msgstr "Le profil d'acide aminé que vous modifiez est introuvable. Il est possible que le profil d'acide aminé ait été enlevé."
+
+msgid "deleting.amino.acid.profile.invalid.id.error.text"
+msgstr "ID de profil d'acide aminé invalide."
+
+msgid "amino.acid.profile.add.success.text"
+msgstr "Ajout du profil d'acide aminé avec Onishi %1 réussi!"
+
+msgid "amino.acid.profile.edit.success.text"
+msgstr "Modification du profil d'acide aminé avec Onishi %1 réussie!"
+
+msgid "amino.acid.profile.delete.success.text"
+msgstr "Suppression du profil d'acide aminé réussie!"
+
+msgid "add.amino.acid.profile.text"
+msgstr "Ajouter un profil d'acide aminé"
+
+msgid "delete.amino.acid.profile.text"
+msgstr "Supprimer un profil d'acide aminé"
+
+msgid "analyze.sequence.text"
+msgstr "Analyser la séquence"
+
+msgid "amino.acid.profile.id.not.found.error"
+msgstr "Profil d'acide aminé %1 introuvable. Veuillez sélectionner un profil d'acide aminé différent."
+
+msgid "modal.confirm.error.1022"
+msgstr "Aucun allèle %(loci_name)s n'existe actuellement!"
+
+msgid "complete.protein.sequences.text"
+msgstr "Terminer les séquences de protéines"
+
+msgid "dna.sequences.text"
+msgstr "Séquence d'ADN"
+
+msgid "wild.type.text"
+msgstr "Type sauvage"
+
+msgid "user.sequence.text"
+msgstr "Séquence d'utilisateur"
+
+msgid "difference.text"
+msgstr "Différence"
+
+msgid "sequence.analysis.text"
+msgstr "Analyse de la séquence"
+
+msgid "error.no.onishi.sequences.returned.invalid.penA.sequence"
+msgstr "Aucune séquence Onishi n'a été obtenue."
+
+msgid "shared.non.mosaic.text"
+msgstr "Non mosaïque"
+
+msgid "possible.penA.type.text"
+msgstr "Type penA possible"
+
+msgid "amino.acid.profile.not.exist.text"
+msgstr "Le profil d'acide aminé n'existe pas. Veuillez l'ajouter ci-dessous."
+
+msgid "shared.manage.amino.acids.text"
+msgstr "Gérer les acides aminés"
+
+msgid "shared.add.amino.acid.text"
+msgstr "Ajouter un acide aminé"
+
+msgid "shared.amino.acid.text"
+msgstr "Acide aminé"
+
+msgid "shared.position.text"
+msgstr "Position"
+
+msgid "shared.edit.amino.acid.text"
+msgstr "Modifier un acide aminé"
+
+msgid "amino.acid.add.success.text"
+msgstr "Ajout de l'acide %1 à la position %2 réussi!"
+
+msgid "amino.acid.edit.success.text"
+msgstr "Modification de l'acide %1 à la position %2 réussie!"
+
+msgid "amino.acid.delete.success.text"
+msgstr "Suppression de l'acide %1 à la position %2 réussie!"
+
+msgid "adding.amino.acid.error.text"
+msgstr "Une erreur interne s'est produite en ajoutant l'acide aminé. Veuillez essayer de nouveau."
+
+msgid "editing.amino.acid.error.text"
+msgstr "L'acide aminé que vous modifiez est introuvable. Il est possible que le profil d'acide aminé ait été enlevé."
+
+msgid "deleting.amino.acid.error.text"
+msgstr "L'acide aminé que vous modifiez est introuvable. Il est possible que le profil d'acide aminé ait été enlevé."
+
+msgid "deleting.amino.acid.invalid.id.error.text"
+msgstr "ID d'acide aminé invalide."
+
+msgid "penA.profile.text"
+msgstr "Profil penA"
+
+msgid "penA.type.text"
+msgstr "Type penA"
+
+msgid "shared.curator.profile.query.text"
+msgstr "Recherche de profil de conservateur"
+
+msgid "curator.profile.query.instructions.msg"
+msgstr "<strong>Remarque:</strong> Entrer chaque type d'allèle sur une nouvelle ligne. Vous devriez avoir un total de 7 lignes (une pour chaque locus). Aucune ligne d'en-tête requise."
+
+msgid "modal.confirm.error.2018"
+msgstr "Entrée de recherche de profil invalide. Veuillez vous assurer que chaque type d'allèle se trouve sur sa propre ligne. Vous devriez avoir un total de 7 lignes (une pour chaque locus). Aucune ligne d'en-tête ne doit être incluse."
+
+msgid "data.content.curator.profile.query"
+msgstr "Recherche de profil pour les conservateurs"
+
+msgid "shared.amr.markers.text"
+msgstr "Marqueurs de RAM"
+
+msgid "modal.confirm.error.2002"
+msgstr "Veuillez entrer un profil différent. Ce profil existe déjà dans la base de données."
+
+msgid "shared.view.profile.submission.text"
+msgstr "Afficher la soumission du profil"
+
+msgid "shared.profile.submission.report.text"
+msgstr "Rapport de soumission du profil"
+
+msgid "onishi.text"
+msgstr "Onishi"

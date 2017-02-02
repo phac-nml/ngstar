@@ -1,0 +1,290 @@
+<nav class="breadcrumbs" property="breadcrumb">
+	<div class="container">
+		<div class="row">
+			<ol>
+				<li><a href="[% c.uri_for(c.controller("Allele").action_for("form")) %]">[% c.loc("home.page.name") | html %]</a></li>
+				<li><a href="[% c.uri_for(c.controller("Allele").action_for("view_loci_alleles")) %]">[% c.loc("shared.view.loci.alleles.text") | html %]</a></li>
+				<li><a class="disabled" tabindex="-1" href="#">[% c.loc("shared.list.alleles.text") | html %]</a></li>
+			</ol>
+		</div>
+	</div>
+</nav>
+
+<main role="main" property="mainContentOfPage" class="container fade in">
+
+
+[% USE Math %]
+[% USE Format %]
+
+[% is_integer_type = 0 %]
+[% FOREACH loci_in_list IN loci_int_type_set %]
+	[% IF loci_in_list.key == loci_name %]
+    		[% is_integer_type = 1 %]
+	[% END %]
+[% END %]
+
+<h1 id="wb-cont">[% c.loc("shared.allele.list.text") | html %] [% IF error != 1005 %] - [% loci_name | html %] [% END %]</h1>
+
+
+[% IF add_notification || batch_add_notification || edit_notification || delete_notification ||   error == 1005  %]
+    <section id="allele_list_alert" class="alert alert-success">
+        [% IF add_notification %]
+            <strong>[% c.loc("allele.submitted.success.msg") %]</strong>
+        [% ELSIF batch_add_notification %]
+			<strong>[% c.loc("batch.alleles.submitted.success.msg") %]</strong>
+		[% ELSIF edit_notification %]
+			[% IF is_integer_type != 1 %]
+				<strong>[% c.loc("allele.edited.success.msg", allele_type ) %]</strong>
+		    [% ELSE %]
+				<strong>[% c.loc("allele.edited.success.msg", Math.int(allele_type)) %]</strong>
+		    [% END %]
+		[% ELSIF delete_notification %]
+			<strong>[% c.loc("allele.deleted.success.msg") %]</strong>
+		[% END %]
+
+		[% IF ( add_notification || batch_add_notification || edit_notification || delete_notification ) &&  error == 1005 %]
+			<br><br>
+		[% END %]
+
+		[% IF error == 1005 %]
+				<strong>[% c.loc("loci.not.exist.msg", loci_name) %]</strong>
+		[% END %]
+	</section>
+[% END %]
+
+[% IF error == 1015 %]
+	<section id="allele_list_alert" class="alert alert-info">
+		<strong>[% c.loc("no.loci.alleles.currently.exist.msg", loci_name) %]</strong>
+	</section>
+[% END %]
+
+
+
+
+
+<div id="type_list_options">
+
+
+		[% IF  error != 1005 AND error != 1015 AND is_invalid != 1 %]
+
+			[% IF not c.check_any_user_role('user','admin') %]
+				<button type="button" class="btn btn-info" onClick="NGSTAR.load_allele_details('[% c.uri_for(c.controller("Allele").action_for("details")) %]');" name="option" value="details" >
+	            	<span class="glyphicon glyphicon-align-left"></span> [% c.loc("shared.details.text") | html %]
+	        	</button>
+			[% END %]
+			[% IF c.user_exists() and c.check_any_user_role('user', 'admin') %]
+		        <button type="button" class="btn btn-info" onClick="NGSTAR.load_allele_details('[% c.uri_for(c.controller("Allele").action_for("edit")) %]');" name="option" value="edit" >
+		            <span class="glyphicon glyphicon-edit"></span> [% c.loc("shared.edit.text") | html %]
+		        </button>
+		        <button type="button" id="delete-allele" name="option" value="delete" class="btn btn-danger" onClick="NGSTAR.deleteAlleleConfirm();">
+		            <span class="glyphicon glyphicon-remove"></span> [% c.loc("shared.delete.text") | html %]
+		        </button>
+			[% END %]
+
+            <a class="btn btn-primary" href="[% c.uri_for(c.controller('Allele').action_for('download_loci_process'), loci_name) %]" >
+                <span class="glyphicon glyphicon-save"></span> [% c.loc("download.alleles.text") | html %]
+            </a>
+
+            <a class="btn btn-primary" href="[% c.uri_for(c.controller('Allele').action_for('download_metadata_process'), loci_name) %]">
+                <span class="glyphicon glyphicon-save"></span> [% c.loc("download.allele.metadata.text") | html %]
+            </a>
+
+		[% END %]
+
+
+		[% IF c.user_exists() and c.check_any_user_role('user', 'admin') AND is_invalid != 1 %]
+	        <a class="btn btn-success" role="button" href="[% c.uri_for(c.controller('Allele').action_for('batch_add_allele'), loci_name) %]"  style="border:none;">
+	            <span class="glyphicon glyphicon-plus"></span> [% c.loc("shared.batch.add.alleles.text") | html %]
+	        </a>
+	        <a class="btn btn-success" role="button" href="[% c.uri_for(c.controller('Allele').action_for('add_allele'), loci_name) %]" style="border:none;">
+	            <span class="glyphicon glyphicon-plus"></span> [% c.loc("shared.add.allele.text") | html %]
+	        </a>
+	   	[% END %]
+
+		[% IF !c.user_exists() %]
+
+			<div class="btn-group pull-right">
+				[% IF is_invalid != 1 %]
+					<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false" name="option" value="download" >
+						[% loci_name | html %] <span class="caret"></span>
+					</button>
+				[% ELSE %]
+					<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false" name="option" value="download" >
+						[% c.loc("shared.select.text") | html %] <span class="caret"></span>
+					</button>
+				[% END %]
+				<ul class="dropdown-menu" role="menu">
+					[% FOREACH loci_name IN loci_name_list %]
+						<li><a href="[% c.uri_for(c.controller('Allele').action_for('list_loci_alleles'), loci_name) %]"  >[% loci_name | html %]</a></li>
+					[% END %]
+				</ul>
+			</div>
+
+		[% END %]
+
+	</div>
+
+	[% IF c.user_exists() %]
+
+
+		<div class="loci-selector-btn-group pull-right">
+			<div class="btn-group">
+				[% IF is_invalid != 1 %]
+					<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false" name="option" value="download" >
+						[% loci_name | html %] <span class="caret"></span>
+					</button>
+				[% ELSE %]
+					<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false" name="option" value="download" >
+						[% c.loc("shared.select.text") | html %] <span class="caret"></span>
+					</button>
+				[% END %]
+				<ul class="dropdown-menu" role="menu">
+					[% FOREACH loci_name IN loci_name_list %]
+						<li><a href="[% c.uri_for(c.controller('Allele').action_for('list_loci_alleles'), loci_name) %]"  >[% loci_name | html %]</a></li>
+					[% END %]
+				</ul>
+			</div>
+		</div>
+
+	[% END %]
+
+		<table id="type_list" class="table table-bordered hidden fade" >
+			<thead>
+				<tr>
+	        		<th class="col-sm-2" scope="col">[% c.loc("shared.allele.type.text") | html %]<i class="glyphicon"></i></th>
+	            	<th class="col-sm-1" scope="col">[% c.loc("shared.locus.text") | html %]<i class="glyphicon"></i></th>
+		            <th class="col-sm-1" scope="col">[% c.loc("sequence.length.text") | html %]<i class="glyphicon"></i></th>
+		            <th class="col-sm-3" scope="col">[% c.loc("shared.curator.comments.text") | html %]<i class="glyphicon"></i></th>
+					<th class="col-sm-3" scope="col">[% c.loc("shared.amr.markers.text") | html %]<i class="glyphicon"></i></th>
+					<th class="col-sm-3" scope="col">[% c.loc("select.allele.for.options.text") | html %]<i class="glyphicon"></i></th>
+	        	</tr>
+	  		</thead>
+	        <tbody id="itemContainer">
+	            [% first_option = 1 %]
+				[% pos = 0 %]
+	        	[% current_metadata_count = 0 %]
+				[% FOREACH item IN allele_list %]
+					[% metadata = metadata_list.$current_metadata_count %]
+	                <tr>
+						[% IF loci_int_type_set.exists(item.loci_name) ? 0 : 1 %]
+							<td class="col-sm-2" data-sort="[% item.allele_type | html %]">[% item.allele_type | html %]
+							<span class="glyphicon glyphicon-info-sign"
+								rel="popover-dt"
+								tabindex="[% pos %]"
+								data-placement="right"
+								data-original-title="[% item.loci_name | html %] [% item.allele_type | html %]"
+								data-html="true"
+								data-content="
+									[% c.loc("shared.curator.comments.text")| html %]:
+									<br>
+									[% IF metadata.curator_comment != ""  %]
+										[% metadata.curator_comment | html %]
+									[% ELSE %]
+										[% c.loc("shared.none.text") %]
+									[% END %]
+									<br>
+									[% c.loc("shared.amr.markers.text")| html %]:
+									<br>
+									[% IF metadata.amr_markers != ""  %]
+										[% metadata.amr_markers | html %]
+									[% ELSE %]
+										[% c.loc("shared.none.text") %]
+									[% END %]
+								<br>
+								<br>
+								<a href='[% c.uri_for(c.controller("Allele").action_for("details"), item.loci_name, item.allele_type) %]'><span class='allele_type_popover_link' style='color:#008CBA; text-decoration:underline; font-weight:bold;' tabindex='[% pos %]'>[% c.loc("shared.details.text") | html %]</span></a>
+							">
+							</span>
+							</td>
+						[% ELSE %]
+							<td class="col-sm-2" data-sort="[% item.allele_type | html %]">[% Math.int(item.allele_type) | html %]
+							<span class="glyphicon glyphicon-info-sign"
+								rel="popover-dt"
+								tabindex="[% pos %]"
+								data-placement="right"
+								data-original-title="[% item.loci_name | html %] [% Math.int(item.allele_type) | html %]"
+								data-html="true"
+								data-content="
+									[% c.loc("shared.curator.comments.text")| html %]:
+									<br>
+									[% IF metadata.curator_comment != ""  %]
+										[% metadata.curator_comment | html %]
+									[% ELSE %]
+										[% c.loc("shared.none.text") %]
+									[% END %]
+									<br>
+									[% c.loc("shared.amr.markers.text")| html %]:
+									<br>
+									[% IF metadata.amr_markers != ""  %]
+										[% metadata.amr_markers | html %]
+									[% ELSE %]
+										[% c.loc("shared.none.text") %]
+									[% END %]
+								<br>
+                                <br>
+                                <a href='[% c.uri_for(c.controller("Allele").action_for("details"), item.loci_name, Math.int(item.allele_type)) %]'><span class='allele_type_popover_link' style='color:#008CBA; text-decoration:underline; font-weight:bold;' tabindex='[% pos %]'>[% c.loc("shared.details.text") | html %]</span></a>
+							">
+							</span>
+							</td>
+						[% END %]
+
+						<td class="col-sm-1">[% item.loci_name | html %]</td>
+	                    <td class="col-sm-1">[% item.allele_sequence_length| html %]</td>
+						<td class="col-sm-3">
+							<p rel="popover-dt"
+								tabindex="0"
+								data-placement="bottom"
+								data-original-title="[% c.loc("shared.curator.comments.text") | html %]"
+								data-html="true"
+								data-content="[% IF metadata.curator_comment != ""  %][% metadata.curator_comment | html %][% ELSE %][% c.loc("shared.none.text") %][% END %]">
+									[% IF metadata.curator_comment != ""  %][% FILTER truncate(30, '&hellip;') %][% metadata.curator_comment | html %][% END %][% ELSE %][% c.loc("shared.none.text") | html %][% END %]
+							</p>
+						</td>
+						<td class="col-sm-3">
+							[% IF metadata.amr_markers != ""  %]
+								[% metadata.amr_markers | html %]
+							[% ELSE %]
+								[% c.loc("shared.none.text") | html %]
+							[% END %]
+						</td>
+
+				    	<td class="col-sm-3">
+		                    [% IF has_allele_type %]
+		                        [% IF item.allele_type == allele_type %]
+
+									<label for="allele_option" class="obscure">[% c.loc("select.allele.for.options.text") | html %]</label>
+		                            <input type="radio" id="[% item.loci_name %][% item.allele_type %]" checked="checked" name="allele_option" value="[% item.loci_name | html %]:[% item.allele_type | html %]" />
+		                        [% ELSE %]
+									<label for="allele_option" class="obscure">[% c.loc("select.allele.for.options.text") | html %]</label>
+		                            <input type="radio" id="[% item.loci_name %][% item.allele_type %]" name="allele_option" value="[% item.loci_name | html %]:[% item.allele_type | html %]" />
+		                        [% END %]
+		                    [% ELSE %]
+		                        [% IF first_option %]
+									<label for="allele_option" class="obscure">[% c.loc("select.allele.for.options.text") | html %]</label>
+		                            <input type="radio" id="[% item.loci_name %][% item.allele_type %]" checked="checked" name="allele_option" value="[% item.loci_name | html %]:[% item.allele_type | html %]" />
+		                            [% first_option = 0 %]
+		                        [% ELSE %]
+									<label for="allele_option" class="obscure">[% c.loc("select.allele.for.options.text") | html %]</label>
+		                            <input type="radio" id="[% item.loci_name %][% item.allele_type %]" name="allele_option" value="[% item.loci_name | html %]:[% item.allele_type | html %]" />
+
+		                        [% END %]
+		                    [% END %]
+						</td>
+	                </tr>
+					[% pos = pos + 1 %]
+					[% current_metadata_count = current_metadata_count + 1 %]
+				[% END %]
+	        </tbody>
+	    </table>
+
+	<!-- This holder is filled in with a pagination -->
+	<div class="holder"></div>
+	<br>
+
+	<br>
+</div>
+
+
+<button type="button" class="btn btn-primary bkbtn" onClick="history.go(-1);return true;"><span class="glyphicon glyphicon-arrow-left"></span> [% c.loc("shared.back.btn.text") | html %]</button>
+
+</main>

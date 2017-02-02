@@ -1,0 +1,7 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/DAL-Dao.t
+lib/DAL/Dao.pm
+lib/DAL/DaoStub.pm

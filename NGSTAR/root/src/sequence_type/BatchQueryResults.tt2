@@ -1,0 +1,111 @@
+<nav class="breadcrumbs" property="breadcrumb">
+	<div class="container">
+		<div class="row">
+			<ol>
+				<li><a href="[% c.uri_for(c.controller("Allele").action_for("form")) %]">[% c.loc("home.page.name") | html %]</a></li>
+                <li><a href="[% c.uri_for(c.controller("SequenceType").action_for("batch_profile_query")) %]">[% c.loc("shared.batch.profile.query.text") | html %]</a></li>
+				<li><a class="disabled" tabindex="-1" href="#">[% c.loc("shared.batch.profile.query.results.text") | html %]</a></li>
+			</ol>
+		</div>
+	</div>
+</nav>
+
+<main role="main" property="mainContentOfPage" class="container fade in">
+
+    [% USE Math %]
+
+    <h1 id="wb-cont">[% c.loc("shared.batch.profile.query.results.text") | html %]</h1>
+
+    <br>
+
+	[% csv_header = c.loc("shared.id.text") _ "," _ "penA" _ "," _ "mtrR"  _ "," _ "porB" _ "," _ "ponA" _ "," _ "gyrA" _ "," _ "parC" _ "," _ "23S" _ "," _ c.loc("shared.profile.type.text") _ "," _ c.loc("shared.curator.comments.text") %]
+	[% tsv_header = c.loc("shared.id.text") _ "\t" _ "penA" _ "\t" _ "mtrR"  _ "\t" _ "porB" _ "\t" _ "ponA" _ "\t" _ "gyrA" _ "\t" _ "parC" _ "\t" _ "23S" _ "\t" _ c.loc("shared.profile.type.text") _ "\t" _ c.loc("shared.curator.comments.text") %]
+	[% csv_str = "" %]
+	[% tsv_str = "" %]
+
+	[% FOREACH item IN batch_seq_type_results_list %]
+		[% csv_str = csv_str _ item.query_id  %]
+		[% tsv_str = tsv_str _ item.query_id  %]
+		[% FOR name IN name_list %]
+			[% csv_str = csv_str _ "," _ item.$name %]
+			[% tsv_str = tsv_str _ "\t" _ item.$name %]
+		[% END %]
+		[% csv_str = csv_str _ "," %]
+		[% tsv_str = tsv_str _ "\t" %]
+		[% csv_str = csv_str _ item.ngstar_type %]
+		[% tsv_str = tsv_str _ item.ngstar_type %]
+		[% csv_str = csv_str _ "," %]
+		[% tsv_str = tsv_str _ "\t" %]
+		[% csv_str = csv_str _ item.curator_comment  _ "\n"%]
+		[% tsv_str = tsv_str _ item.curator_comment  _ "\n"%]
+	[% END %]
+
+	[% csv_str = csv_header _ "\n" _ csv_str %]
+	[% tsv_str = tsv_header _ "\n" _ tsv_str %]
+
+    <form action ="[% c.uri_for(c.controller('SequenceType').action_for('export_profile_query_results')) %]" method="post">
+        <div class="pull-right">
+            <button type = "submit" name="csv_str" value="[% csv_str %]" class="btn btn-primary"><span class="glyphicon glyphicon-save"></span> [% c.loc("shared.download.csv.text") %]</button>
+            <button type = "submit" name="tsv_str" value ="[% tsv_str %]" class="btn btn-primary"><span class="glyphicon glyphicon-save"></span> [% c.loc("shared.download.tsv.text") %]</button>
+	    </div>
+    </form>
+
+	<table class="table hidden fade" id="batch_st_query_table">
+        <thead class="table-header">
+            <tr>
+                <th class="col-sm-1" scope="col">[% c.loc("shared.id.text") | html %]</th>
+                    [% FOR name IN name_list %]
+                        <th class="col-sm-1" scope="col">[% name | html %]</th>
+                    [% END %]
+                <th class="col-sm-1" scope="col">[% c.loc("shared.profile.type.text") | html %]</th>
+                <th class="col-sm-3" scope="col">[% c.loc("shared.curator.comments.text") | html %]</th>
+            </tr>
+        </thead>
+        <tbody id="itemContainer">
+            [% FOREACH item IN batch_seq_type_results_list %]
+
+                [% IF item.found == 1 %]
+                    <tr class="success">
+                [% ELSE %]
+                    <tr class="danger">
+                [% END %]
+                    <td><p rel="popover-dt"
+								tabindex="0"
+								data-placement="right"
+								data-original-title="[% c.loc("profile.query.details.text") | html %]"
+								data-html="true"
+								data-content="[% c.loc("shared.id.text") | html %]: [% item.query_id %]<br>
+                                                [% FOR name IN name_list %]
+                                                    [% name | html %]: [% item.$name %]<br>
+                                                [% END %]
+                                                [% c.loc("shared.profile.type.text") | html %]: [% item.ngstar_type %]<br>
+                                                [% c.loc("shared.curator.comments.text") | html %]:<br>[% item.curator_comment %]<br>
+												[% c.loc("shared.amr.markers.text") | html %]:<br>[% item.amr_markers %]">
+									<span style="font-weight:bold; text-decoration:underline !important;">[% item.query_id %]</span>
+							</p></td>
+                    [% FOR name IN name_list %]
+                        <td>[% item.$name %]</td>
+                    [% END %]
+                    <td>[% item.ngstar_type %]</td>
+                    <td><p rel="popover-dt"
+								tabindex="0"
+								data-placement="left"
+								data-original-title="[% c.loc("shared.curator.comments.text") | html %]"
+								data-html="true"
+								data-content="[% IF item.curator_comment != ""  %][% item.curator_comment | html %][% ELSE %][% c.loc("shared.none.text") %][% END %]">
+									[% IF item.curator_comment != ""  %][% FILTER truncate(65, '&hellip;') %][% item.curator_comment | html %][% END %][% END %]
+							</p></td>
+                </tr>
+            [% END %]
+        </tbody>
+    </table>
+
+    <div class="holder"></div>
+
+    <br>
+
+    <button type="button" class="btn btn-primary bkbtn" onClick="history.go(-1);return true;">
+        <span class="glyphicon glyphicon-arrow-left"></span> [% c.loc("shared.back.btn.text") | html %]
+    </button>
+
+</main>

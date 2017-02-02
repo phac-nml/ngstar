@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>
+<html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8"/>
+  <title>NG-STAR</title>
+  <!-- META DATA -->
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta name="description" content=""/>
+
+  <!--[if gte IE 9 | !IE ]><!-->
+  <link href="/static/GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon"/>
+  <link rel="stylesheet" href="/static/GCWeb/css/theme.min.css"/>
+  <!--<![endif]-->
+  <link rel="stylesheet" href="/static/GCWeb/css/messages.min.css"/>
+
+  <!--[if lt IE 9]>
+  <link href="/static/GCWeb/assets/favicon.ico" rel="shortcut icon"/>
+  <link rel="stylesheet" href="/static/GCWeb/css/messages-ie.min.css"/>
+  <link rel="stylesheet" href="/static/GCWeb/css/ie8-theme.min.css"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+  <script src="/static/wet-boew/js/ie8-wet-boew.min.js"></script>
+  <![endif]-->
+
+  <noscript>
+    <link rel="stylesheet" href="/static/wet-boew/css/noscript.min.css"/>
+  </noscript>
+
+</head>
+<body class="splash" vocab="http://schema.org/" typeof="WebPage">
+  <!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
+  <noscript><iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-TLGQ9K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer1'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,
+f);})(window,document,'script','dataLayer1','GTM-TLGQ9K');</script>
+  <!-- End Google Tag Manager -->
+
+  <div id="bg"><img id="splash-image" src="/static/GCWeb/assets/sp-bg-2.jpg" alt=""></div>
+  <main role="main" property="mainContentOfPage">
+      <div class="sp-hb">
+          <div class="sp-bx col-xs-12">
+              <h1 property="name" class="wb-inv">Canada.ca</h1>
+              <div class="row">
+                  <div class="col-xs-11 col-md-8">
+                      <object type="image/svg+xml" tabindex="-1" role="img" data="/static/assets/sig-spl.svg" width="283" aria-label="Government of Canada / Gouvernement du Canada"></object>
+                  </div>
+              </div>
+              <div class="row">
+                  <section class="col-xs-6 text-right">
+                      <h2 class="wb-inv">Government of Canada</h2>
+                      <p><a href="[% c.uri_for(c.controller('Root').action_for('index'), 'en') %]" class="btn btn-primary" id="btn-en">English</a></p>
+                  </section>
+                  <section class="col-xs-6" lang="fr">
+                      <h2 class="wb-inv">Gouvernement du Canada</h2>
+                      <p><a href="[% c.uri_for(c.controller('Root').action_for('index'), 'fr') %]" class="btn btn-primary" id="btn-fr">Français</a></p>
+                  </section>
+              </div>
+          </div>
+          <div class="sp-bx-bt col-xs-12">
+              <div class="row">
+                  <div class="col-xs-7 col-md-8">
+                      <a href="https://www.canada.ca/en/transparency/terms.html" class="sp-lk">Terms & conditions</a> <span class="glyphicon glyphicon-asterisk"></span> <a href="https://www.canada.ca/fr/transparence/avis.html" class="sp-lk" lang="fr">Avis</a>
+                  </div>
+                  <div class="col-xs-5 col-md-4 text-right mrgn-bttm-md">
+                      <object type="image/svg+xml" tabindex="-1" role="img" data="/static/assets/wmms-spl.svg" width="127" aria-label="Symbol of the Government of Canada / Symbole du gouvernement du Canada"></object>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </main>
+	<script>
+    var splashImagePaths = [];
+    var numImages = 0;
+    var selectedImageIndex = 5;
+
+
+                splashImagePaths.push('//www.canada.ca/content/dam/canada/splash/sp-bg-1.jpg');
+                numImages++;
+
+                splashImagePaths.push('//www.canada.ca/content/dam/canada/splash/sp-bg-10.jpg');
+                numImages++;
+
+                splashImagePaths.push('//www.canada.ca/content/dam/canada/splash/sp-bg-11.jpg');
+                numImages++;
+
+                splashImagePaths.push('//www.canada.ca/content/dam/canada/splash/sp-bg-12.jpg');
+                numImages++;
+
+                splashImagePaths.push('//www.canada.ca/content/dam/canada/splash/sp-bg-2.jpg');
+                numImages++;
+
+                splashImagePaths.push('//www.canada.ca/content/dam/canada/splash/sp-bg-3.jpg');
+                numImages++;
+
+                splashImagePaths.push('//www.canada.ca/content/dam/canada/splash/sp-bg-4.jpg');
+                numImages++;
+
+                splashImagePaths.push('//www.canada.ca/content/dam/canada/splash/sp-bg-5.jpg');
+                numImages++;
+
+                splashImagePaths.push('//www.canada.ca/content/dam/canada/splash/sp-bg-6.jpg');
+                numImages++;
+
+                splashImagePaths.push('//www.canada.ca/content/dam/canada/splash/sp-bg-7.jpg');
+                numImages++;
+
+                splashImagePaths.push('//www.canada.ca/content/dam/canada/splash/sp-bg-8.jpg');
+                numImages++;
+
+                splashImagePaths.push('//www.canada.ca/content/dam/canada/splash/sp-bg-9.jpg');
+                numImages++;
+
+
+    document.getElementById("splash-image").src = splashImagePaths[Math.floor((Math.random() * numImages))];
+
+	</script>
+
+
+	<!--[if gte IE 9 | !IE ]><!-->
+
+
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="/static/wet-boew/js/wet-boew.min.js"></script>
+	<!--<![endif]-->
+
+	<!--[if lt IE 9]>
+					<script src="/static/wet-boew/js/ie8-wet-boew2.min.js"></script>
+	<![endif]-->
+
+	<script src="/static/GCWeb/js/theme.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<nav class="breadcrumbs" property="breadcrumb">
+	<div class="container">
+		<div class="row">
+			<ol>
+				<li><a href="[% c.uri_for(c.controller("Allele").action_for("form")) %]">[% c.loc("home.page.name") | html %]</a></li>
+			</ol>
+		</div>
+	</div>
+</nav>
+
+<main role="main" property="mainContentOfPage" class="container fade in">
+
+	<h1 id="wb-cont">[% c.loc("shared.allele.query.text") | html %]</h1>
+	<div>
+		<div class="pull-right">
+			<div class="loader" style="display:none;"></div>
+			<a href="[% c.uri_for(c.controller('Allele').action_for('batch_allele_query')) %]" class="btn btn-default" ><span class="glyphicon glyphicon-list-alt"></span> [% c.loc("shared.batch.allele.query.text") | html %]</a>
+		</div>
+		<form class="form-horizontal" method="post" id="allele_query_form">
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+
+					<h2>[% c.loc("dna.sequences.text") | html %]</h2>
+
+				</div>
+			</div>
+			[% counter = 0 %]
+			[% FOREACH name IN loci_name_list %]
+				[% field_name = 'seq' _ counter %]
+				[% form.field(field_name).render %]
+				[% counter = counter + 1 %]
+			[% END %]
+
+			[% form.field('csrf').render %]
+
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10" id="action_buttons">
+					<button type="submit" class="btn btn-primary" name="submit_name" value="allele" >[% c.loc("shared.submit.text") | html %]</button>
+					<button type="button" onclick="clearAlleleQueryForm(); return false;" class="btn btn-info" >[% c.loc("shared.clear.text") | html %]</button>
+					<!-- <a href="[% c.uri_for(c.controller('Allele').action_for('multiple_allele_query')) %]" class="btn btn-success" >[% c.loc("alleles.multifasta.whole.genome.text") | html %]</a> -->
+				</div>
+			</div>
+		</form>
+	</div>
+
+</main>

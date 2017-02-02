@@ -1,0 +1,34 @@
+<nav class="breadcrumbs" property="breadcrumb">
+	<div class="container">
+		<div class="row">
+			<ol>
+				<li><a href="[% c.uri_for(c.controller("Allele").action_for("form")) %]">[% c.loc("home.page.name") | html %]</a></li>
+				<li><a class="disabled" tabindex="-1" href="#">[% c.loc("shared.view.loci.alleles.text") | html %]</a></li>
+			</ol>
+		</div>
+	</div>
+</nav>
+
+<main role="main" property="mainContentOfPage" class="container fade in">
+
+<h1 id="wb-cont">[% c.loc("shared.select.loci.to.view.alleles.text") | html %]</h1>
+    <br>
+    <form id="view_loci_alleles" class="form-horizontal" action="[% c.uri_for(c.controller('Allele').action_for('view_loci_alleles_process')) %]">
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <p class="details_labels">[% c.loc("allele.view.loci") | html %]</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="loci_to_view_option" class="col-sm-2 control-label">[% c.loc("shared.loci.name.text") | html %]</label>
+            <div class="col-sm-4">
+                [% form.field('loci_to_view_option').render %]
+                </div>
+        </div>
+        <br>
+    </form>
+</div>
+
+<button type="button" class="btn btn-primary bkbtn" onClick="history.go(-1);return true;" ><span class="glyphicon glyphicon-arrow-left"></span> [% c.loc("shared.back.btn.text") | html %]</button>
+
+</main>

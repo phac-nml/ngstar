@@ -1,0 +1,50 @@
+<nav class="breadcrumbs" property="breadcrumb">
+	<div class="container">
+		<div class="row">
+			<ol>
+				<li><a href="[% c.uri_for(c.controller("Allele").action_for("form")) %]">[% c.loc("home.page.name") | html %]</a></li>
+				<li><a href="[% c.uri_for(c.controller("Curator").action_for("settings")) %]">[% c.loc("curator.tools.text") | html %]</a></li>
+				<li><a class="disabled" tabindex="-1" href="#">[% c.loc("shared.curator.profile.query.text") | html %]</a></li>
+			</ol>
+		</div>
+	</div>
+</nav>
+
+<main role="main" property="mainContentOfPage" class="container fade in">
+
+    <section class="alert alert-info">
+        [% c.loc("curator.profile.query.instructions.msg") %]
+    </section>
+
+
+    <h1 id="wb-cont">[% c.loc("shared.curator.profile.query.text") | html %]</h1>
+    <div>
+        <div class="pull-right">
+            <div class="loader" style="display:none;"></div>
+        </div>
+        <form enctype="multipart/form-data" class="form-horizontal" method="post" id="batch-profile-fasta-query">
+            <br>
+
+            [% form.field('curator_profiles').render %]
+
+
+            [% form.field('csrf').render %]
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary" id="submit">
+                        <span class="glyphicon glyphicon-save"></span>  [% c.loc("shared.submit.text") | html %]
+                    </button>
+                    <button type="button" id="reset" onclick="clearBatchProfileQueryForm(); return false;" class="btn btn-info">
+    			        <span class="glyphicon glyphicon-remove"></span> [% c.loc("shared.clear.text") | html %]
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+     <button type="button" class="btn btn-primary bkbtn" onClick="history.go(-1);return true;">
+          <span class="glyphicon glyphicon-arrow-left"></span> [% c.loc("shared.back.btn.text") | html %]
+     </button>
+
+ </main>

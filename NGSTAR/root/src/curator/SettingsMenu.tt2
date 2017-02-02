@@ -1,0 +1,89 @@
+<nav class="breadcrumbs" property="breadcrumb">
+	<div class="container">
+		<div class="row">
+			<ol>
+			<li><a href="[% c.uri_for(c.controller("Allele").action_for("form")) %]">[% c.loc("home.page.name") | html %]</a></li>
+				<li><a class="disabled" tabindex="-1" href="#">[% c.loc("curator.tools.text") | html %]</a></li>
+			</ol>
+		</div>
+	</div>
+</nav>
+
+<main role="main" property="mainContentOfPage" class="container fade in">
+
+	<h1 id="wb-cont">[% c.loc("curator.tools.text") | html %]</h1>
+	<div class="col-sm-12">
+		<div class ="col-sm-6">
+			<h2>[% c.loc("alleles.text") | html %]</h2>
+			<div class="list-group">
+
+			    <a id="popover-add-allele" class="list-group-item" data-animation="false" data-container="body" data-content="[% c.loc("data.content.add.new.allele") | html %]" data-placement="bottom" data-toggle="popover" data-trigger="hover focus" href="[% c.uri_for(c.controller('Allele').action_for('add_allele')) %]">
+			        <p class="listgroup-txt list-group-item-heading"><span class="glyphicon glyphicon-plus-sign"></span> [% c.loc("shared.add.new.allele.text") | html %]</p>
+			    </a>
+				<a id="popover-manage-amino-acid-profiles" class="list-group-item" data-animation="false" data-container="body" data-content="[% c.loc("shared.allele.query.text") | html %]" data-placement="bottom" data-toggle="popover" data-trigger="hover focus" href="[% c.uri_for(c.controller('Allele').action_for('form')) %]">
+					<p class="listgroup-txt list-group-item-heading"><span class="glyphicon glyphicon-list-alt"></span></span> [% c.loc("shared.allele.query.text") | html %]</p>
+				</a>
+			    <a id="popover-batch-add-allele" class="list-group-item" data-animation="false" data-container="body" data-content="[% c.loc("data.content.batch.add.alleles") | html %]" data-placement="bottom" data-toggle="popover" data-trigger="hover focus" href="[% c.uri_for(c.controller('Allele').action_for('batch_add_allele')) %]">
+			        <p class="listgroup-txt list-group-item-heading"><span class="glyphicon glyphicon-plus-sign"></span> [% c.loc("shared.batch.add.alleles.text") | html %]</p>
+			    </a>
+
+			    <a id="popover-batch-add-metadata" class="list-group-item" data-animation="false" data-container="body" data-content="[% c.loc("data.content.batch.add.allele.metadata") | html %]" data-placement="bottom" data-toggle="popover" data-trigger="hover focus" href="[% c.uri_for(c.controller('Allele').action_for('batch_add_metadata')) %]">
+			        <p class="listgroup-txt list-group-item-heading"><span class="glyphicon glyphicon-plus-sign"></span> [% c.loc("shared.batch.add.allele.metadata.text") | html %]</p>
+			    </a>
+				<a id="popover-manage-amino-acid-profiles" class="list-group-item" data-animation="false" data-container="body" data-content="[% c.loc("shared.batch.allele.query.text") | html %]" data-placement="bottom" data-toggle="popover" data-trigger="hover focus" href="[% c.uri_for(c.controller('Allele').action_for('batch_allele_query')) %]">
+					<p class="listgroup-txt list-group-item-heading"><span class="glyphicon glyphicon-list-alt"></span></span> [% c.loc("shared.batch.allele.query.text") | html %]</p>
+				</a>
+				<a id="popover-manage-alleles" class="list-group-item" data-animation="false" data-container="body" data-content="[% c.loc("data.content.manage.alleles") | html %]" data-placement="bottom" data-toggle="popover" data-trigger="hover focus" href="[% c.uri_for(c.controller('Allele').action_for('view_loci_alleles')) %]">
+					<p class="listgroup-txt list-group-item-heading"><span class="glyphicon glyphicon-edit"></span> [% c.loc("manage.alleles.text") | html %]</p>
+				</a>
+			</div>
+
+			<h2>[% c.loc("profiles.text") | html %]</h2>
+			<div class="list-group">
+			    <a id="popover-add-profiles" class="list-group-item" data-animation="false" data-container="body" data-content="[% c.loc("data.content.add.new.profile") | html %]" data-placement="bottom" data-toggle="popover" data-trigger="hover focus" href="[% c.uri_for(c.controller('SequenceType').action_for('add_profile')) %]">
+			        <p class="listgroup-txt list-group-item-heading"><span class="glyphicon glyphicon-plus-sign"></span> [% c.loc("add.new.profile.text") | html %]</p>
+			    </a>
+			    <a id="popover-batch-add-profiles" class="list-group-item" data-animation="false" data-container="body" data-content="[% c.loc("data.content.batch.add.new.profiles") | html %]" data-placement="bottom" data-toggle="popover" data-trigger="hover focus" href="[% c.uri_for(c.controller('SequenceType').action_for('batch_add_profile')) %]">
+			        <p class="listgroup-txt list-group-item-heading"><span class="glyphicon glyphicon-plus-sign"></span> [% c.loc("batch.add.new.profiles.text") | html %]</p>
+			    </a>
+			    <a id="popover-batch-add-profile-metadata" class="list-group-item" data-animation="false" data-container="body" data-content="[% c.loc("data.content.batch.add.profile.metadata") | html %]" data-placement="bottom" data-toggle="popover" data-trigger="hover focus" href="[% c.uri_for(c.controller('SequenceType').action_for('batch_add_profile_metadata')) %]">
+			        <p class="listgroup-txt list-group-item-heading"><span class="glyphicon glyphicon-plus-sign"></span> [% c.loc("shared.batch.add.profile.metadata.text") | html %]</p>
+			    </a>
+				<a id="popover-batch-profile-query" class="list-group-item" data-animation="false" data-container="body" data-content="[% c.loc("shared.batch.profile.query.text") | html %]" data-placement="bottom" data-toggle="popover" data-trigger="hover focus" href="[% c.uri_for(c.controller('SequenceType').action_for('batch_profile_query')) %]">
+					<p class="listgroup-txt list-group-item-heading"><span class="glyphicon glyphicon-list-alt"></span></span> [% c.loc("shared.batch.profile.query.text") | html %]</p>
+				</a>
+				<a id="popover-curator-profile-query" class="list-group-item" data-animation="false" data-container="body" data-content="[% c.loc("data.content.curator.profile.query") | html %]" data-placement="bottom" data-toggle="popover" data-trigger="hover focus" href="[% c.uri_for(c.controller('SequenceType').action_for('curator_profile_query')) %]">
+					<p class="listgroup-txt list-group-item-heading"><span class="glyphicon glyphicon-list-alt"></span> [% c.loc("shared.curator.profile.query.text") | html %]</p>
+				</a>
+				<a id="popover-manage-profiles" class="list-group-item" data-animation="false" data-container="body" data-content="[% c.loc("data.content.manage.profiles") | html %]" data-placement="bottom" data-toggle="popover" data-trigger="hover focus" href="[% c.uri_for(c.controller('SequenceType').action_for('list_profiles')) %]">
+					<p class="listgroup-txt list-group-item-heading"><span class="glyphicon glyphicon-edit"></span> [% c.loc("manage.profiles.text") | html %]</p>
+				</a>
+				<a id="popover-profile-query" class="list-group-item" data-animation="false" data-container="body" data-content="[% c.loc("shared.profile.query.text") | html %]" data-placement="bottom" data-toggle="popover" data-trigger="hover focus" href="[% c.uri_for(c.controller('SequenceType').action_for('form')) %]">
+					<p class="listgroup-txt list-group-item-heading"><span class="glyphicon glyphicon-list-alt"></span></span> [% c.loc("shared.profile.query.text") | html %]</p>
+				</a>
+			</div>
+
+		</div>
+
+		<div class ="col-sm-6">
+			<h2>[% c.loc("onishi.text") | html %]</h2>
+			<div class="list-group">
+				<a id="popover-add-amino-acids" class="list-group-item" data-animation="false" data-container="body" data-content="[% c.loc("shared.add.amino.acid.text") | html %]" data-placement="bottom" data-toggle="popover" data-trigger="hover focus" href="[% c.uri_for(c.controller('Curator').action_for('add_amino_acid')) %]">
+					<p class="listgroup-txt list-group-item-heading"><span class="glyphicon glyphicon-plus-sign"></span></span> [% c.loc("shared.add.amino.acid.text") | html %]</p>
+				</a>
+				<a id="popover-add-amino-acid-profiles" class="list-group-item" data-animation="false" data-container="body" data-content="[% c.loc("shared.add.amino.acid.profile.text") | html %]" data-placement="bottom" data-toggle="popover" data-trigger="hover focus" href="[% c.uri_for(c.controller('Curator').action_for('add_amino_acid_profile')) %]">
+					<p class="listgroup-txt list-group-item-heading"><span class="glyphicon glyphicon-plus-sign"></span></span> [% c.loc("shared.add.amino.acid.profile.text") | html %]</p>
+				</a>
+				<a id="popover-manage-amino-acids" class="list-group-item" data-animation="false" data-container="body" data-content="[% c.loc("shared.manage.amino.acids.text") | html %]" data-placement="bottom" data-toggle="popover" data-trigger="hover focus" href="[% c.uri_for(c.controller('Curator').action_for('manage_amino_acids')) %]">
+					<p class="listgroup-txt list-group-item-heading"><span class="glyphicon glyphicon-edit"></span></span> [% c.loc("shared.manage.amino.acids.text") | html %]</p>
+				</a>
+				<a id="popover-manage-amino-acid-profiles" class="list-group-item" data-animation="false" data-container="body" data-content="[% c.loc("shared.manage.amino.acid.profiles.text") | html %]" data-placement="bottom" data-toggle="popover" data-trigger="hover focus" href="[% c.uri_for(c.controller('Curator').action_for('manage_amino_acid_profiles')) %]">
+					<p class="listgroup-txt list-group-item-heading"><span class="glyphicon glyphicon-edit"></span></span> [% c.loc("shared.manage.amino.acid.profiles.text") | html %]</p>
+				</a>
+			</div>
+		</div>
+
+	</div>
+	<button type="button" class="btn btn-primary bkbtn" onClick="history.go(-1);return true;"><span class="glyphicon glyphicon-arrow-left"></span> [% c.loc("shared.back.btn.text") | html %]</button>
+
+</main>

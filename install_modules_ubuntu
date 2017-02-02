@@ -1,0 +1,26 @@
+#!/bin/bash
+
+#Purpose:   Ubuntu installation only. Install the BusinessLogic and DAL modules to 
+#           /usr/local/share/perl5 which is an entry in @INC that stores standard perl modules.
+#Usage:     ./install_modules
+
+path=/usr/local/share/perl/5.18.2/
+folder_a=BusinessLogic
+folder_b=DAL
+local_folder_a=BusinessLogic/lib/BusinessLogic/
+local_folder_b=DAL/lib/DAL/
+
+#remove old modules
+if [ -d "$path$folder_a" ]; then
+    sudo rm -r "$path$folder_a"
+fi
+
+if [ -d "$path$folder_b" ]; then
+    sudo rm -r "$path$folder_b"
+fi
+
+#copy new modules
+sudo cp -r "$local_folder_a" "$path" 
+sudo cp -r "$local_folder_b" "$path" 
+
+echo "If you get an error you may need to update the path variable in this script. Otherwise, ignore this message."

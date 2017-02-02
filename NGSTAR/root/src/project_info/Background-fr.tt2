@@ -1,0 +1,78 @@
+<nav class="breadcrumbs" property="breadcrumb">
+	<div class="container">
+		<div class="row">
+			<ol>
+				<li><a href="[% c.uri_for(c.controller("Allele").action_for("form")) %]">[% c.loc("home.page.name") | html %]</a></li>
+				<li><a class="disabled" tabindex="-1" href="#">[% c.loc("about.ngstar.text") | html %]</a></li>
+			</ol>
+		</div>
+	</div>
+</nav>
+
+<main role="main" property="mainContentOfPage" class="container fade in">
+
+<h1 id="wb-cont">NG-STAR</h1>
+
+<div style="font-size:16px;">
+<br>
+<p>(<span class="bold underline-txt">N</span><span class="italic">eisseria <span class="bold underline-txt">g</span>onorrhoeae</span> <span class="bold underline-txt">S</span>ystème de <span class="bold underline-txt">T</span>ypage pour la résistance aux <span class="bold underline-txt">A</span>ntibiotiques <span class="bold underline-txt">R</span>echerche génétique): nouvel outil moléculaire de typage génomique des gènes de la résistance aux antimicrobiens pour le suivi de la dissémination mondiale des souches de N. gonorrhoeae.</p>
+
+
+<p><span class="italic">Neisseria gonorrhoeae</span> est en train d'acquérir une résistance à presque tous les antibiotiques actuellement offerts pour le traitement. Le site Web NG-STAR offre une méthode de classification normalisée de sept gènes bien caractérisés (<span class="italic">penA, mtrR, porB, ponA, gyrA, parC et</span> ARNr 23S) associés à la résistance de <span class="italic">N. gonorrhoeae</span> à trois classes d'antibiotiques (céphalosporines, macrolides et fluoroquinolones).</p>
+
+<p>Les séquences d'ADN uniques de chaque gène de résistance se verront attribuer un numéro d'allèle, et la combinaison des allèles des sept gènes produira un type NG-STAR. Une séquence de gène donnée sera recherchée dans la base de données, et les allèles, profils et commentaires du conservateur correspondants seront affichés avec les mutations d'intérêt mises en évidence.</p>
+
+<p>La base de données et l'application Web NG-STAR sont hébergées par le Laboratoire national de microbiologie de l'Agence de la santé publique du Canada <a href="mailto:[% curator_email %]" class="file-link bold underline-txt"><span style="font-weight:bold;">([% curator_email | html %])</span></a>. Les renseignements de base sur les souches (caractérisation, degré de résistance aux antimicrobiens, information géographique, etc.) sont disponibles pour tous les types d'allèles et tous les types NG-STAR.</p>
+
+<p>Le but de NG-STAR est de normaliser les gènes de résistance aux antimicrobiens et les souches de gonocoque qui, en combinaison avec les outils de caractérisation existants, permettront aux praticiens en santé publique partout dans le monde de communiquer dans un même « langage moléculaire », ce qui accélérera les interventions et permettra de mieux retracer les nouvelles souches de gonocoque résistantes aux antimicrobiens.</p>
+
+<br>
+
+<p class="para-headings"><strong>Gènes et amorces suggérées</strong></p>
+
+<p><span class="italic">penA</span> - Des altérations de la protéine PBP-2 (<span class="italic">penicillin binding-protein 2</span>), laquelle code des formes variantes de la principale protéine cible des céphalosporines, ont été répertoriées. L'une des principales altérations est l'acquisition de séquences en mosaïque de <span class="italic">penA</span> provenant d'autres espèces de <span class="italic">Neisseria</span> ainsi que des substitutions de divers acides aminés dans des allèles non en mosaïque. Dans le passé, la nomenclature employée pour le gène <span class="italic">penA</span> utilisait les types PBP2 I à XXXVIII basés sur les substitutions d'acides aminés plutôt que sur les différences dans les séquences de nucléotides. NG-STAR utilisera la nomenclature historique basée sur les acides aminés afin de nommer les allèles de <span class="italic">penA</span> et les identifiera aussi comme étant ou non en mosaïque. Ainsi, lorsqu'un nouveau profil d'acides animés sera détecté, un nombre entier séquentiel lui sera attribué, et si une nouvelle séquence d'ADN d'un profil d'acides aminés existant est détectée, un nombre décimal sera ajouté (par exemple, la 12e séquence d'ADN du type <span class="italic">penA</span> XXXIV pourrait recevoir le numéro d'allèle 34.12).</p>
+
+<p><span class="italic">mtrR</span> - Des mutations du promoteur et/ou de la séquence codante du gène répresseur causent une surexpression des pompes d'efflux MtrCDE (p. ex. délétion -35A dans le promoteur, mutation A39T ou G45D dans la région codante, ou présence de séquences apparentées à celles de <span class="italic">N. meningitidis</span>).</p>
+
+<p><span class="italic">porB1b</span> - Des mutations de ce gène (aussi connu sous le nom de déterminant de la résistance <span class="italic">penB</span>) qui altèrent les acides aminés G120 et A121 de la porine PorB1b de la paroi cellulaire entraînent une diminution de la perméabilité de la paroi et de la sensibilité aux antimicrobiens. Même si les mutations 120/121 ne s'appliquent qu'au gène <span class="italic">porB1b</span>, les séquences de <span class="italic">porB1a</span> seront aussi conservées.</p>
+<p><span class="italic">ponA</span> - Des mutations de <span class="italic">ponA</span> (protéine PBP1, <span class="italic">penicillin binding-protein 1</span>) ont été observées chez des souches de <span class="italic">N. gonorrhoeae</span> dont la CMI des céphalosporines était élevée, mais la mutation L421P ne s'est pas révélée causer une résistance dans les expériences de transformation.</p>
+<p><span class="italic">gyrA</span> - Des mutations de la sous-unité A de l'ADN gyrase (<span class="italic">gyrA</span>) confèrent à <span class="italic">N. gonorrhoeae</span> une résistance aux fluoroquinolones.</p>
+<p><span class="italic">parC</span> - Des mutations de la sous-unité ParC de la topoisomérase IV (<span class="italic">parC</span>) confèrent à <span class="italic">N. gonorrhoeae</span> une résistance aux fluoroquinolones.</p>
+<p>ARNr 23S - Des mutations dans le domaine V du centre peptidyl-transférase de l'ARNr 23S confèrent une résistance à l'azithromycine. La nomenclature relative aux mutations de l'ARNr 23S est basée sur la numérotation d'<span class="italic">E. coli</span>: A2059G et C2611T. Bien que le nombre d'allèles mutés soit corrélé à une augmentation de la résistance, une souche porteuse d'un allèle muté présente facilement et rapidement des mutations des quatre allèles. Par conséquent, l'outil de typage NG-STAR ne fait pas de distinction entre le nombre d'allèles mutés.</p>
+
+<p>Amorces suggérées pour l'amplification des gènes: <a href="../../static/pdf/tableau.pdf" class="file-link bold underline-txt" target="blank">[% c.loc("shared.website.primer.table.for.all.genes.text") | html %]</a></p>
+
+<br>
+
+<p class="para-headings"><strong>Fonctionnement de NG-STAR</strong></p>
+<p>L'utilisateur copie-colle les séquences de chaque gène dans les zones de texte (une pour chaque gène) qui s'affichent. D'autres options s'ajouteront, comme le téléversement de lots à partir d'un fichier FASTA unique, ou le téléversement de fichiers de séquences du génome entier. Les utilisateurs peuvent téléverser des séquences de longueur variable, et le système tentera de trouver chaque séquence dans une base de données de séquences de gènes de résistance. Si la séquence soumise ne représente qu'une partie de l'allèle, l'utilisateur se verra offrir une liste des possibles types d'allèles correspondants, et le système l'encouragera à soumettre une séquence d'ADN plus longue pour permettre une identification exacte de l'allèle. Si la séquence soumise est celle du génome entier, une correspondance s'affichera si elle est présente dans la banque. Chaque correspondance unique représente un allèle. La combinaison des numéros d'allèle qui s'affichent pour chaque séquence de gène correspond à un type NG-STAR spécifique qui est présenté à l'utilisateur, type qui devrait être associé à certaines caractéristiques de résistance aux antimicrobiens. Si une recherche donne plusieurs correspondances avec des allèles de la banque (parce que la séquence saisie était trop courte pour ne correspondre qu'à une seule séquence) ou si aucune correspondance n'est trouvée, aucun type NG-STAR ne sera attribué et le système expliquera pourquoi. Pour chaque correspondance d'allèle et de type NG-STAR, certaines caractéristiques générales et certains renseignements de base pourraient s'afficher sur cet allèle ou type NG-STAR particulier (p. ex. ponA1 présente une mutation L421P, résistance aux antimicrobiens, dates de déclaration, et information géographique au sujet d'une souche de référence représentative).</p>
+
+<p>Pour attribuer un nouveau type d'allèle à un gène donné, le système affiche automatiquement un message invitant l'utilisateur à aviser le conservateur de la base de données. L'utilisateur se voit demander de fournir : une séquence (fichier trace), ses coordonnées (courriel) et les renseignements de base disponibles sur la souche (date d'isolement, source, endroit, profil de sensibilité aux antimicrobiens, etc.). Le conservateur valide les renseignements soumis concernant la nouvelle séquence et met à jour la base de données en ligne.</p>
+
+	<br>
+
+	<p class="para-headings"><strong>Équipe</strong></p>
+
+	<ul>
+
+	<li>Irene Martin, Michael Mulvey, Walter Demczuk, Irish Medina, Sukhdeep Sidhu, Pam Sawatzky, Amrita Bharat, Gary Van Domselaar (Laboratoire national de microbiologie, Manitoba, Canada)</li>
+	<li>Vanessa G. Allen (Santé publique Ontario, Ontario, Canada)</li>
+	<li>Magnus Unemo (Centre collaborateur de l'OMS pour la gonorrhée et autres infections sexuellement transmissibles; Örebro University Hospital, Suède)</li>
+	<li>David A. Whiley (Centre for Clinical Research de l'Université du Queensland, Queensland, Australie)</li>
+	<li>Jo-Anne Dillon (Université de la Saskatchewan, Saskatchewan, Canada)</li>
+	<li>Michelle Cole (Public Health England, Angleterre, Royaume-Uni)</li>
+
+	</ul>
+
+	<br>
+
+	<p class="para-headings"><strong>Conservateur de NG-STAR</span>:</strong></p>
+	<p style="font-size:17px;">Walter Demczuk (Laboratoire national de microbiologie, Manitoba, Canada)</p>
+	<p class="para-headings"><strong>Courriel:</strong></p>
+	<p style="font-size:17px;"><a href="mailto:[% curator_email %]" class="file-link bold">[% curator_email | html %]</a></p>
+
+</div>
+
+<button type="button" class="btn btn-primary bkbtn" onClick="history.go(-1);return true;"><span class="glyphicon glyphicon-arrow-left"></span> [% c.loc("shared.back.btn.text") | html %]</button>
+
+</main>

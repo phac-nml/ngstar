@@ -1,0 +1,497 @@
+[% IF no_wrapper OR template.no_wrapper %]
+
+           [% content %]
+
+[% ELSE %]
+
+    <!DOCTYPE html>
+        [% IF c.session.lang.length == 2 %]
+            [% IF c.session.lang == "en" OR c.session.lang == "fr" %]
+                <!--[if lt IE 9]><html class="no-js lt-ie9" lang="[% c.session.lang %]" dir="ltr"><![endif]-->
+                <!--[if gt IE 8]><!--><html class="no-js" lang="[% c.session.lang %]" dir="ltr"><!--<![endif]-->
+            [% ELSE %]
+                <!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+                <!--[if gt IE 8]><!--><html class="no-js" lang="en" dir="ltr"><!--<![endif]-->
+            [% END %]
+        [% ELSE %]
+            <!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+            <!--[if gt IE 8]><!--><html class="no-js" lang="en" dir="ltr"><!--<![endif]-->
+        [% END %]
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+            <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+        	<title>[% c.loc(page_title) %] - NG-STAR</title>
+        	<meta content="width=device-width,initial-scale=1" name="viewport" />
+        	<!-- Meta data -->
+        	<meta name="description" content="" />
+        	<!-- Meta data-->
+
+
+            <!--[if gte IE 9 | !IE ]><!-->
+                <link href="/static/GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
+                <link rel="stylesheet" href="/static/GCWeb/css/theme.min.css" />
+            <!--<![endif]-->
+            <!--[if lt IE 9]>
+                <link href="/static/GCweb/assets/favicon.ico" rel="shortcut icon" />
+                <link rel="stylesheet" href="/static/GCWeb/css/ie8-theme.min.css" />
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                <script src="/static/wet-boew/js/ie8-wet-boew.min.js"></script>
+            <![endif]-->
+
+            <link rel="stylesheet" href="/static/GCWeb/css/theme.min.css">
+
+            <link rel="stylesheet" href="/static/select2/select2.min.css" />
+            <link rel="stylesheet" href="/static/datepicker/datetimepicker.min.css" />
+            <link rel="stylesheet" href="/static/NGSTAR/css/ngstar.css" />
+
+            <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.1/css/fixedColumns.dataTables.min.css" />
+
+
+        </head>
+
+        <body vocab="http://schema.org/" typeof="WebPage">
+
+            <ul id="wb-tphp" >
+                <li class="wb-slc"><a class="wb-sl" href="#wb-cont" tabindex="0">[% c.loc("skip.to.main.content") | html %]</a></li>
+            </ul>
+            <header role="banner">
+              <div id="wb-bnr" class="container">
+                <section id="wb-lng" class="visible-md visible-lg text-right">
+                [% IF c.session.lang == "fr" %]
+                  <h2 class="wb-inv">Sélection de la langue</h2>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <ul class="list-inline margin-bottom-none">
+                        <li><a lang="en" href="[% c.uri_for(c.controller('Root').action_for('index'), 'en') %]" tabindex="0">English</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                [% ELSE %]
+                    <h2 class="wb-inv">Language selection</h2>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <ul class="list-inline margin-bottom-none">
+                          <li><a lang="fr" href="[% c.uri_for(c.controller('Root').action_for('index'), 'fr') %]" tabindex="0">Français</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                [% END %]
+                </section>
+                <div class="row">
+                  <div class="brand col-xs-8 col-sm-9 col-md-6">
+                  [% IF c.session.lang.length == 2 %]
+                      [% IF c.session.lang == "en" OR c.session.lang == "fr" %]
+                          <object type="image/svg+xml" data="/static/GCWeb/assets/sig-blk-[% c.session.lang %].svg" tabindex="0" ></object>
+                      [% ELSE %]
+                          <object type="image/svg+xml" data="/static/GCWeb/assets/sig-blk-en.svg" tabindex="0" ></object>
+                      [% END %]
+                  [% ELSE %]
+                      <object type="image/svg+xml" data="/static/GCWeb/assets/sig-blk-en.svg" tabindex="0" ></object>
+                  [% END %]
+                    <span class="wb-inv"> [% c.loc("text.government.of.canada") | html %]</span>
+                  </div>
+                  <section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn">
+                    <h2>Menu</h2>
+                    <ul class="list-inline text-right chvrn">
+                       <li><a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk" role="button"><span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list"><span class="wb-inv">Menu</span></span></span></a></li>
+                    </ul>
+                    <div id="mb-pnl"></div>
+                  </section>
+                </div>
+              </div>
+            </header>
+
+            <div id="def-top" >
+        		<!-- Write closure fall-back static file -->
+        		<!-- /ROOT/app/cls/WET/gcweb/v4_0_18/static/top-en.html -->
+        		<!--#include virtual="/app/cls/WET/gcweb/v4_0_18/static/top-en.html" -->
+        	</div>
+
+
+            <div class="container">
+        		<div class="row">
+        			<div class="app-title">
+        				<a href="[% c.uri_for(c.controller("Allele").action_for("form"))  %]" tabindex="0">
+        					<span>[% c.loc("app.title") | html %]</span>
+        				</a>
+        			</div>
+        		</div>
+        	</div>
+
+
+            <nav id="wb-sm" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
+                <div class="pnl-strt container visible-md visible-lg nvbar">
+                    <div class="row">
+                        <ul class="list-inline menu main-menu" role="menubar">
+                            <li>
+                                <a href="#allele-sub-menu" tabindex="-1" class="item" >[% c.loc("alleles.text") | html %]</a>
+                                <ul class="sm list-unstyled" id="allele-sub-menu" role="menu" >
+                                    <li><a  href="[% c.uri_for(c.controller('Allele').action_for('view_loci_alleles')) %]" >
+                                        [% c.loc("alleles.text") | html %]
+                                    </a></li>
+                                    <li><a  href="[% c.uri_for(c.controller('Allele').action_for('form')) %]" >
+                                        [% c.loc("shared.allele.query.text") | html %]
+                                    </a></li>
+                                    <li><a  href="[% c.uri_for(c.controller('Allele').action_for('batch_allele_query')) %]" >
+                                        [% c.loc("shared.batch.allele.query.text") | html %]
+                                    </a></li>
+                                    <li><a  href="[% c.uri_for(c.controller('Allele').action_for('email_allele')) %]" >
+                                        [% c.loc("shared.email.allele.text") | html %]
+                                    </a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#profile-sub-menu" class="item">[% c.loc("profiles.text") | html %]</a>
+                                <ul class="sm list-unstyled" id="profile-sub-menu" role="menu">
+                                    <li><a href="[% c.uri_for(c.controller('SequenceType').action_for('list_profiles')) %]" >
+                                        [% c.loc("profiles.text") | html %]
+                                    </a></li>
+                                    <li><a href="[% c.uri_for(c.controller('SequenceType').action_for('form')) %]" >
+                                        [% c.loc("shared.profile.query.text") | html %]
+                                    </a></li>
+                                    <li><a href="[% c.uri_for(c.controller('SequenceType').action_for('batch_profile_query')) %]" >
+                                        [% c.loc("shared.batch.profile.query.text") | html %]
+                                    </a></li>
+									[% IF c.user_exists() and c.check_any_user_role('user', 'admin') and login_allow == "true" %]
+		                                <li><a href="[% c.uri_for(c.controller('SequenceType').action_for('curator_profile_query')) %]" >
+		                                    [% c.loc("shared.curator.profile.query.text") | html %]
+		                                </a></li>
+									[% END %]
+                                    <li><a  href="[% c.uri_for(c.controller('SequenceType').action_for('email_sequence_type')) %]" >
+                                        [% c.loc("shared.email.profile.text") | html %]
+                                    </a></li>
+                                </ul>
+                            </li>
+                            <li><a href="[% c.uri_for(c.controller('ProjectInfo').action_for('background')) %]" >
+                                [% c.loc("shared.background.text") | html %]
+                            </a></li>
+                            <li>
+                                [% IF c.session.lang != "fr" %]
+                                    <a href="../../static/pdf/table.pdf" target="blank" >
+                                        [% c.loc("shared.primer.table.text") | html %]
+                                    </a>
+                                [% ELSE %]
+                                    <a href="../../static/pdf/tableau.pdf" target="blank" >
+                                        [% c.loc("shared.primer.table.text") | html %]
+                                    </a>
+                                [% END %]
+                            </li>
+                            [% IF c.user_exists() and c.check_any_user_role('user', 'admin') and login_allow == "true" %]
+                            <li>
+                               <a href="[% c.uri_for(c.controller('Curator').action_for('settings')) %]" >
+                                   [% c.loc("curator.tools.text") | html %]
+                               </a>
+                            </li>
+                            <li>
+                               <a href="[% c.uri_for(c.controller('Account').action_for('settings')) %]">
+                                   [% c.loc("shared.account.settings.text") | html %]
+                               </a>
+                            </li>
+                            [% END %]
+                            [% IF c.user_exists() and c.check_any_user_role('admin') and login_allow == "true" %]
+
+                            <li>
+                               <a href="[% c.uri_for(c.controller('Admin').action_for('settings')) %]" >
+                                   [% c.loc("admin.tools.text") | html %]
+                               </a>
+                            </li>
+                            [% END %]
+
+                            [% IF c.user_exists() and c.check_any_user_role('user', 'admin') and login_allow == "true" %]
+                                <li>
+                                    <a href="[% c.uri_for(c.controller('Logout').action_for('index')) %]" >
+                                        [% c.loc("signout.text") | html %]
+                                    </a>
+                                </li>
+                            [% ELSE %]
+                                [% IF login_allow == "true" %]
+                                    <li>
+                                        <a href="[% c.uri_for(c.controller('Login').action_for('index')) %]" >
+                                            [% c.loc("shared.signin.text") | html %]
+                                        </a>
+                                    </li>
+                                [% END %]
+                            [% END %]
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            [% content %]
+
+            [% IF add_profile_notification.defined %]
+                  <!-- Profile Submission Report Modal -->
+
+                      <section class="modal-dialog modal-content overlay-def mfp-hide" id="profileSubmissionModal" role="dialog" aria-labelledby="profileSubmissionModalLabel">
+                            <header class="modal-header">
+                          <h2 class="modal-title" id="profileSubmissionModalLabel">Profile Submission Report</h2>
+                            </header>
+                            <div class="modal-body modal-body-custom" id="profile-submission-modal-body">
+								[% report_str= "" %]
+								<table class="table table-bordered">
+									<thead>
+										<th>ST</th>
+										[% report_str =  report_str _ "ST"_"\t" %]
+										[% FOREACH name IN name_list %]
+											<th>[% name %]</th>
+											[% report_str= report_str _ name _"\t" %]
+										[% END %]
+										<th>[% c.loc("shared.curator.comments.text") %]</th>
+										[% report_str= report_str _ c.loc("shared.curator.comments.text") _"\n" %]		
+									</thead>
+									<tbody>
+										<td>[% st_added %]</td>
+										[% report_str= report_str _ st_added _ "\t" %]
+										[% FOREACH a_type IN allele_types_list  %]
+											<td>[% a_type %]</td>
+											[% report_str= report_str _ a_type _ "\t" %]
+										[% END %]
+										<td>[% amr_marker_string %]</td>
+										[% report_str= report_str _ amr_marker_string %]			
+									</tbody>
+								</table>
+								<textarea id="psm" rows="4" cols="45">[% report_str %]</textarea>
+                            </div>
+                            <div class="modal-footer" id="confirm-modal-footer">
+								<button class="btn btn-info ccbtn" data-clipboard-target="#psm">
+   									 Copy
+								</button>
+                                <button type="button" class="btn btn-default" onclick="$.magnificPopup.close();">[% c.loc("shared.ok.text") | html %]</button>
+                            </div>
+                      </section>
+
+              [% END %]
+
+
+            [% IF error_id.defined %]
+                  <!-- Error Modal -->
+
+                      <section class="modal-dialog modal-content overlay-def mfp-hide" id="errorModal" role="dialog" aria-labelledby="errorModalLabel">
+                            <header class="modal-header">
+                          <h2 class="modal-title" id="errorModalLabel">[% c.loc("error.text") | html %]: [% error_id | html %]</h2>
+                            </header>
+                            <div class="modal-body modal-body-custom" id="error-modal-body">
+                                [% error_code | html %]
+                            </div>
+                            <div class="modal-footer" id="confirm-modal-footer">
+                                <button type="button" class="btn btn-primary" id="close-error-modal" onclick="$.magnificPopup.close();">[% c.loc("shared.ok.text") | html %]</button>
+                            </div>
+                      </section>
+
+              [% END %]
+
+              [% IF c.user_exists() and c.check_any_user_role('user','admin') and login_allow == "true" %]
+
+                  <!-- Batch Adding Error Modal -->
+                  <section class="modal-dialog modal-content overlay-def mfp-hide" id="batchErrorModal" role="dialog" aria-labelledby="batchErrorModalLabel">
+                        <header class="modal-header">
+                      <h2 class="modal-title" id="batchErrorModalLabel">[% c.loc("batch.add.error.text") | html %]</h2>
+                        </header>
+                        <div class="modal-body modal-body-custom" id="batch-error-modal-body">
+                        </div>
+                        <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" id="batch-modal-ok" onclick="$.magnificPopup.close();">[% c.loc("shared.ok.text") | html %]</button>
+                        </div>
+                  </section>
+
+                  <!-- Delete Allele Modal -->
+                  <section class="modal-dialog modal-content overlay-def mfp-hide" id="deleteModal" role="dialog" aria-labelledby="deleteModalLabel">
+                        <header class="modal-header">
+                      <h2 class="modal-title" id="deleteModalLabel">[% c.loc("delete.allele.text") | html %]</h2>
+                        </header>
+                        <div class="modal-body modal-body-custom" id="delete-allele-modal-body">
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-primary" onclick="$.magnificPopup.close();">[% c.loc("shared.no.text") | html %]</button>
+                          <button type="button" class="btn btn-danger" id="delete-ok" name="option" value="delete" onClick="NGSTAR.deleteAllele('[% c.uri_for(c.controller('Allele').action_for('delete')) %]');">[% c.loc("shared.yes.text") | html %]</button>
+                        </div>
+                  </section>
+
+				  <!-- Delete Amino Acid Profile Modal -->
+                  <section class="modal-dialog modal-content overlay-def mfp-hide" id="deleteAminoAcidProfileModal" role="dialog" aria-labelledby="deleteModalLabel">
+                        <header class="modal-header">
+                      <h2 class="modal-title" id="deleteModalLabel">[% c.loc("delete.amino.acid.profile.text") | html %]</h2>
+                        </header>
+                        <div class="modal-body" id="delete-aa-profile-modal-body">
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" onclick="$.magnificPopup.close();">[% c.loc("shared.no.text") | html %]</button>
+                          <button type="button" class="btn btn-success" id="delete-aa-profile-ok" name="option" value="delete" onClick="NGSTAR.deleteAAProfile('[% c.uri_for(c.controller('Curator').action_for('delete_amino_acid_profile')) %]');">[% c.loc("shared.yes.text") | html %]</button>
+
+                        </div>
+                  </section>
+
+				  <!-- Delete Amino Acid Modal -->
+                  <section class="modal-dialog modal-content overlay-def mfp-hide" id="deleteAminoAcidModal" role="dialog" aria-labelledby="deleteModalLabel">
+                        <header class="modal-header">
+                      <h2 class="modal-title" id="deleteModalLabel">[% c.loc("delete.amino.acid.text") | html %]</h2>
+                        </header>
+                        <div class="modal-body" id="delete-aa-modal-body">
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" onclick="$.magnificPopup.close();">[% c.loc("shared.no.text") | html %]</button>
+                          <button type="button" class="btn btn-success" id="delete-aa-profile-ok" name="option" value="delete" onClick="NGSTAR.deleteAA('[% c.uri_for(c.controller('Curator').action_for('delete_amino_acid')) %]');">[% c.loc("shared.yes.text") | html %]</button>
+                        </div>
+                  </section>
+
+                  <!-- Delete Profile Modal -->
+                  <section class="modal-dialog modal-content overlay-def mfp-hide" id="deleteProfileModal" aria-labelledby="deleteProfileModalLabel">
+                    <header class="modal-header">
+                      <h2 id="deleteProfileModalLabel" class="modal-title">[% c.loc("delete.profile.text") | html %]</h2>
+                    </header>
+                    <div class="modal-body modal-body-custom" id="delete-profile-modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" onclick="$.magnificPopup.close();">[% c.loc("shared.no.text") | html %]</button>
+                        <button type="button" class="btn btn-danger" id="delete-profile-ok" name="option" value="delete" onClick="NGSTAR.deleteProfile('[% c.uri_for(c.controller('SequenceType').action_for('delete')) %]');">[% c.loc("shared.yes.text") | html %]</button>
+                    </div>
+                  </section>
+
+                  <!-- Confirm Modal -->
+                  <section class="modal-dialog modal-content overlay-def mfp-hide" id="confirmModal" role="dialog" aria-labelledby="confirmModalLabel">
+                        <header class="modal-header">
+                      <h2 class="modal-title" id="confirmModalLabel">[% c.loc("please.confirm.text") | html %]</h2>
+                        </header>
+                        <div class="modal-body modal-body-custom" id="confirm-modal-body">
+                        </div>
+                        <div class="modal-footer" id="confirm-modal-footer">
+                      <button type="button" class="btn btn-default" onclick="$.magnificPopup.close();">[% c.loc("shared.no.text") | html %]</button>
+                          <button type="button" class="btn btn-primary" id="confirm-ok">[% c.loc("shared.yes.text") | html %]</button>
+                        </div>
+                  </section>
+              [% END %]
+
+            <footer role="content-info" id="wb-info" style="margin-top:50px;">
+                <nav role="navigation" class="container visible-sm visible-md visible-lg wb-navcurr">
+                    <div class="row">
+                         <div class="col-sm-2 col-lg-2">
+                             <li>
+                                 <a  href="[% c.uri_for(c.controller('Welcome').action_for('eula')) %]" style="margin-top:20px;">
+                                     [% c.loc("shared.terms.text") | html %]
+                                 </a>
+                             </li>
+                         </div>
+                         <div class="col-sm-2 col-lg-2">
+                         </div>
+                    </div>
+                </nav>
+                <div class="brand"><div class="container"><div class="row"><div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div><div class="col-xs-6 col-md-12 text-right"><object type="image/svg+xml"   role="img" data="https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_20/GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object></div></div></div></div>
+           </footer>
+
+           <!--[if gte IE 9 | !IE ]><!-->
+               <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+               <script src="/static/wet-boew/js/deps/jquery.magnific-popup.min.js"></script>
+               <script src="/static/wet-boew/js/deps/jquery.dataTables.min.js"></script>
+               <script src="/static/wet-boew/js/wet-boew.min.js"></script>
+           <!--<![endif]-->
+           <!--[if lt IE 9]>
+               <script src="/static/wet-boew/js/ie8-wet-boew2.min.js"></script>
+               <script src="/static/wet-boew/js/polyfills/details.min.js"></script>
+           <![endif]-->
+
+           <script src="/static/GCWeb/js/theme.min.js"></script>
+
+            [% IF c.session.lang.length == 2 %]
+                [% IF c.session.lang == "en" OR c.session.lang == "fr" %]
+                    <script>
+                        var $curr_lang = "[% c.session.lang %]";
+                    </script>
+                [% ELSE %]
+                    <script>
+                            var $curr_lang = "en";
+                    </script>
+                [% END %]
+            [% ELSE %]
+                <script>
+                        var $curr_lang = "en";
+                </script>
+            [% END %]
+
+            <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
+            <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+
+            <!-- Datepicker javascript -->
+            <script src="/static/datepicker/datetimepicker.min.js"></script>
+
+            [% IF c.session.lang.length == 2 AND c.session.lang == "fr" %]
+                <script src="/static/datepicker/datetimepicker.fr.js" charset="UTF-8"></script>
+            [% END %]
+
+            <script src="/static/NGSTAR/js/datepicker.js"></script>
+
+            <!-- select2 javascript -->
+            <script src="/static/select2/select2.min.js"></script>
+            <script src="/static/NGSTAR/js/init-select2.js"></script>
+
+            <!-- Custom javascript -->
+            <script src="/static/NGSTAR/js/compare-passwords.js"></script>
+            <script src="/static/NGSTAR/js/clearforms.js"></script>
+            <script src="/static/NGSTAR/js/datatable.js"></script>
+            <script src="/static/NGSTAR/js/confirm-modals.js" ></script>
+            <script src="/static/NGSTAR/js/list_details.js"></script>
+            <script src="/static/NGSTAR/js/loci-to-view.js"></script>
+            <script src="/static/NGSTAR/js/filename-upload-display.js"></script>
+            <script src="/static/NGSTAR/js/display-loader.js"></script>
+            <script src="/static/NGSTAR/js/popover.js"></script>
+            <script src="/static/NGSTAR/js/mics-determined-by-display.js"></script>
+            <script src="/static/NGSTAR/js/select-text.js"></script>
+            <script src="/static/NGSTAR/js/select-allele-for-analysis.js"></script>
+            <script src="https://cdn.datatables.net/fixedcolumns/3.2.1/js/dataTables.fixedColumns.min.js"></script>
+            <script src="/static/NGSTAR/js/details-toggle.js"></script>
+            <script src="/static/NGSTAR/js/clipboard.min.js"></script>
+
+
+            [% IF error_id.defined %]
+              <script>
+                  $.magnificPopup.open({
+                      items: {
+                          src: $('#errorModal')
+                      },
+                      type: 'inline'
+                  });
+              </script>
+            [% END %]
+
+            [% IF add_profile_notification.defined %]
+              <script>
+				new Clipboard('.ccbtn');
+				function view_profile_submission_report()
+				{
+                  $.magnificPopup.open({
+                      items: {
+                          src: $('#profileSubmissionModal')
+                      },
+                      type: 'inline'
+                  });
+				}
+              </script>
+            [% END %]
+
+            [% IF ics.defined %]
+                <script>
+                    var string = '[% ics %]';
+                    var selectedValues = new Array();
+                    selectedValues = string.split(" ");
+                    $("#isolate_classification").val(selectedValues);
+                </script>
+            [% END %]
+
+            <script>
+                $('.allele_checkbox').on('change', function() {
+                    $('.allele_checkbox').not(this).prop('checked', false);
+                });
+            </script>
+
+            [% IF onishi_positions.defined %]
+
+                <script>
+                    var onishi_positions = '[% onishi_positions %]';
+                </script>
+
+            [% END %]
+
+            <script src="/static/NGSTAR/js/sequence-positions.js"></script>
+
+        </body>
+    </html>
+[% END %]

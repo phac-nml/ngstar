@@ -1,0 +1,3 @@
+#!/bin/bash
+
+plackup -s Starman -l :5005 ngstar.psgi

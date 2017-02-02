@@ -1,0 +1,34 @@
+# rename this file to ngstar.yml and put a ':' after 'name' if
+# you want to use YAML like in old versions of Catalyst
+name NGSTAR
+encoding utf8
+
+account_services_email_enabled false
+
+curator_email curator@localhost
+curator_email_host smtp.localhost
+curator_email_password emailpassword
+account_services_email ngstar.acct.services@localhost
+
+#These variables are required to be changed according to server
+
+reset_password_link http://localhost:3000/resetpassword
+db_user root
+db_password password
+
+auth_db_user root
+auth_db_password password
+
+businesslogic_data_path /opt/ng-star/BusinessLogic/data/
+businesslogic_data_stub_path /opt/ng-star/BusinessLogic/data_stub/
+
+dal_databaseobjects_path /opt/ng-star/DatabaseObjects
+
+dsn_string dbi:mysql:dbname=NGSTAR;host=localhost;port=3000
+dsn_auth_string dbi:mysql:dbname=NGSTAR_Auth;host=localhost;port=3000
+
+#Allow connections from 192.168.0.0/255 and localhost to admin interface
+allowed_ips 192\.168}\.\d{1,3}\.\d{1,3}|127.0.0.1
+
+eula_version 1.0
+ngstar_base_url localhost:3000

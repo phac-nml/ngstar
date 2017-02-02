@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 9]>
+<html class="no-js lt-ie9" lang="fr" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="fr" dir="ltr">
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8"/>
+  <title>NG-STAR - Canada.ca</title>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <!-- Meta Data -->
+  <meta name="description" content=""/>
+  <!-- Meta Data -->
+
+  <!-- Load closure template scripts -->
+  <script type="text/javascript" src="https://ssl-templates.services.gc.ca/app/cls/wet/gcweb/v4_0_20/js/compiled/soyutils.js"></script>
+  <script type="text/javascript" src="https://ssl-templates.services.gc.ca/app/cls/wet/gcweb/v4_0_20/js/compiled/wet-fr.js"></script>
+  <noscript>
+    <!-- Write closure fall-back static-file -->
+    <!--[if gte IE 9 | !IE ]><!-->
+    <link href="https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_20/GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_20/GCWeb/css/theme.min.css">
+    <!--<![endif]-->
+    <!--[if lt IE 9]>
+    <link href="https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_20/GCWeb/assets/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_20/GCWeb/css/ie8-theme.min.css" />
+    <![endif]-->
+    <!--[if lte IE 9]><![endif]-->
+    <link rel="stylesheet" href="https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_20/wet-boew/css/noscript.min.css" />
+  </noscript>
+  <!-- Write closure template -->
+  <script type="text/javascript">
+    document.write(wet.builder.refTop({
+      cdnEnv: "prod"
+    }));
+  </script>
+
+
+  <link rel="stylesheet" media="all" href="/assets/application-d747a4b96163636b5854ad2f1d40a7a8.css" />
+</head>
+<body vocab="http://schema.org/" typeof="WebPage" data-controller='pages' data-action='show'>
+  <div id="def-top">
+  </div>
+
+<main property="mainContentOfPage" class="container">
+  
+<h1 id="wb-cont">NG-STAR</h1>
+
+<div class="row">
+  <div class="col-md-8">
+
+	<p>Neisseria gonorrhoeae est en train d'acquérir une résistance à presque tous les antibiotiques actuellement offerts pour le traitement. Le site Web NG-STAR offre une méthode de classification normalisée de sept gènes bien caractérisés (penA, mtrR, porB, ponA, gyrA, parC et ARNr 23S) associés à la résistance de N. gonorrhoeae à trois classes d'antibiotiques (céphalosporines, macrolides et fluoroquinolones).</p>
+
+<p>Les séquences d'ADN uniques de chaque gène de résistance se verront attribuer un numéro d'allèle, et la combinaison des allèles des sept gènes produira un type NG-STAR. Une séquence de gène donnée sera recherchée dans la base de données, et les allèles, profils et commentaires du conservateur correspondants seront affichés avec les mutations d'intérêt mises en évidence.</p>
+
+<p>La base de données et l'application Web NG-STAR sont hébergées par le Laboratoire national de microbiologie de l'Agence de la santé publique du Canada. Les renseignements de base sur les souches (caractérisation, degré de résistance aux antimicrobiens, information géographique, etc.) sont disponibles pour tous les types d'allèles et tous les types NG-STAR.</p>
+
+<p>Le but de NG-STAR est de normaliser les gènes de résistance aux antimicrobiens et les souches de gonocoque qui, en combinaison avec les outils de caractérisation existants, permettront aux praticiens en santé publique partout dans le monde de communiquer dans un même « langage moléculaire », ce qui accélérera les interventions et permettra de mieux retracer les nouvelles souches de gonocoque résistantes aux antimicrobiens.</p>
+
+<p>NG-STAR a été créé par l'Agence de la santé publique du Canada dans le cadre d'une initiative de recherche et de développement en génomique.</p>
+
+    <p>
+        <a href="[% c.uri_for(c.controller('Allele').action_for('form') ) %]" class="btn btn-lg btn-primary mrgn-tp-md" id="lancez-ngstar">[% c.loc("button.launch.ngstar") | html %]</a>
+    </p>
+  </div>
+
+</div>
+
+</main>
+
+<div id="def-footer">
+</div>
+<!-- Write closure template -->
+<script type="text/javascript">
+  var defFooter = document.getElementById("def-footer");
+  defFooter.outerHTML = wet.builder.footer({
+    cdnEnv: "prod"
+  });
+</script>
+<!-- Write closure template -->
+<script type="text/javascript">
+  document.write(wet.builder.refFooter({
+    cdnEnv: "prod",
+  }));
+</script>
+<!-- Write closure tempalte -->
+<script type="text/javascript">
+  var defTop = document.getElementById("def-top");
+  defTop.outerHTML = wet.builder.top({
+    cdnEnv: "prod",
+    topSecMenu: true,
+    lngLinks: [{
+      lang: "en",
+      href: "[% c.uri_for(c.controller('Root').action_for('index'),'en') %]",
+      text: "English"
+    }],
+    search: false,
+  });
+</script>
+
+</body>
+</html>
+

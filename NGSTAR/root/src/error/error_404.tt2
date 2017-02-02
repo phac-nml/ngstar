@@ -1,0 +1,33 @@
+<main role="main" property="mainContentOfPage" class="container fade in">
+
+[% IF c.session.lang == "en" %]
+
+    <div class="row mrgn-tp-lg">
+    <div class="col-md-12">
+    <h1><span class="glyphicon glyphicon-warning-sign mrgn-rght-md"></span> We couldn't find that Web page (Error 404)</h1>
+    <p>We're sorry you ended up here. Sometimes a page gets moved or deleted, but hopefully we can help you find what you're looking for.</p>
+    <ul>
+    <li>Return to the <a href="[% c.uri_for(c.controller('Allele').action_for('form')) %]">home page</a></li>
+    <li>Return to the <a href="#" onClick="history.go(-1);return true;">previous page</a></li>
+    </ul>
+    </div>
+    </div>
+
+[% ELSE %]
+
+    <div class="row mrgn-tp-lg">
+    <div class="col-md-12">
+    <h1><span class="glyphicon glyphicon-warning-sign mrgn-rght-md"></span> Nous ne pouvons trouver cette page Web (Erreur 404)</h1>
+    <p>Nous sommes désolés que vous ayez abouti ici. Il arrive parfois qu'une page ait été déplacée ou supprimée. Heureusement, nous pouvons vous aider à trouver ce que vous cherchez.</p>
+    <ul>
+    <li>Retournez à la <a href="[% c.uri_for(c.controller('Allele').action_for('form')) %]">page d'accueil</a></li>
+    <li>Retournez à la <a href="#" onClick="history.go(-1);return true;">page précédente</a></li>
+    </ul>
+    </div>
+    </div>
+
+[% END %]
+
+<button type="button" class="btn btn-default bkbtn" onClick="history.go(-1);return true;"><span class="glyphicon glyphicon-arrow-left"></span> [% c.loc("shared.back.btn.text") | html %]</button>
+
+</main>

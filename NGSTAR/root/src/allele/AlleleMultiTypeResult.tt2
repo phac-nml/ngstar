@@ -1,0 +1,338 @@
+[% USE Math %]
+[% USE Format %]
+
+[% csv_header = c.loc("sample.number.text") _ "," _ "penA" _ "," _ "mtrR"  _ "," _ "porB" _ "," _ "ponA" _ "," _ "gyrA" _ "," _ "parC" _ "," _ "23S" %]
+[% tsv_header = c.loc("sample.number.text") _ "\t" _ "penA" _ "\t" _ "mtrR"  _ "\t" _ "porB" _ "\t" _ "ponA" _ "\t" _ "gyrA" _ "\t" _ "parC" _ "\t" _ "23S" %]
+
+[% csv_str = "" %]
+[% tsv_str = "" %]
+
+[% sample_number = 0 %]
+[% last_pos = 0 %]
+[% prev_sample_number = "" %]
+[% prev_loci_name = "" %]
+
+[% FOREACH allele IN allele_info_list %]
+
+	[% IF prev_sample_number != "" %]
+		[% IF prev_sample_number > 0 AND allele.sample_number != prev_sample_number %]
+
+			[% count = last_pos %]
+			[% WHILE count < all_loci_names.size %]
+				[% IF count < all_loci_names.size - 1 %]
+					[% csv_str = csv_str _ "--" _ "," %]
+					[% tsv_str = tsv_str _ "--" _ "\t" %]
+				[% ELSE %]
+					[% csv_str = csv_str _ "--" %]
+					[% tsv_str = tsv_str _ "--" %]
+				[% END %]
+				[% count = count + 1 %]
+			[% END %]
+
+			[% last_pos = 0 %]
+
+		[% END %]
+	[% END %]
+
+	[% IF allele.name != prev_loci_name OR allele.sample_number != prev_sample_number %]
+
+		[% loci_position = 0 %]
+		[% FOREACH lname IN all_loci_names %]
+			[% LAST IF lname == allele.name %]
+			[% loci_position = loci_position + 1 %]
+		[%  END %]
+
+		[% is_integer_type = 0 %]
+		[% FOREACH loci_in_list IN loci_int_type_set %]
+			[% IF loci_in_list.key == allele.name %]
+				[% is_integer_type = 1 %]
+			[% END %]
+		[% END %]
+
+		[% IF sample_number != allele.sample_number %]
+			[% csv_str = csv_str _ "\n" _ allele.sample_number _ "," %]
+			[% tsv_str = tsv_str _ "\n" _ allele.sample_number _ "\t" %]
+			[% sample_number = allele.sample_number %]
+		[% END %]
+
+		[% t_count = 0 %]
+		[% WHILE t_count < loci_position - last_pos  %]
+			[% csv_str = csv_str _ "--" _ "," %]
+			[% tsv_str = tsv_str _ "--" _ "\t" %]
+			[% t_count = t_count + 1 %]
+		[% END %]
+
+		[% IF allele.type != c.loc("not.found.text") %]
+
+			[% IF is_integer_type == 1 %]
+				[% IF allele.name != "23S"%]
+					[% csv_str = csv_str _ Math.int(allele.type) _ "," %]
+					[% tsv_str = tsv_str _ Math.int(allele.type) _ "\t" %]
+				[% ELSE %]
+					[% csv_str = csv_str _ Math.int(allele.type) %]
+					[% tsv_str = tsv_str _ Math.int(allele.type) %]
+				[% END %]
+			[% ELSE %]
+				[% csv_str = csv_str _ allele.type _ "," %]
+				[% tsv_str = tsv_str _ allele.type _ "\t" %]
+			[% END %]
+		[% ELSE %]
+			[% csv_str = csv_str _ c.loc("not.found.text") _ "," %]
+			[% tsv_str = tsv_str _ c.loc("not.found.text") _ "\t" %]
+		[% END %]
+		[% prev_sample_number = allele.sample_number %]
+		[% prev_loci_name = allele.name %]
+		[% last_pos = loci_position + 1 %]
+
+	[% END %]
+
+[% END %]
+
+[% count = last_pos %]
+[% WHILE count < all_loci_names.size %]
+	[% IF count < all_loci_names.size - 1 %]
+        [% csv_str = csv_str _ "--" _ "," %]
+	    [% tsv_str = tsv_str _ "--" _ "\t" %]
+	[% ELSE %]
+        [% csv_str = csv_str _ "--" %]
+        [% tsv_str = tsv_str _ "--" %]
+    [% END %]
+    [% count = count + 1 %]
+[% END %]
+
+
+[% csv_str = csv_header _ csv_str %]
+[% tsv_str = tsv_header _ tsv_str %]
+
+
+<nav class="breadcrumbs" property="breadcrumb">
+	<div class="container">
+		<div class="row">
+			<ol>
+				<li><a href="[% c.uri_for(c.controller("Allele").action_for("form")) %]">[% c.loc("home.page.name") | html %]</a></li>
+				<li><a href="[% c.uri_for(c.controller("Allele").action_for("batch_allele_query")) %]">[% c.loc("shared.batch.allele.query.text") | html %]</a></li>
+				<li><a class="disabled" tabindex="-1" href="#">[% c.loc("shared.batch.allele.query.results.text") | html %]</a></li>
+			</ol>
+		</div>
+	</div>
+</nav>
+
+<main role="main" property="mainContentOfPage" class="container fade in">
+
+	<h1 id="wb-cont">[% c.loc("shared.batch.allele.query.results.text") | html %]</h1>
+	<br>
+
+
+	[% IF allele_info_list.size > 0 AND all_loci_names.size > 0 %]
+		<form action ="[% c.uri_for(c.controller('Allele').action_for('export_batch_allele_query_results')) %]" method="post">
+	        <div class="pull-right">
+	            <button type = "submit" name="csv_str" value="[% csv_str %]" class="btn btn-primary"><span class="glyphicon glyphicon-save"></span> [% c.loc("shared.download.csv.text") %]</button>
+	            <button type = "submit" name="tsv_str" value ="[% tsv_str %]" class="btn btn-primary"><span class="glyphicon glyphicon-save"></span> [% c.loc("shared.download.tsv.text") %]</button>
+		    </div>
+	    </form>
+	[% END %]
+
+	<table id="multi_allele_type_list" class="table table-bordered" style="margin-top:30px">
+
+		<thead>
+		<th class="col-sm-2" scope="col">[% c.loc("sample.number.text") | html %]</th>
+		[% FOREACH loci_name IN all_loci_names %]
+		<th class="col-sm-1" scope="col">[% loci_name %]</th>
+		[% END %]
+		</thead>
+		<tbody id="itemContainer">
+
+		[% sample_number = 0 %]
+		[% last_pos = 0 %]
+		[% prev_sample_number = "" %]
+		[% prev_loci_name = "" %]
+
+		[% current_metadata_count = 0 %]
+		[% FOREACH allele IN allele_info_list %]
+
+			[% IF prev_sample_number != "" %]
+				[% IF prev_sample_number > 0 AND allele.sample_number != prev_sample_number %]
+
+					[% count = last_pos %]
+					[% WHILE count < all_loci_names.size %]
+						<td>--</td>
+						[% count = count + 1 %]
+					[% END %]
+
+					[% last_pos = 0 %]
+
+				[% END %]
+			[% END %]
+
+			[% IF allele.name != prev_loci_name OR allele.sample_number != prev_sample_number %]
+
+				[% loci_position = 0 %]
+				[% FOREACH lname IN all_loci_names %]
+					[% LAST IF lname == allele.name %]
+					[% loci_position = loci_position + 1 %]
+				[%  END %]
+
+				[% is_integer_type = 0 %]
+				[% FOREACH loci_in_list IN loci_int_type_set %]
+					[% IF loci_in_list.key == allele.name %]
+						[% is_integer_type = 1 %]
+					[% END %]
+				[% END %]
+
+				[% IF sample_number != allele.sample_number %]
+					<tr>
+					<td>[% allele.sample_number %]</td>
+					[% sample_number = allele.sample_number %]
+				[% END %]
+
+				[% t_count = 0 %]
+				[% WHILE t_count < loci_position - last_pos  %]
+					<td>--</td>
+					[% t_count = t_count + 1 %]
+				[% END %]
+
+				[% IF allele.type != c.loc("not.found.text") %]
+					[% IF allele.full_match == 1 %]
+						<td class="success">
+					[% ELSE %]
+						<td class="danger">
+					[% END %]
+
+					[% IF is_integer_type == 1 %]
+					<a href="#" style="color:black; text-decoration:underline;" rel="popover-dt" data-placement="right" data-original-title="[% allele.name _ " "_ Math.int(allele.type) %]" data-html="true" data-content="
+						[% IF allele.full_match == 1 %]
+							[% c.loc("match.type.text") | html %]: [% c.loc("full.text") | html %] <br>
+						[% ELSE %]
+							[% c.loc("match.type.text") | html %]: [% c.loc("partial.text") | html %]  <br>
+						[% END %]
+						[% IF allele.full_match != 1 %]
+							<br>[% c.loc("submitted.sequence.match.text") | html %]: <br>
+							[% allele.hsp_num_identical | html %] / [% allele.hsp_total_length | html %] ([% allele.percent_identity | html | format('%.2f') %]%)<br>
+							<br>[% c.loc("full.database.match.text") | html %]:<br>
+							[%  IF allele.full_subject_length > 0 %]
+								[% IF allele.hsp_total_length > allele.full_subject_length %]
+									[% allele.hsp_num_identical | html %] / [% allele.hsp_total_length | html %] ([% allele.full_gene_ratio | html | format('%.2f') %]%)
+								[% ELSE %]
+									[% allele.hsp_num_identical | html %] / [% allele.full_subject_length | html %] ([% allele.full_gene_ratio | html | format('%.2f') %]%)
+								[% END %]
+							[% END %]
+							<br>
+						[% END %]
+						<br>
+						[% c.loc("shared.curator.comments.text") %]:
+						<br>
+						[% IF metadata_set.$current_metadata_count.curator_comment != "" %]
+							[% metadata_set.$current_metadata_count.curator_comment %]
+						[% ELSE %]
+							[% c.loc("shared.none.text") %]
+						[% END %]
+						<br>
+						[% c.loc("shared.amr.markers.text") %]:
+						[% IF metadata_set.$current_metadata_count.amr_markers != "" %]
+							[% metadata_set.$current_metadata_count.amr_markers %]
+						[% ELSE %]
+							[% c.loc("shared.none.text") %]
+						[% END %]
+						<br><br>
+						<a href='[% c.uri_for(c.controller("Allele").action_for("details"), allele.name, allele.type) %]' tabindex='0'><span class='allele_type_popover_link' style='color:#008CBA; text-decoration:underline; font-weight:bold;'>[% c.loc("shared.details.text") | html %]</span></a>
+						">
+						[% Math.int(allele.type) %]</a></td>
+						[% current_metadata_count = current_metadata_count+1 %]
+
+					[% ELSE %]
+						<a href="#" style="color:black; text-decoration:underline;" rel="popover-dt" data-placement="right" data-original-title="[% allele.name _ " "_ allele.type %]" data-html="true" data-content="
+							[% IF allele.full_match == 1 %]
+								[% c.loc("match.type.text") | html %]: [% c.loc("full.text") | html %] <br>
+							[% ELSE %]
+								[% c.loc("match.type.text") | html %]: [% c.loc("partial.text") | html %]  <br>
+							[% END %]
+
+							[% IF allele.full_match != 1 %]
+								<br>[% c.loc("submitted.sequence.match.text") | html %]: <br>
+								[% allele.hsp_num_identical | html %] / [% allele.hsp_total_length | html %] ([% allele.percent_identity | html | format('%.2f') %]%)<br>
+								<br>[% c.loc("full.database.match.text") | html %]:<br>
+								[%  IF allele.full_subject_length > 0 %]
+									[% IF allele.hsp_total_length > allele.full_subject_length %]
+										[% allele.hsp_num_identical | html %] / [% allele.hsp_total_length | html %] ([% allele.full_gene_ratio | html | format('%.2f') %]%)
+									[% ELSE %]
+										[% allele.hsp_num_identical | html %] / [% allele.full_subject_length | html %] ([% allele.full_gene_ratio | html | format('%.2f') %]%)
+									[% END %]
+								[% END %]
+								<br>
+							[% END %]
+							<br>
+							[% c.loc("shared.curator.comments.text") %]:
+							<br>
+							[% IF metadata_set.$current_metadata_count.curator_comment != "" %]
+								[% metadata_set.$current_metadata_count.curator_comment %]
+							[% ELSE %]
+								[% c.loc("shared.none.text") %]
+							[% END %]
+							<br>
+							[% c.loc("shared.amr.markers.text") %]:
+							<br>
+							[% IF metadata_set.$current_metadata_count.amr_markers != "" %]
+								[% metadata_set.$current_metadata_count.amr_markers %]
+							[% ELSE %]
+								[% c.loc("shared.none.text") %]
+							[% END %]
+							<br><br>
+							<a href='[% c.uri_for(c.controller("Allele").action_for("details"), allele.name, allele.type) %]' tabindex='0'><span class='allele_type_popover_link' style='color:#008CBA; text-decoration:underline; font-weight:bold;'>[% c.loc("shared.details.text") | html %]</span></a>
+							">[% allele.type %]</a></td>
+							[% current_metadata_count = current_metadata_count+1 %]
+					[% END %]
+				[% ELSE %]
+					<td>[% c.loc("not.found.text") | html %]</td>
+				[% END %]
+
+				[% prev_sample_number = allele.sample_number %]
+				[% prev_loci_name = allele.name %]
+				[% last_pos = loci_position + 1 %]
+
+			[% END %]
+
+			[% IF allele.name == "23S"%]
+				</tr>
+			[% END %]
+		[% END %]
+
+		[% count = last_pos %]
+		[% WHILE count < all_loci_names.size %]
+			<td>--</td>
+			[% count = count + 1 %]
+		[% END %]
+
+		</tbody>
+
+	</table>
+
+	<button type="button" class="btn btn-primary bkbtn" onClick="history.go(-1);return true;" >
+	<span class="glyphicon glyphicon-arrow-left"></span> [% c.loc("shared.back.btn.text") | html %]
+	</button>
+
+	<div class="pull-right" style="margin-top:5px;">
+		<details>
+			<summary>[% c.loc("legend.text") | html %]</summary>
+			<table class="table table-bordered">
+			  <tr>
+				<td>[% c.loc("match.type.text") | html %]</td>
+				<td> </td>
+			  </tr>
+			  <tr>
+				<td style="font-size:12px !important;">[% c.loc("full.text") | html %]</td>
+				<td class="success"> </td>
+			  </tr>
+			  <tr>
+				<td style="font-size:12px !important;">[% c.loc("partial.text") | html %]</td>
+				<td class="danger"> </td>
+			  </tr>
+			  <tr>
+				<td style="font-size:12px !important;">[% c.loc("not.queried.text") | html %]</td>
+				<td style="background-color: #FFFFFF;">--</td>
+			  </tr>
+			</table>
+		</details>
+	</div>
+
+
+</main>

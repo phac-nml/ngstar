@@ -1,0 +1,63 @@
+<nav class="breadcrumbs" property="breadcrumb">
+	<div class="container">
+		<div class="row">
+			<ol>
+				<li><a href="[% c.uri_for(c.controller("Allele").action_for("form")) %]">[% c.loc("home.page.name") | html %]</a></li>
+				<li><a class="disabled" tabindex="-1" href="#">[% c.loc("shared.signin.text") | html %]</a></li>
+			</ol>
+		</div>
+	</div>
+</nav>
+
+<main role="main" property="mainContentOfPage" class="container fade in">
+
+	<section class="alert alert-warning">
+
+		[% IF error_msg == "AUTH_LOGGED_OUT" %]
+				<strong>[% c.loc("signout.success.msg") %]</strong>
+				<br><br>
+		[% END %]
+
+		[% IF error_msg == "ACCOUNT_LOCKED_ERROR" %]
+				<strong>[% c.loc("account.locked.out.msg") %]</strong>
+		[% END %]
+
+		[% IF error_msg != "AUTH_ERROR" AND error_msg != "PASSWORD_SUCCESSFULLY_UPDATED" AND error_msg != "ACCOUNT_LOCKED_ERROR"   %]
+				<strong>[% c.loc("curator.signin.msg") %]</strong>
+				<br>
+		[% ELSIF error_msg == "AUTH_ERROR" %]
+				<strong>[% c.loc("invalid.credentials.msg") %]</strong>
+				<br>
+		[% ELSIF error_msg == "PASSWORD_SUCCESSFULLY_UPDATED" %]
+				<strong>[% c.loc("password.update.success.msg") %]</strong>
+		[% END %]
+
+	</section>
+
+	<h1 id="wb-cont">[% c.loc("please.signin.text") %]</h1>
+
+	<div>
+		<div class="pull-right">
+			<div class="loader" style="display:none;"></div>
+		</div>
+		<br>
+		<form class="form-horizontal" action="[% c.uri_for(c.controller('Login').action_for('index')) %]" method="post">
+
+		[% form.field('username').render %]
+		[% form.field('password').render %]
+		[% form.field('csrf').render %]
+
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button id="submit" class="btn btn-primary" type="submit">[% c.loc("shared.submit.text") | html %]</button>
+					<button id="reset" class="btn btn-info" type="reset">[% c.loc("shared.clear.text") | html %]</button>
+					<a href="[% c.uri_for(c.controller('ForgotPassword').action_for('index')) %]" class="btn btn-default">[% c.loc("shared.forgot.password.text") | html %]</a>
+				</div>
+			</div>
+
+		</form>
+	</div>
+
+	<button type="button" class="btn btn-primary bkbtn" onClick="history.go(-1);return true;" ><span class="glyphicon glyphicon-arrow-left"></span> [% c.loc("shared.back.btn.text") | html %]</button>
+
+</main>

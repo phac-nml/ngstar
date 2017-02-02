@@ -1,0 +1,14 @@
+SELECT * FROM NGSTAR.tbl_IsolateClassification;
+insert into NGSTAR.tbl_IsolateClassification(classification_id, classification_name, classification_code) values (1, 'Azithromycin Resistant Neisseria gonorrhoeae', 'AzR');
+insert into NGSTAR.tbl_IsolateClassification(classification_id, classification_name, classification_code) values (2, 'Neisseria gonorrhoeae with Decreased Susceptiblity to Cefixime', 'CeDS');
+insert into NGSTAR.tbl_IsolateClassification(classification_id, classification_name, classification_code) values (3, 'Ciprofloxacin Resistant Neisseria gonorrhoeae', 'CipR');
+insert into NGSTAR.tbl_IsolateClassification(classification_id, classification_name, classification_code) values (4, 'Chromosomal Mediated Resistant Neisseria gonorrhoeae', 'CMRNG');
+insert into NGSTAR.tbl_IsolateClassification(classification_id, classification_name, classification_code) values (5, 'Neisseria gonorrhoeae with Decreased Susceptiblity to Ceftriaxone', 'CxDS');
+insert into NGSTAR.tbl_IsolateClassification(classification_id, classification_name, classification_code) values (6, 'Erythromycin Resistant Neisseria gonorrhoeae', 'EryR');
+insert into NGSTAR.tbl_IsolateClassification(classification_id, classification_name, classification_code) values (7, 'Penicillin Resistant Neisseria gonorrhoeae', 'PenR');
+insert into NGSTAR.tbl_IsolateClassification(classification_id, classification_name, classification_code) values (8, 'Penicillinase Producing Neisseria gonorrhoeae', 'PPNG');
+insert into NGSTAR.tbl_IsolateClassification(classification_id, classification_name, classification_code) values (9, 'Probable Chromosomal Mediated Resistant Neisseria gonorrhoeae', 'Probable-CMRNG');
+insert into NGSTAR.tbl_IsolateClassification(classification_id, classification_name, classification_code) values (10, 'Spectinomycin Resistant Neisseria gonorrhoeae', 'SpecR');
+insert into NGSTAR.tbl_IsolateClassification(classification_id, classification_name, classification_code) values (11, 'Susceptible Isolate', 'S');
+insert into NGSTAR.tbl_IsolateClassification(classification_id, classification_name, classification_code) values (12, 'Tetracycline Resistant Neisseria gonorrhoeae', 'TetR');
+insert into NGSTAR.tbl_IsolateClassification(classification_id, classification_name, classification_code) values (13, 'Tetracycline Resistant Neisseria gonorrhoeae', 'TRNG');

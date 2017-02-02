@@ -1,0 +1,62 @@
+<nav class="breadcrumbs" property="breadcrumb">
+	<div class="container">
+		<div class="row">
+			<ol>
+				<li><a href="[% c.uri_for(c.controller("Allele").action_for("form")) %]">[% c.loc("home.page.name") | html %]</a></li>
+				<li><a href="[% c.uri_for(c.controller("Admin").action_for("settings")) %]">[% c.loc("admin.tools.text") | html %]</a></li>
+				<li><a href="[% c.uri_for(c.controller("Admin").action_for("view_users")) %]">[% c.loc("shared.manage.user.accounts.text") | html %]</a></li>
+				<li><a class="disabled" tabindex="-1" href="#">[% c.loc("shared.edit.user.account.text") | html %]</a></li>
+			</ol>
+		</div>
+	</div>
+</nav>
+
+<main role="main" property="mainContentOfPage" class="container fade in">
+
+
+	<h1 id="wb-cont">[% c.loc("shared.edit.user.account.text") | html %]</h1>
+	<div>
+
+		<div class="pull-right">
+			<div class="loader" style="display:none;"></div>
+		</div>
+
+		<form id="edit_account_form" class="form-horizontal" method="post">
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<br>
+					<p class="details_labels">[% c.loc("edit.account.note.text") | html %]</p>
+					<br>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<p class="details_labels">[% c.loc("shared.enter.account.information.text") | html %]</p>
+				</div>
+			</div>
+
+			[% form.field('username').render %]
+			[% form.field('role').render %]
+			[% form.field('email_address').render %]
+			[% form.field('first_name').render %]
+			[% form.field('last_name').render %]
+			[% form.field('ins_name').render %]
+			[% form.field('ins_city').render %]
+			[% form.field('ins_country').render %]
+			[% form.field('is_active').render %]
+			[% form.field('csrf').render %]
+
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button id="edit" type="submit" class="btn btn-primary">[% c.loc("update.text") | html %]</button>
+					<button type="reset" id="reset" class="btn btn-info">[% c.loc("shared.clear.text") | html %]</button>
+					</div>
+			</div>
+
+		</form>
+
+	</div>
+
+	<button type="button" class="btn btn-primary bkbtn" onClick="history.go(-1);return true;"><span class="glyphicon glyphicon-arrow-left"></span> [% c.loc("shared.back.btn.text") | html %]</button>
+
+</main>

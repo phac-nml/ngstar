@@ -1,0 +1,39 @@
+<nav class="breadcrumbs" property="breadcrumb">
+	<div class="container">
+		<div class="row">
+			<ol>
+				<li><a href="[% c.uri_for(c.controller("Allele").action_for("form")) %]">[% c.loc("home.page.name") | html %]</a></li>
+				<li><a href="[% c.uri_for(c.controller("Curator").action_for("settings")) %]">[% c.loc("curator.tools.text") | html %]</a></li>
+				<li><a href="[% c.uri_for(c.controller("Allele").action_for("batch_add_metadata")) %]">[% c.loc("shared.batch.add.allele.metadata.text") | html %]</a></li>
+				<li><a class="disabled" tabindex="-1" href="#">[% c.loc("batch.add.allele.metadata.example.text") | html %]</a></li>
+			</ol>
+		</div>
+	</div>
+</nav>
+
+<main role="main" property="mainContentOfPage" class="container fade in">
+
+	<h1 id="wb-cont">[% c.loc("batch.add.allele.metadata.example.text") | html %]</h1>
+
+	<br>
+	<div class="panel panel-info" style="border:none !important;">
+		<div class="panel-heading" style="background-color:#dce1e7; color:#000000; border:none !important;">
+			<br>
+			<p class="details_labels">[% c.loc("shared.batch.add.metadata.instructions.msg") %]</p>
+			<button class="btn btn-info pull-right" onclick="selectText('example-text')" style="margin-top:10px; margin-right:-15px;">[% c.loc("shared.select.text") | html %]</button>
+		</div>
+		<div class="panel-body" id="example-text" style="font-size:18px; margin-top:30px;">
+		[% c.loc("shared.allele.type.text") | html %]	[% c.loc("shared.collection.date.text") | html %]	[% c.loc("shared.country.text") | html %]	[% c.loc("shared.patient.age.text") | html %]	[% c.loc("shared.patient.gender.text") | html %]	[% c.loc("shared.beta.lactamase.text") | html %]	[% c.loc("shared.isolate.classifications.text") | html %]	[% c.loc("shared.mics.determination.text") | html %]	[% c.loc("Azithromycin") | html %]	[% c.loc("Cefixime") | html %]	[% c.loc("Ceftriaxone") | html %]	[% c.loc("Ciprofloxacin") | html %]	[% c.loc("Erythromycin") | html %]	[% c.loc("Penicillin") | html %]	[% c.loc("Spectinomycin") | html %]	[% c.loc("Tetracycline") | html %]	[% c.loc("shared.additional.epi.data.text") | html %]	[% c.loc("shared.curator.comments.text") | html %]
+		<br>
+		0	2000-01-01	Canada	20	Female	Negative	eryr	E-Test	0.001	0.001	0.001	0.001	0.25	0.01	1	0.5	Clinical source: Cervix	penA NonMosaic_WT_M32091 - Tet-I
+		<br>
+		1	2000-01-01	Canada	30	Female	Positive	eryr/azr	Agar Dilution	0.001	0.001	0.001	0.001	0.25	0.01	1	0.5	Clinical source: Cervix	penA NonMosaic_WT_M32091 - Tet-I
+		</div>
+	</div>
+
+
+    <button type="button" class="btn btn-primary bkbtn" onClick="history.go(-1);return true;">
+        <span class="glyphicon glyphicon-arrow-left"></span> [% c.loc("shared.back.btn.text") | html %]
+    </button>
+
+</main>

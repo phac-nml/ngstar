@@ -1,0 +1,463 @@
+<nav class="breadcrumbs" property="breadcrumb">
+	<div class="container">
+		<div class="row">
+			<ol>
+				<li><a href="[% c.uri_for(c.controller("Allele").action_for("form")) %]">[% c.loc("home.page.name") | html %]</a></li>
+				<li><a class="disabled" tabindex="-1" href="#">[% c.loc("browser.title.allele.query.results") | html %]</a></li>
+			</ol>
+		</div>
+	</div>
+</nav>
+
+<main role="main" property="mainContentOfPage" class="container fade in">
+<div class="pull-right">
+    <div class="loader" style="display:none;"></div>
+</div>
+
+[% USE Math %]
+[% USE Format %]
+
+[% num_loci = 7 %]
+[% prev_name = "" %]
+[% allele_name_count = 0 %]
+[% total_loci = loci_count %]
+[% all_loci_have_full_match_counter = 0 %]
+[% PROFILE_QUERY_AUTO = "PROFILE_QUERY_AUTO" %]
+[% allele_type_str = "" %]
+[% has_partial_match = 0 %]
+[% partial_match = 0 %]
+[% num_actual_loci_names = 0 %]
+[% allele_not_found = 0 %]
+[% already_displayed = 0 %]
+[% ST_RESULTS = 5 %]
+[% not_found_counter = 0 %]
+[% single_allele_type = -1 %]
+
+
+<form class="form-horizontal" action="[% c.uri_for(c.controller('SequenceType').action_for('form_process_option'), PROFILE_QUERY_AUTO, ST_RESULTS) %]">
+    [% counter = 0 %]
+    [% has_multiple = 0 %]
+    [% not_found = 0 %]
+    [% FOREACH allele IN allele_info_list %]
+        [% loci_name = allele.name %]
+        [% IF allele_counter.$loci_name > 1 %]
+            [% has_multiple = 1 %]
+        [% END %]
+        [% IF allele.error_msg != "OK" %]
+            [% not_found = 1 %]
+        [% not_found_counter = not_found_counter + 1 %]
+        [% END %]
+        <input type="hidden" name="allele_name[% counter %]" value="[% allele.name | html %]"/>
+        <input type="hidden" name="allele_type[% counter %]" value="[% allele.type | html %]"/>
+        [% counter = counter + 1 %]
+        [% IF allele.name != prev_name %]
+            [% allele_name_count = allele_name_count + 1 %]
+        [% END %]
+        [% IF allele.name != prev_name && allele.full_match == 1 %]
+            [% all_loci_have_full_match_counter = all_loci_have_full_match_counter + 1 %]
+        [% END %]
+        [% prev_name = allele.name %]
+
+        [% IF allele.full_match != 1 && allele.full_match != -1 %]
+            [% partial_match = 1 %]
+        [% END %]
+
+    [% END %]
+
+	[% IF allele_name_count > 1 %]
+		[% multiple_alleles = "true" %]
+		[% single_allele = "false" %]
+	[% ELSE %]
+		[% single_allele = "true" %]
+		[% multiple_alleles = "false" %]
+	[% END %]
+
+	[% IF allele_info_list.size > total_loci || partial_match == 1 && allele_name_count == 1 || not_found AND not_found_counter > 1 || not_found AND not_found_counter == 1 %]
+
+		<section class="alert alert-warning">
+
+			[% IF allele_info_list.size > total_loci %]
+				[% c.loc("atr.partial.matches.msg") %]
+				<br><br>
+			[% END %]
+
+			[% IF partial_match == 1 && allele_name_count == 1 %]
+				[% c.loc("atr.partial.match.w.link.msg", c.uri_for(c.controller('Allele').action_for('email_allele'))) %]
+			[% ELSIF partial_match == 1 && allele_name_count > 1  %]
+				[% c.loc("atr.partial.matches.w.link.msg", c.uri_for(c.controller('Allele').action_for('email_allele'))) %]
+				<br><br>
+			[% END%]
+
+			[% IF not_found AND not_found_counter > 1  %]
+				[% c.loc("atr.no.matches.w.link.msg", c.uri_for(c.controller('Allele').action_for('email_allele'))) %]
+				<br><br>
+			[% END %]
+
+			[% IF not_found AND not_found_counter == 1 %]
+				[% c.loc("atr.no.match.w.link.msg", c.uri_for(c.controller('Allele').action_for('email_allele'))) %]
+			[% END %]
+
+		</section>
+
+	[% END %]
+
+
+        <h1 id="wb-cont">[% c.loc("allele.type.query.results.text") | html %]</h1>
+            <table id="allele_type_list" class="table table-bordered" style="margin-top:30px">
+
+			<thead>
+				<tr>
+
+				<th style="width:25px !importantl" scope="col"></th>
+				<th class="col-sm-2" scope="col">[% c.loc("shared.locus.text") | html %]</th>
+				<th class="col-sm-2" scope="col">[% c.loc("shared.allele.type.text") | html %]</th>
+				<th class="col-sm-2" scope="col">[% c.loc("match.type.text") | html %]</th>
+				<th class="col-sm-3" scope="col">[% c.loc("submitted.sequence.match.text") | html %]</th>
+				<th class="col-sm-3" scope="col">[% c.loc("full.database.match.text") | html %]</th>
+
+				</tr>
+			</thead>
+			<tbody id="itemContainer">
+
+
+                [% counter = 0 %]
+                [% first_option  = 0 %]
+                [% prev_query = 0 %]
+                [% pos = 103 %]
+                [% current_metadata_count = 0 %]
+
+                [% current_loci_name %]
+                [% prev_loci_name %]
+
+                [% type_counter = 0 %]
+
+                [% FOREACH allele IN allele_info_list  %]
+                    [% is_integer_type = 0 %]
+                    [% current_loci_name = allele.name %]
+
+                    [% IF current_loci_name != prev_loci_name %]
+
+                        [% num_actual_loci_names = num_actual_loci_names + 1 %]
+
+                        [% FOREACH loci_in_list IN loci_int_type_set %]
+                            [% IF loci_in_list.key == allele.name %]
+                                [% is_integer_type = 1 %]
+                            [% END %]
+                        [% END %]
+                        [% IF allele.error_msg == "OK"  AND allele.full_match == 1 %]
+                            <tr class="success">
+                        [% ELSE %]
+                            <tr class="danger" >
+                        [% END %]
+
+						[% IF allele_name_count > 1 %]
+							<td><input class="allele_checkbox" type="checkbox" name="query_allele_selected" id="query_allele_selected" value="[% allele.name %]:[% allele.type %]"/></td>
+						[% ELSE %]
+							<td><input class="allele_checkbox" type="checkbox" name="query_allele_selected" id="query_allele_selected" value="[% allele.name %]:[% allele.type %]" checked /></td>
+						[% END %]
+
+						[% metadata = metadata_set.$current_metadata_count %]
+                        <!-- if allele is found in a query populate the popover with the metadata for that allele. if not found then there is no popover for that allele-->
+                        [% IF allele.type != "Not found" %]
+                            <td>
+                                [% allele.name | html %] <span class="glyphicon glyphicon-info-sign"
+								[% IF allele.error_msg != "OK"  OR allele.full_match != 1 %]
+									rel="popover-partial-results"
+								[% ELSE %]
+									rel="popover-full-results"
+								[% END %]
+								tabindex="0"
+                                data-placement="right"
+                                data-original-title="
+								[% IF allele.error_msg != "OK"  OR allele.full_match != 1 %]
+									Closest match:
+								[% END %]
+                                [% allele.name | html %]
+                                [% IF is_integer_type != 1 %]
+                                    [% allele.type | html %]<br>
+                                    [% allele_type_str = allele_type_str _  allele.type  %]
+
+                                [% ELSE %]
+                                    [% Math.int(allele.type) | html %]<br>
+                                    [% allele_type_str = allele_type_str _ Math.int(allele.type)  %]
+                                [% END %]</span>
+                                "
+                                data-html="true"
+                                data-content="
+                                Curator Comments:
+                                [% IF metadata.curator_comment != ""  %]
+                                    [% metadata.curator_comment | html %]
+                                [% ELSE %]
+                                    [% c.loc("shared.none.text") | html %]
+                                [% END %]
+                                <br>
+                                <br>
+                                <a href='[% c.uri_for(c.controller("Allele").action_for("details"), allele.name, allele.type) %]' tabindex='0'><span class='allele_type_popover_link' style='color:#008CBA; text-decoration:underline; font-weight:bold;'>[% c.loc("shared.details.text") | html %]</span></a>
+                                "></span>
+                            </td>
+
+                            [% IF type_counter < num_loci - 1 %]
+                                [% allele_type_str = allele_type_str _ ","  %]
+                            [% END %]
+
+                            [% type_counter = type_counter + 1 %]
+
+                        [% ELSE %]
+                            <td><span>[% allele.name | html %]</span></td>
+                        [% END %]
+                        [% IF is_integer_type != 1 AND  allele.type != "Not found" %]
+                            <td>[% allele.type | html %]</td>
+							[% single_allele_type = allele.type %]
+							[% current_metadata_count = current_metadata_count + 1 %]
+                        [% ELSIF allele.type == "Not found" %]
+                            <td>[% c.loc("not.found.text") | html %]</td>
+                            [% allele_not_found = 1 %]
+                        [% ELSE %]
+                            <td>[% Math.int(allele.type) | html %]</td>
+							[% single_allele_type = Math.int(allele.type) %]
+                            [% current_metadata_count = current_metadata_count + 1 %]
+                        [% END %]
+                        [% IF allele.full_match == 1 %]
+                            <td>[% c.loc("full.text") | html %]</td>
+                        [% ELSIF allele.full_match == -1 %]
+                            <td>--</td>
+                        [% ELSE %]
+                            <td>[% c.loc("partial.text") | html %]</td>
+                            [% has_partial_match = 1 %]
+                        [% END %]
+                        [% IF allele.hsp_total_length > 0 %]
+                            <td>[% allele.hsp_num_identical | html %] / [% allele.hsp_total_length | html %] ([% allele.percent_identity | html | format('%.2f') %]%)</td>
+                        [% ELSE %]
+                            <td>--</td>
+                        [% END %]
+                        [%  IF allele.full_subject_length > 0 %]
+                            [% IF allele.hsp_total_length > allele.full_subject_length %]
+                                <td>[% allele.hsp_num_identical | html %] / [% allele.hsp_total_length | html %] ([% allele.full_gene_ratio | html | format('%.2f') %]%)</td>
+                            [% ELSE %]
+                                <td>[% allele.hsp_num_identical | html %] / [% allele.full_subject_length | html %] ([% allele.full_gene_ratio | html | format('%.2f') %]%)</td>
+                            [% END %]
+                        [% ELSE %]
+                            <td>--</td>
+                        [% END %]
+                        [% IF prev_query != allele.name %]
+                            [% first_option  = 0 %]
+                        [% END %]
+                        [% loci_name = allele.name %]
+                        [% allele_count = allele_counter.$loci_name %]
+                        [% IF all_loci_have_full_match_counter >= total_loci %]
+                            [% IF ((has_multiple == 1) && (not_found == 0) && (allele_count == 1)) %]
+                                <td><input type="radio" disabled="disabled" checked="checked"/></td>
+                            [% END %]
+                            [% IF (has_multiple == 1) && (not_found == 0) && (allele_count > 1) && (allele.full_match == 1) %]
+                                [% IF first_option == 0 %]
+                                    <td><input type="radio" checked="checked" name="allele_option_[% allele.name | html %]" value="[% allele.type | html %]"/></td>
+                                    [% first_option = 1 %]
+                                [% ELSE %]
+                                    <td><input type="radio" name="allele_option_[% allele.name | html %]" value="[% allele.type | html %]"/></td>
+                                [% END %]
+                            [% END %]
+                            [% IF allele.full_match != 1 %]
+                                <td>--</td>
+                            [% END %]
+                        [% END %]
+                        </tr>
+                        [% counter = counter + 1 %]
+                        [% prev_query = allele.name %]
+                        [% pos = pos + 2 %]
+                    [% END %]
+                    [% prev_loci_name = current_loci_name %]
+                [% END %]
+				</tbody>
+            </table>
+    <br>
+
+	[% sequence_map = "" %]
+
+	[% FOREACH element IN seq_map %]
+		[% IF element.value != "" %]
+			[% sequence_map = sequence_map _ element.key _ "=" _ element.value _ ":" %]
+		[% END %]
+	[% END %]
+	<a id="analyze-seq" onclick="analyze_sequence('[% c.uri_for(c.controller("Allele").action_for("analyze_sequence_process")) %]','[% sequence_map %]'); return true;" class="btn btn-info">[% c.loc("analyze.sequence.text") %]</a>
+
+    [% profile_count = 0 %]
+    [% FOREACH profile IN st_profile_list %]
+        [% profile_count = profile_count + 1 %]
+    [% END %]
+
+    [% IF not_found == 0 && all_loci_have_full_match_counter >= total_loci %]
+        [% already_displayed = already_displayed + 1 %]
+        [%  IF profile_count > 0 %]
+
+                <h2>[% c.loc("profile.type.result.text") | html %]</h2>
+
+				<table id="profile_type_list" class="table table-bordered" style="margin-top:30px">
+
+				<thead>
+					<tr>
+						<th class="col-sm-1" scope="col">[% c.loc("shared.profile.type.text") | html %]</th>
+						[% FOREACH loci IN all_loci_names %]
+							<th class="col-sm-1" scope="col">[% loci | html %]</th>
+						[% END %]
+					</tr>
+				</thead>
+				<tbody id="itemContainer">
+
+                    [% FOREACH profile IN st_profile_list %]
+	                    <tr class="success">
+	                        <td style="font-weight:bold;">[% profile.type | html %]
+	                        <span class="glyphicon glyphicon-info-sign"
+								rel="popover-dt"
+								tabindex="0"
+								data-placement="right"
+								data-original-title="NGSTAR Type [% profile.type | html %]"
+								data-html="true"
+								data-content="
+									[% c.loc("shared.curator.comments.text") | html %]:
+									[% IF metadata_list.0.curator_comment != ""  %]
+										[% metadata_list.0.curator_comment | html %]
+									[% ELSE %]
+										[% c.loc("shared.none.text") | html %]
+									[% END %]
+									<br>
+									[% c.loc("shared.amr.markers.text") %]:
+									[% IF metadata_list.0.amr_markers != "" %]
+										[% metadata_list.0.amr_markers %]
+									[% ELSE %]
+										[% c.loc("shared.none.text") %]
+									[% END %]
+								<br>
+	                            <br>
+	                            <a href='[% c.uri_for(c.controller("SequenceType").action_for("details"), profile.type) %]'><span class='allele_type_popover_link' style='color:#008CBA; text-decoration:underline; font-weight:bold;' tabindex='0'>[% c.loc("shared.details.text") | html %]</span></a>
+							">
+	                        </td>
+	                        [% FOR name IN name_list %]
+
+	                            [% is_integer_type = 0 %]
+	                            [% FOREACH loci_in_list IN loci_int_type_set %]
+	                                [% IF loci_in_list.key == name %]
+	                                    [% is_integer_type = 1 %]
+	                                [% END %]
+	                            [% END %]
+
+	                            [% IF is_integer_type != 1 %]
+	                                <td>[% profile.$name | html %]</td>
+	                            [% ELSE %]
+	                                <td>[% Math.int(profile.$name) | html %]</td>
+	                            [% END %]
+	                        [% END %]
+	                    </tr>
+	                [% END %]
+                </tbody>
+            </table>
+        [% ELSE %]
+            [% IF all_loci_have_full_match_counter >= total_loci %]
+
+                    <h2>[% c.loc("profile.type.result.text") | html %]</h2>
+                    <div>
+                        <div style="margin-top:30px">
+                            <label>[% c.loc("submit.ngstar.type.to.curator.text") | html %]:</label>
+                        </div>
+                    </div>
+                    <table class="table table-bordered" style="margin-top:20px">
+                        <tr>
+                            <th class="col-sm-1" scope="col">[% c.loc("shared.profile.type.text") | html %]</th>
+                            [% FOREACH loci IN all_loci_names %]
+                                <th class="col-sm-1" scope="col">[% loci | html %]</th>
+                            [% END %]
+                            <th class="col-sm-1" scope="col">[% c.loc("shared.options.text") | html %]:</th>
+                        </tr>
+                        <tbody id="itemContainer">
+                            <tr class="warning">
+                            <td style="font-weight:bold;">--</td>
+                            [% FOR allele IN allele_info_list %]
+
+                                [% is_integer_type = 0 %]
+                                [% FOREACH loci_in_list IN loci_int_type_set %]
+                                    [% IF loci_in_list.key == allele.name %]
+                                        [% is_integer_type = 1 %]
+                                    [% END %]
+                                [% END %]
+
+                                [% IF is_integer_type != 1 %]
+                                    <td>[% allele.type | html %]</td>
+                                [% ELSE %]
+                                    <td>[% Math.int(allele.type) | html %]</td>
+                                [% END %]
+                            [% END %]
+                            <td><a href="[% c.uri_for(c.controller('SequenceType').action_for('email_sequence_type_process'), allele_type_str) %]" class="btn btn-info" id="submitbtn">[% c.loc("shared.notify.curator.text") | html %]</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+            [% END %]
+        [% END %]
+    [% ELSIF num_actual_loci_names == total_loci && not_found_counter == 0  %]
+        [% already_displayed = 1 %]
+        <br>
+        <input type="hidden" name="size" value="[% allele_info_list.size | html %]"/>
+            <div>
+                <div>
+                    <label>[% c.loc("submit.allele.types.to.determine.ngstar.type.label") | html %]</label>
+                </div>
+            </div>
+            <div>
+                <div style="margin-top:20px">
+                    <button type="submit" class="btn btn-primary">[% c.loc("shared.submit.text") | html %]</button>
+                </div>
+            </div>
+        <br>
+[% END %]
+
+    [% IF already_displayed == 0 %]
+        [% IF has_partial_match == 1 && num_actual_loci_names == total_loci && allele_not_found == 0 %]
+
+                <h2>[% c.loc("profile.type.result.text") | html %]</h2>
+
+                    <div class="table-responsive">
+                    <table class="table table-bordered table-hover table-striped " style="margin-top:30px">
+                        <tr>
+                            <p class="allele_type_result_p">[% c.loc("no.ngstar.type.found.partial.alleles.incl.msg") | html %]</p>
+                        </tr>
+                        [% FOREACH allele IN allele_info_list  %]
+                            [% is_integer_type = 0 %]
+                            [% current_loci_name = allele.name %]
+                            [% IF current_loci_name != prev_loci_name && allele.full_match != 1 %]
+                                [% is_integer_type = 0 %]
+                                [% FOREACH loci_in_list IN loci_int_type_set %]
+                                    [% IF loci_in_list.key == allele.name %]
+                                        [% is_integer_type = 1 %]
+                                    [% END %]
+                                [% END %]
+                                <tr>
+                                    <td>[% allele.name | html %]</td>
+                                </tr>
+                            [% END %]
+                            [% prev_loci_name = current_loci_name %]
+                        [% END %]
+                    </table>
+                </div>
+        [% ELSIF num_actual_loci_names < total_loci && allele_not_found == 0  %]
+            <div >
+
+                <h2>[% c.loc("profile.type.result.text") | html %]</h2>
+
+			    <div>
+                	<p class="allele_type_result_p" style="margin-top:20px">[% c.loc("no.ngstar.type.found.missing.allele.msg") | html %]</p>
+            	</div>
+            </div>
+        [% ELSE %]
+            <div>
+                <h2>[% c.loc("profile.type.result.text") | html %]</h2>
+                <div>
+                    <p class="allele_type_result_p" style="margin-top:20px">[% c.loc("no.ngstar.type.found.allele.not.found.msg") | html %]</p>
+                </div>
+            </div>
+        [% END %]
+    [% END %]
+</form>
+
+<button type="button" class="btn btn-primary bkbtn" onClick="history.go(-1);return true;" >
+    <span class="glyphicon glyphicon-arrow-left"></span> [% c.loc("shared.back.btn.text") | html %]
+</button>
+
+</main>

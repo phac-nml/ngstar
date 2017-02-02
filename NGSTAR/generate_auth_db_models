@@ -1,0 +1,34 @@
+#!/bin/bash
+
+#Purpose:   Run this program each time the NGSTAR_Auth database schema changes to re-generate
+#           the database classes based on the current schema.
+#Usage:     ./generate_auth_db_models -d my_database_name -u my_dbms_username -p my_dbms_password
+
+NO_ARGS=0
+E_OPTERROR=85
+
+dbname=""
+username=""
+password=""
+
+if [ $# -eq "$NO_ARGS" ]
+then
+    echo "Usage: `basename $0` -d database_name -u dbms_username -p dbms_password"
+    exit $E_OPTERROR
+fi
+
+while getopts ":d:a:u:b:p:c" Option
+do
+    case $Option in
+        d   ) dbname="$OPTARG";;
+        u   ) username="$OPTARG";;
+        p   ) password="$OPTARG";;
+        *   ) echo "Unimplemented option chosen.";;
+    esac
+done
+
+echo "dbname=$dbname"
+echo "username=$username"
+
+script/ngstar_create.pl model DB DBIC::Schema $dbname::Schema create=static components=TimeStamp,PassphraseColumn dbi:mysql:$dbname $username $password '{ AutoCommit => 1 }'
+echo "Please make sure you update NGSTAR_Auth/Schema/Result.User.pm to include the appropriate settings for the password column. If unsure, please consult the documentation."

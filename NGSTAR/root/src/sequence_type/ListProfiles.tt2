@@ -1,0 +1,182 @@
+<nav class="breadcrumbs" property="breadcrumb">
+	<div class="container">
+		<div class="row">
+			<ol>
+				<li><a href="[% c.uri_for(c.controller("Allele").action_for("form")) %]">[% c.loc("home.page.name") | html %]</a></li>
+				<li><a class="disabled" tabindex="-1" href="#">[% c.loc("shared.list.profiles.text") | html %]</a></li>
+			</ol>
+		</div>
+	</div>
+</nav>
+
+<main role="main" property="mainContentOfPage" class="container fade in">
+
+[% USE Math %]
+
+<h1 id="wb-cont">[% c.loc("shared.profile.list.text") | html %]</h1>
+
+[% IF add_profile_notification || edit_notification || delete_notification || batch_profile_notification %]
+    <section id="my-alert" class="alert alert-success">
+        [% IF add_profile_notification %]
+			<strong>[% c.loc("profile.submitted.success.text") %]</strong>
+        [% ELSIF edit_notification %]
+			<strong>[% c.loc("profile.edit.success.text") %]</strong>
+        [% ELSIF delete_notification %]
+			<strong>[% c.loc("profile.delete.success.text") %]</strong>
+		[% ELSIF batch_profile_notification %]
+			<strong>[% c.loc("batch.add.profile.success.msg") %]</strong>
+		[% END %]
+    </section>
+[% END %]
+
+[% IF error == 2005 %]
+	<section class="alert alert-warning">
+		[% IF error == 2005 %]
+				<strong>[% c.loc("no.profiles.exist.text") %]</strong>
+		[% END %]
+	</section>
+[% END %]
+
+[% IF add_profile_notification %]
+
+	<div class="pull-right">
+		<button type="button" id="show-report" class="btn btn-info" onClick="view_profile_submission_report();" name="view-submission">
+			<span class="glyphicon glyphicon-list"></span> View Submission Report
+		</button>
+	</div>
+
+[% END %]
+
+<div id="type_list_options" >
+
+    [% IF error != 2005 %]
+	    [% IF not c.check_any_user_role('user','admin') %]
+			<button type="button" onClick="NGSTAR.load_profile_details('[% c.uri_for(c.controller("SequenceType").action_for("details")) %]');" class="btn btn-info" name="option" value="details">
+			    <span class="glyphicon glyphicon-align-left"></span> [% c.loc("shared.details.text") | html %]
+			</button>
+		[% END %]
+
+		[% IF c.user_exists() and c.check_any_user_role('user', 'admin') %]
+	        <button type="button" onClick="NGSTAR.load_profile_details('[% c.uri_for(c.controller("SequenceType").action_for("edit")) %]');" class="btn btn-info" name="option" value="edit">
+	            <span class="glyphicon glyphicon-edit"></span> [% c.loc("shared.edit.text") | html %]
+	        </button>
+	        <button type="button" id="delete-profile" class="btn btn-danger" onClick="NGSTAR.profileDeleteConfirm();" name="option" value="delete">
+	            <span class="glyphicon glyphicon-remove"></span> [% c.loc("shared.delete.text") | html %]
+	        </button>
+	    [% END %]
+
+    	<div class="btn-group">
+    	  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" name="option" value="download">
+    		<span class="glyphicon glyphicon-save"></span> [% c.loc("download.profiles.text") | html %] <span class="caret"></span>
+    	  </button>
+    	  <ul class="dropdown-menu" role="menu">
+    		<li><a href="[% c.uri_for(c.controller('SequenceType').action_for('download_profiles_process'), "Comma Separated Text") %]">[% c.loc("csv.text") | html %]</a></li>
+    		<li><a href="[% c.uri_for(c.controller('SequenceType').action_for('download_profiles_process'), "Tab Separated Text") %]" >[% c.loc("tsv.text") | html %]</a></li>
+    	  </ul>
+    	</div>
+        <a href="[% c.uri_for(c.controller('SequenceType').action_for('download_profile_metadata')) %]" class="btn btn-primary" >
+            <span class="glyphicon glyphicon-save"></span> [% c.loc("download.profile.metadata.text") | html %]
+        </a>
+	[% END %]
+
+	[% IF c.user_exists() and c.check_any_user_role('user', 'admin') %]
+            <a class="btn btn-success" role="button" href="[% c.uri_for(c.controller('SequenceType').action_for('batch_add_profile')) %]">
+                <span class="glyphicon glyphicon-plus"></span> [% c.loc("shared.batch.add.profiles.text") | html %]
+            </a>
+            <a class="btn btn-success" role="button" href="[% c.uri_for(c.controller('SequenceType').action_for('add_profile')) %]">
+                <span class="glyphicon glyphicon-plus"></span> [% c.loc("shared.add.profile.text") | html %]
+            </a>
+	[% END %]
+</div>
+
+    <table class="table table-bordered table-hover hidden fade" id="type_list">
+        <thead class="table-header">
+            <tr>
+                <th class="col-sm-2" scope="col">[% c.loc("shared.profile.type.text") | html %] <i class="glyphicon"></i></th>
+                    [% FOR name IN name_list %]
+                        <th class="col-sm-1" scope="col">[% name | html %] <i class="glyphicon"></i></th>
+                    [% END %]
+                <th class="col-sm-4" scope="col">[% c.loc("select.profile.text") | html %] <i class="glyphicon"></i></th>
+            </tr>
+        </thead>
+        <tbody id="itemContainer">
+            [% IF st_profile_list.defined AND st_profile_list.size > 0 %]
+                [% first_option = 1 %]
+				[% pos = 0 %]
+            	[% current_metadata_count = 0 %]
+                [% FOREACH profile IN st_profile_list %]
+					[% metadata = metadata_list.$current_metadata_count %]
+                    <tr>
+                        <td class="col-sm-2" data-sort="[% profile.type | html %]">[% profile.type | html %]
+							<span class="glyphicon glyphicon-info-sign"
+								rel="popover-dt"
+								tabindex="[% pos %]"
+								data-placement="right"
+								data-original-title="[% c.loc("shared.profile.type.text")| html %] [% profile.type | html %]"
+								data-html="true"
+								data-content="
+									[% c.loc("shared.curator.comments.text")| html %]:
+									<br>
+									[% IF metadata.curator_comment != ""  %]
+										[% metadata.curator_comment | html %]
+									[% ELSE %]
+										[% c.loc("shared.none.text") %]
+									[% END %]
+									<br>
+									[% c.loc("shared.amr.markers.text")| html %]:
+									<br>
+									[% IF metadata.amr_markers != ""  %]
+										[% metadata.amr_markers | html %]
+									[% ELSE %]
+										[% c.loc("shared.none.text") %]
+									[% END %]
+								<br>
+                                <br>
+                                <a href='[% c.uri_for(c.controller("SequenceType").action_for("details"), profile.type) %]'><span class='allele_type_popover_link' style='color:#008CBA; text-decoration:underline; font-weight:bold;' tabindex='[% pos %]'>[% c.loc("shared.details.text") | html %]</span></a>
+							">
+							</span>
+						</td>
+
+                        [% FOREACH name IN name_list %]
+        			        [% is_integer_type = 0 %]
+        			        [% FOREACH loci_in_list IN loci_int_type_set %]
+            				    [% IF loci_in_list.key == name %]
+            				        [% is_integer_type = 1 %]
+            				    [% END %]
+        			        [% END %]
+
+            				[% IF is_integer_type != 1 %]
+            	                        	<td class="col-sm-1">[% profile.$name | html %]</td>
+            				[% ELSE %]
+            					<td class="col-sm-1">[% Math.int(profile.$name) | html %]</td>
+            				[% END %]
+		                [% END %]
+
+                        <td class="col-sm-4">
+                            [% IF first_option %]
+                                <label for"profile_option" class="obscure">[% c.loc("select.profile.text") | html %]</label>
+                                <input type="radio" checked="checked" name="profile_option"  value="[% profile.type | html %]"/>
+                                [% first_option = 0 %]
+                            [% ELSE %]
+                                <label for"profile_option" class="obscure">[% c.loc("select.profile.text") | html %]</label>
+                                <input type="radio" name="profile_option" value="[% profile.type | html %]"/>
+                            [% END %]
+                        </td>
+                    </tr>
+				[% current_metadata_count = current_metadata_count + 1 %]
+                [% END %]
+            [% END %]
+        </tbody>
+    </table>
+
+
+    <div class="holder"></div>
+
+    <br>
+    <br>
+
+<button type="button" class="btn btn-primary bkbtn" onClick="history.go(-1);return true;">
+    <span class="glyphicon glyphicon-arrow-left"></span> [% c.loc("shared.back.btn.text") | html %]
+</button>
+
+</main>

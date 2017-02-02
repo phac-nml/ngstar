@@ -1,0 +1,6 @@
+Revision history for Perl extension BusinessLogic::Allele.
+
+0.01  Mon Jan 27 12:13:46 2014
+	- original version; created by h2xs 1.23 with options
+		-AX -n BusinessLogic::Allele
+

@@ -1,0 +1,6 @@
+Revision history for Perl extension DAL::Dao.
+
+0.01  Wed Jan 29 15:59:43 2014
+	- original version; created by h2xs 1.23 with options
+		-AX -n DAL::Dao
+

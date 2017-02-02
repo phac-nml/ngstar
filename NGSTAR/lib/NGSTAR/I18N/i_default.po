@@ -1,0 +1,1774 @@
+
+
+#EN
+
+msgid "app.title"
+msgstr "NG-STAR"
+
+msgid "app.title.expanded"
+msgstr "<span class='italic'>Neisseria gonorrhoeae</span> - Sequence Typing for Antimicrobial Resistance"
+
+
+#SHARED - any text used >1 time
+
+msgid "shared.signin.text"
+msgstr "Sign In"
+
+msgid "shared.account.settings.text"
+msgstr "Account Settings"
+
+msgid "shared.allele.query.text"
+msgstr "Allele Query"
+
+msgid "shared.profile.query.text"
+msgstr "Profile Query"
+
+msgid "shared.background.text"
+msgstr "Background"
+
+msgid "shared.primer.table.text"
+msgstr "Primer Table"
+
+msgid "shared.curator.text"
+msgstr "Curator"
+
+msgid "shared.admin.text"
+msgstr "Administrator"
+
+msgid "shared.terms.text"
+msgstr "Terms & Conditions"
+
+msgid "shared.submit.text"
+msgstr "Submit"
+
+msgid "shared.send.text"
+msgstr "Send"
+
+msgid "shared.save.text"
+msgstr "Save"
+
+msgid "shared.cancel.text"
+msgstr "Cancel"
+
+msgid "shared.clear.text"
+msgstr "Clear"
+
+msgid "shared.browse.text"
+msgstr "Browse"
+
+msgid "shared.notify.curator.text"
+msgstr "Notify Curator"
+
+msgid "shared.back.btn.text"
+msgstr "Back"
+
+msgid "shared.details.text"
+msgstr "Details"
+
+msgid "shared.edit.text"
+msgstr "Edit"
+
+msgid "shared.delete.text"
+msgstr "Delete"
+
+msgid "shared.batch.add.profiles.text"
+msgstr "Batch Add NG-STAR Profiles"
+
+msgid "shared.add.profile.text"
+msgstr "Add NG-STAR Profile"
+
+msgid "shared.batch.add.alleles.text"
+msgstr "Batch Add Alleles"
+
+msgid "shared.add.allele.text"
+msgstr "Add Allele"
+
+msgid "shared.forgot.password.text"
+msgstr "Forgot Password"
+
+msgid "shared.edit.allele.text"
+msgstr "Edit Allele"
+
+msgid "shared.email.contact.info.label"
+msgstr "Please enter your contact information"
+
+msgid "shared.loci.name.text"
+msgstr "Loci Name"
+
+msgid "shared.allele.type.text"
+msgstr "Allele Type"
+
+msgid "shared.sequence.text"
+msgstr "Sequence"
+
+msgid "shared.trace.file.text"
+msgstr "Upload a trace file"
+
+msgid "shared.optional.metadata.label"
+msgstr "Please enter optional metadata"
+
+msgid "shared.collection.date.text"
+msgstr "Collection Date"
+
+msgid "shared.country.text"
+msgstr "Originating Country"
+
+msgid "shared.patient.age.text"
+msgstr "Patient Age"
+
+msgid "shared.patient.gender.text"
+msgstr "Patient Gender"
+
+msgid "shared.beta.lactamase.text"
+msgstr "Beta-Lactamase"
+
+msgid "shared.isolate.codes.text"
+msgstr "Isolate Classification Code(s)"
+
+msgid "shared.isolate.classifications.text"
+msgstr "Isolate Classification(s)"
+
+msgid "shared.mics.determination.text"
+msgstr "MICs Determined By"
+
+msgid "shared.mgl.text"
+msgstr "MIC (mg/L)"
+
+msgid "shared.interpretation.text"
+msgstr "MIC (r/s/i)"
+
+msgid "shared.additional.epi.data.text"
+msgstr "Additional Epidemiological Data"
+
+msgid "shared.profile.type.text"
+msgstr "NG-STAR Type"
+
+msgid "shared.options.text"
+msgstr "Options"
+
+msgid "shared.curator.comments.text"
+msgstr "Curator Comments"
+
+msgid "shared.add.new.allele.text"
+msgstr "Add New Allele"
+
+msgid "shared.batch.add.alleles.text"
+msgstr "Batch Add New Alleles"
+
+msgid "shared.batch.add.allele.metadata.text"
+msgstr "Batch Add Allele Metadata"
+
+msgid "shared.batch.add.profile.metadata.text"
+msgstr "Batch Add Profile Metadata"
+
+msgid "shared.submit.allele.text"
+msgstr "Submit New Allele"
+
+msgid "shared.submit.profile.text"
+msgstr "Submit New Profile"
+
+msgid "shared.create.new.account.text"
+msgstr "Create New Account"
+
+msgid "shared.reset.password.text"
+msgstr "Reset Password"
+
+msgid "shared.change.password.text"
+msgstr "Change Password"
+
+msgid "shared.change.username.text"
+msgstr "Change Username"
+
+msgid "shared.change.email.text"
+msgstr "Change Email Address"
+
+msgid "shared.update.email.text"
+msgstr "Update Email Address"
+
+msgid "shared.update.password.text"
+msgstr "Update Password"
+
+msgid "shared.update.username.text"
+msgstr "Update Username"
+
+msgid "shared.password.updated.email.subj"
+msgstr "NG-STAR Password Updated"
+
+msgid "shared.password.updated.email.body"
+msgstr "Your NG-STAR password has been successfully updated."
+
+msgid "shared.enter.account.information.text"
+msgstr "Please enter account information"
+
+msgid "shared.account.access.level.text"
+msgstr "Access Level"
+
+msgid "shared.account.first.name.text"
+msgstr "First Name"
+
+msgid "shared.account.last.name.text"
+msgstr "Last Name"
+
+msgid "shared.account.ins.name.text"
+msgstr "Institution Name"
+
+msgid "shared.account.ins.city.text"
+msgstr "Institution City"
+
+msgid "shared.account.ins.country.text"
+msgstr "Institution Country"
+
+msgid "shared.account.username.text"
+msgstr "Username"
+
+msgid "shared.account.email.text"
+msgstr "Email Address"
+
+msgid "shared.account.password.text"
+msgstr "Password"
+
+msgid "shared.edit.user.account.text"
+msgstr "Edit User Account"
+
+msgid "shared.locus.text"
+msgstr "Locus"
+
+msgid "shared.none.text"
+msgstr "None"
+
+msgid "shared.access.denied.text"
+msgstr "Access Denied"
+
+msgid "shared.not.provided.text"
+msgstr "Not Provided"
+
+msgid "shared.male.text"
+msgstr "Male"
+
+msgid "shared.female.text"
+msgstr "Female"
+
+msgid "shared.unknown.text"
+msgstr "Unknown"
+
+msgid "shared.positive.text"
+msgstr "Positive"
+
+msgid "shared.negative.text"
+msgstr "Negative"
+
+msgid "shared.etest.text"
+msgstr "E-Test"
+
+msgid "shared.agar.dilution.text"
+msgstr "Agar Dilution"
+
+msgid "shared.disc.diffusion.text"
+msgstr "Disc Diffusion"
+
+
+msgid "shared.intermediate.text"
+msgstr "Intermediate"
+
+msgid "shared.resistant.text"
+msgstr "Resistant"
+
+msgid "shared.susceptible.text"
+msgstr "Susceptible"
+
+msgid "shared.batch.add.metadata.instructions.msg"
+msgstr "Input must begin with a header line and each column must be tab separated. If a value is not given for a certain column insert a tab in it's place."
+
+msgid "shared.upload.metadata.file.text"
+msgstr "Upload a Metadata file"
+
+msgid "shared.no.text"
+msgstr "No"
+
+msgid "shared.enter.allele.type.form.error.msg"
+msgstr "Please enter an allele type"
+
+msgid "shared.enter.sequence.msg"
+msgstr "Please enter a sequence"
+
+msgid "shared.enter.metadata.msg"
+msgstr "Please enter metadata"
+
+msgid "shared.enter.first.name.msg"
+msgstr "Please enter a first name"
+
+msgid "shared.enter.last.name.msg"
+msgstr "Please enter a last name"
+
+msgid "shared.enter.ins.name.msg"
+msgstr "Please enter name of institution"
+
+msgid "shared.enter.ins.country.msg"
+msgstr "Please enter country of institution"
+
+msgid "shared.enter.ins.city.msg"
+msgstr "Please enter city of institution"
+
+msgid "shared.enter.username.msg"
+msgstr "Please enter a username"
+
+msgid "shared.enter.password.msg"
+msgstr "Please enter a password"
+
+msgid "shared.enter.email.address.msg"
+msgstr "Please enter an email address"
+
+msgid "shared.enter.user.identifier.msg"
+msgstr "Please enter username or email address"
+
+msgid "shared.mic.val.error.msg"
+msgstr "Please enter a valid MIC"
+
+msgid "shared.check.age.error.msg"
+msgstr "Please enter a valid age. This field can only contain numbers"
+
+msgid "shared.check.city.error.msg"
+msgstr "Please enter a valid city. This field can only contain letters, and dashes"
+
+msgid "shared.check.collection.date.error.msg"
+msgstr "Please enter a valid date in the format YYYY-MM-DD. This field can only contain numbers and dashes"
+
+msgid "shared.check.country.error.msg"
+msgstr "Please enter a valid country. This field can only contain letters and dashes"
+
+msgid "shared.check.curator.comment.error.msg"
+msgstr "Please enter valid comments. This field can only contain letters, numbers, and these special characters [ . , : ; / ]"
+
+msgid "shared.check.epi.data.error.msg"
+msgstr "Please enter valid epidemiological data. This field can only contain letters, numbers, and these special characters [ . , : ; / ]"
+
+msgid "shared.check.email.address.error.msg"
+msgstr "Email should be of the format someuser@example.com"
+
+msgid "shared.check.name.error.msg"
+msgstr "Please enter a valid name. This field can only contain letters, and these special characters [ - ' ]"
+
+msgid "shared.check.password.error.msg"
+msgstr "Please enter a valid password. This field must contain one uppercase letter, one lowercase letter, one number, and one of these special characters [ . - _ ! ]"
+
+msgid "shared.check.signin.password.error.msg"
+msgstr "Please enter a valid password. This field can only contain letters, numbers, and these special characters [ . - _ ! ]"
+
+msgid "shared.batch.add.metadata.entry.error.msg"
+msgstr "Please enter metadata in valid tab format. This field only accepts letters, numbers and these special characters [ < > = : + . - _ , ; / ]"
+
+msgid "shared.check.seq.error.msg"
+msgstr "Please enter a valid sequence. This field can only contain the following letters [ A , T , C , G ]"
+
+msgid "shared.check.non.dec.type.val.error.msg"
+msgstr "Please enter a valid type. This field can only contain numbers"
+
+msgid "shared.check.type.val.error.msg"
+msgstr "Please enter a valid type. This field can only contain numbers and decimals"
+
+msgid "shared.check.type.range.error.msg"
+msgstr "Please enter a type that is in the range of 0 to 999 inclusive"
+
+msgid "shared.check.username.error.msg"
+msgstr "Please enter a valid username. This field can only contain letters, numbers, and these special characters [ . - _ ]"
+
+msgid "shared.check.user.identifier.error.msg"
+msgstr "Please enter a valid email address or username. This field can only contain letters, numbers, and these special characters [ @ . - _ ]"
+
+msgid "shared.ok.text"
+msgstr "OK"
+
+msgid "shared.yes.text"
+msgstr "Yes"
+
+msgid "shared.profile.query.results.text"
+msgstr "Profile Query Results"
+
+msgid "shared.allele.details.text"
+msgstr "Allele Details"
+
+msgid "shared.agree.text"
+msgstr "Agree"
+
+msgid "shared.required.field.text"
+msgstr "Required field"
+
+msgid "shared.allele.list.text"
+msgstr "Allele List"
+
+msgid "shared.profile.list.text"
+msgstr "Profile List"
+
+msgid "shared.select.loci.to.view.alleles.text"
+msgstr "Select Loci to View Alleles"
+
+msgid "shared.batch.add.profiles.example.text"
+msgstr "Batch Add Profiles Example"
+
+msgid "shared.batch.add.alleles.example.text"
+msgstr "Batch Add Alleles Example"
+
+msgid "shared.batch.add.profile.metadata.example.text"
+msgstr "Batch Add Profile Metadata Example"
+
+msgid "shared.manage.user.accounts.text"
+msgstr "Manage User Accounts"
+
+msgid "shared.email.allele.text"
+msgstr "Email Allele"
+
+msgid "shared.add.new.profile.text"
+msgstr "Add New Profile"
+
+msgid "shared.edit.profile.text"
+msgstr "Edit Profile"
+
+msgid "shared.email.profile.text"
+msgstr "Email Profile"
+
+msgid "shared.ngstar.profile.details.text"
+msgstr "NG-STAR Profile Details"
+
+msgid "shared.404.page.not.found.text"
+msgstr "Error 404 - We couldn't find that Web page"
+
+msgid "shared.website.primer.table.for.all.genes.text"
+msgstr "Website Primer Table for all Genes"
+
+msgid "shared.view.loci.alleles.text"
+msgstr "View Loci Alleles"
+
+msgid "shared.list.alleles.text"
+msgstr "List Alleles"
+
+msgid "shared.list.profiles.text"
+msgstr "List Profiles"
+
+msgid "shared.select.text"
+msgstr "Select"
+
+msgid "shared.date.format"
+msgstr "YYYY-MM-DD"
+
+msgid "shared.batch.allele.query.text"
+msgstr "Batch Allele Query"
+
+msgid "shared.batch.allele.query.example.text"
+msgstr "Batch Allele Query Example"
+
+msgid "shared.sequences.text"
+msgstr "Sequences"
+
+msgid "shared.batch.allele.query.results.text"
+msgstr "Batch Allele Query Results"
+
+msgid "shared.format.text"
+msgstr "Format"
+
+#ALLELES
+
+msgid "alleles.text"
+msgstr "Alleles"
+
+msgid "alleles.multifasta.whole.genome.text"
+msgstr "Multi-FASTA/Whole Genome"
+
+msgid "download.alleles.text"
+msgstr "Download Alleles"
+
+msgid "download.allele.metadata.text"
+msgstr "Download Metadata"
+
+msgid "dna.sequences.text"
+msgstr "Please enter your DNA sequences below"
+
+msgid "allele.email.success.text"
+msgstr "Your allele was sent to the curator and will be evaluated promptly. Thank you for your submission."
+
+msgid "allele.add.info.label"
+msgstr "Please enter information for the allele to add"
+
+msgid "email.allele.comments.label"
+msgstr "Please enter any comments regarding the allele you are submitting"
+
+msgid "email.allele.info.label"
+msgstr "Please enter information for the allele to submit"
+
+msgid "allele.view.loci"
+msgstr "Please select a loci"
+
+msgid "manage.alleles.text"
+msgstr "Manage Alleles"
+
+msgid "data.content.manage.alleles"
+msgstr "View a list of alleles, view allele details, edit and delete alleles"
+
+msgid "data.content.add.new.allele"
+msgstr "Add a new allele to the database"
+
+msgid "data.content.batch.add.alleles"
+msgstr "Batch add new alleles to the database"
+
+msgid "data.content.batch.add.allele.metadata"
+msgstr "Batch add allele metadata to the database"
+
+msgid "data.content.submit.allele"
+msgstr "Submit new allele to curator"
+
+msgid "sequence.length.text"
+msgstr "Sequence Length"
+
+msgid "match.type.text"
+msgstr "Match Type"
+
+msgid "submitted.sequence.match.text"
+msgstr "Submitted Sequence Match"
+
+msgid "full.database.match.text"
+msgstr "Full Database Match"
+
+msgid "select.allele.for.options.text"
+msgstr "Select allele for Options"
+
+msgid "allele.submitted.success.msg"
+msgstr "Allele submitted successfully!"
+
+msgid "allele.deleted.success.msg"
+msgstr "Allele deleted successfully!"
+
+msgid "batch.alleles.submitted.success.msg"
+msgstr "Batch Alleles submitted successfully!"
+
+msgid "allele.edited.success.msg"
+msgstr "Allele with Allele Type %1 Edited Successfully!"
+
+msgid "no.loci.alleles.currently.exist.msg"
+msgstr "No %1 alleles currently exist."
+
+msgid "loci.not.exist.msg"
+msgstr "Loci name %1 does not exist"
+
+msgid "full.text"
+msgstr "Full"
+
+msgid "partial.text"
+msgstr "Partial"
+
+msgid "batch.add.alleles.instructions.msg"
+msgstr "For the FASTA header, you must provide at least the allele type for each sequence. Each sequence must be contained in a single line."
+
+msgid "enter.seqs.in.fasta.format.text"
+msgstr "Enter sequences in FASTA format"
+
+msgid "upload.a.fasta.file.text"
+msgstr "Upload a FASTA file instead"
+
+msgid "batch.add.allele.metadata.example.text"
+msgstr "Batch Add Metadata Example"
+
+msgid "batch.add.allele.example.msg"
+msgstr "<strong>Note: </strong> The input/file that you submit must have a particular format and must end with a <strong>.fasta</strong> extension. Click <a href= %1 class='alert-link'> here </a> for an example."
+
+msgid "batch.add.allele.wrong.length.msg"
+msgstr "<strong>FASTA file with allele type %1 error:</strong> This sequence is not the appropriate length for a %2 gene. Please ensure that you are including %2 sequences only."
+
+msgid "batch.add.allele.error.1000.msg"
+msgstr "<strong>FASTA Loci %1 Error:</strong> This loci does not exist. Please make sure that you are entering sequences for a valid loci."
+
+msgid "batch.add.allele.error.1002.msg"
+msgstr "<strong>FASTA file with allele type %1 error:</strong> This sequence already exists in the database. Please remove the sequence with allele type %1 from your FASTA file."
+
+msgid "batch.add.allele.error.1003.msg"
+msgstr "<strong>FASTA Allele Type %1 Error:</strong> Please enter a different allele type. A %2 allele with type %1 already exists in the database."
+
+msgid "batch.add.allele.error.1004.msg"
+msgstr "<strong>FASTA Allele Type %1 Error:</strong> Invalid allele type. Please enter an allele type in the range 0 to 999."
+
+msgid "batch.add.allele.error.1022.msg"
+msgstr "<strong>FASTA Allele Type %1 Error:</strong> Please enter a different allele type. An allele with type %1 already exists in the FASTA input that you provided."
+
+msgid "batch.add.allele.error.1025.msg"
+msgstr "<strong>FASTA Allele Type %1 Error:</strong> Duplicate sequence. There is another allele with an equivalent sequence in the FASTA input that you provided."
+
+msgid "batch.add.allele.error.1026.msg"
+msgstr "<strong>FASTA Allele Type %1 Error:</strong> This sequence contains invalid characters."
+
+msgid "batch.add.allele.error.5000.msg"
+msgstr "<strong>FASTA Allele Type %1 Error:</strong> The sequences you have entered are not in valid FASTA format. Please ensure that you are submitting alleles in FASTA format only and that there are no extra blank or broken lines."
+
+msgid "batch.add.allele.metadata.success.msg"
+msgstr "Batch metadata added successfully!"
+
+msgid "enter.allele.metadata.tab.format.text"
+msgstr "Enter allele metadata in Tab format"
+
+msgid "batch.add.allele.metadata.error.1022.msg"
+msgstr "<strong>METADATA Allele Type %1 Error:</strong> An allele with type %1 already exists in the metadata input that you provided. Please remove the duplicate line(s)."
+
+msgid "batch.add.allele.metadata.error.1023.msg"
+msgstr "<strong>METADATA Allele Type %1 Error:</strong> Allele with type %1 does not exist. Please add the allele first."
+
+msgid "batch.add.allele.metadata.error.1024.msg"
+msgstr "<strong>Allele Error:</strong> No %1 alleles found. Before adding metadata please add these alleles."
+
+msgid "batch.add.allele.metadata.error.5001.msg"
+msgstr "<strong>METADATA Format %1 Error:</strong> Invalid metadata entry. Please ensure input is in tab separated format with the correct number of fields."
+
+msgid "batch.add.allele.metadata.example.msg"
+msgstr "<strong>Note: </strong> The input/file that you submit must have a particular format and must end with a <strong>.txt</strong> extension. Click <a href= %1 class='alert-link'> here </a> for an example."
+
+msgid "allele.type.query.results.text"
+msgstr "Allele Type Query Results"
+
+#this msgstr appears on allele type result page
+msgid "profile.type.result.text"
+msgstr "Profile Type Result"
+
+msgid "submit.ngstar.type.to.curator.text"
+msgstr "Submit new NG-STAR type to curator"
+
+msgid "submit.allele.types.to.determine.ngstar.type.label"
+msgstr "Submit allele types to determine NG-STAR Type"
+
+msgid "no.ngstar.type.found.partial.alleles.incl.msg"
+msgstr "NO NG-STAR type found due to the following partial alleles included in the query"
+
+msgid "batch.add.allele.fasta.entry.error.msg"
+msgstr "Please enter sequences in valid fasta format. This field only accepts letters, numbers, and these special characters [ . - _ > ]"
+
+msgid "no.ngstar.type.found.missing.allele.msg"
+msgstr "NO NG-STAR type found due to not all allele sequences being included in the query"
+
+msgid "no.ngstar.type.found.allele.not.found.msg"
+msgstr "NO NG-STAR type found due to allele sequences not being found"
+
+#atr = Allele Type Result
+
+msgid "atr.partial.matches.msg"
+msgstr "<strong>Note:</strong> Your query returned partial matches!<br>You may want to submit a longer sequence in order to get a more refined result."
+
+msgid "atr.partial.match.w.link.msg"
+msgstr "<strong>Note: </strong>Your query resulted in a partial match being found. Please submit your allele <a href= %1 class='alert-link'> here</a> so that it can be included in the NG-STAR database."
+
+msgid "atr.partial.matches.w.link.msg"
+msgstr "<strong>Note: </strong>Your query resulted in partial matches being found. Please submit your alleles <a href= %1 class='alert-link'> here</a> so that they can be included in the NG-STAR database."
+
+msgid "atr.no.matches.w.link.msg"
+msgstr "<strong>Note: </strong>Your query resulted in matches not being found. Please submit your alleles <a href= %1 class='alert-link'> here</a> so that they can be included in the NG-STAR database."
+
+msgid "atr.no.match.w.link.msg"
+msgstr "<strong>Note: </strong>Your query resulted in a match not being found. Please submit your allele <a href= %1 class='alert-link'> here</a> so that it can be included in the NG-STAR database."
+
+msgid "not.found.text"
+msgstr "Not found"
+
+
+#PROFILES
+
+msgid "profiles.text"
+msgstr "Profiles"
+
+msgid "download.profiles.text"
+msgstr "Download Profiles"
+
+msgid "download.profile.metadata.text"
+msgstr "Download Profile Metadata"
+
+msgid "csv.text"
+msgstr "Comma Separated Text"
+
+msgid "tsv.text"
+msgstr "Tab Separated Text"
+
+msgid "select.profile.text"
+msgstr "Select NG-STAR Profile for Options"
+
+msgid "enter.profile.query.text"
+msgstr "Please enter your profile query below"
+
+msgid "profile.submitted.success.text"
+msgstr "Profile submitted successfully!"
+
+msgid "profile.edit.success.text"
+msgstr "Profile edited successfully!"
+
+msgid "profile.delete.success.text"
+msgstr "Profile deleted successfully!"
+
+msgid "no.profiles.exist.text"
+msgstr "No profiles currently exist."
+
+msgid "edit.profile.text"
+msgstr "Edit NG-STAR Profile"
+
+msgid "edit.profile.metadata.label"
+msgstr "Edit optional metadata"
+
+msgid "email.profile.success.text"
+msgstr "Your profile was sent to the curator and will be evaluated promptly. Thank you for your submission."
+
+msgid "enter.profile.types.label"
+msgstr "Please enter the profile types to submit"
+
+msgid "profile.comments.text"
+msgstr "Comments"
+
+msgid "manage.profiles.text"
+msgstr "Manage NG-STAR Profiles"
+
+msgid "data.content.manage.profiles"
+msgstr "View a list of all NG-STAR profiles. Edit and delete NG-STAR profiles"
+
+msgid "add.new.profile.text"
+msgstr "Add New NG-STAR Profile"
+
+msgid "data.content.add.new.profile"
+msgstr "Add a new NG-STAR profile to the database"
+
+msgid "batch.add.new.profiles.text"
+msgstr "Batch Add New NG-STAR Profiles"
+
+msgid "data.content.batch.add.new.profiles"
+msgstr "Batch add new NG-STAR profiles to the database"
+
+msgid "data.content.batch.add.profile.metadata"
+msgstr "Batch add profile metadata to the database"
+
+msgid "data.content.submit.profile"
+msgstr "Submit new profile to curator"
+
+msgid "query.text"
+msgstr "Query"
+
+msgid "enter.profile.msg"
+msgstr "Please enter a profile"
+
+msgid "batch.add.profile.entry.error.msg"
+msgstr "Please enter a valid profile. This field can only contain numbers, decimal points, and commas. Each profile should be contained on it's own line."
+
+msgid "batch.add.profile.error.1001"
+msgstr "<strong>Profile NG-STAR Type %1 Error:</strong> You entered an allele type for an allele that is non-existent. Please add the allele first."
+
+msgid "batch.add.profile.error.1014"
+msgstr "<strong>Profile NG-STAR Type %1 Error:</strong> Please enter a valid allele type within the range [0-999]."
+
+msgid "batch.add.profile.error.1026"
+msgstr "<strong>Profile NG-STAR Type %1 Error:</strong> Please enter the correct number of NG-STAR type and allele types."
+
+msgid "batch.add.profile.error.2002"
+msgstr "<strong>Profile NG-STAR Type %1 Error:</strong> Please enter a different profile. This profile already exists in the database."
+
+msgid "batch.add.profile.error.2003"
+msgstr "<strong>Profile NG-STAR Type %1 Error:</strong> Please enter a different NG-STAR type. A profile with this NG-STAR type already exists in the database."
+
+msgid "batch.add.profile.error.2010"
+msgstr "<strong>Profile NG-STAR Type %1 Error:</strong> Please enter profiles that follow the correct format. You can refer to the example to determine the proper format."
+
+msgid "batch.add.profile.error.2021"
+msgstr "<strong>Profile NG-STAR Type %1 Error:</strong> Please enter a different profile. This profile already exists in the input that you provided."
+
+msgid "batch.add.profile.error.2022"
+msgstr "<strong>Profile NG-STAR Type %1 Error:</strong> Please enter a different NG-STAR type. A profile with this NG-STAR type already exists in the input that you provided."
+
+msgid "batch.add.profile.error.2023"
+msgstr "<strong>Profile NG-STAR Type %1 Error:</strong> Please enter a valid NG-STAR type within the range [0-999]."
+
+msgid "batch.profile.metadata.error.2019"
+msgstr "<strong>METADATA Profile Type %1 Error:</strong> A sequence with type %1 already exists in the metadata input that you provided. Please remove the duplicate line(s)."
+
+msgid "batch.profile.metadata.error.2018"
+msgstr "<strong>METADATA Profile Type %1 Error:</strong> Sequence with type %1 does not exist. Please add the profile first."
+
+msgid "batch.profile.metadata.error.5001"
+msgstr "<strong>METADATA Format %1 Error:</strong> Invalid metadata entry. Please ensure input is in tab separated format with the correct number of fields."
+
+msgid "batch.profile.metadata.error.2020"
+msgstr "<strong>Profile Error:</strong> No profiles found. Before adding metadata please add these profiles."
+
+#ptr = Profile Type Result
+
+msgid "ptr.no.profiles.found.msg"
+msgstr "<strong>Note: </strong>No profiles found. Try relaxing your search criteria."
+
+msgid "ptr.partial.matches.found.msg"
+msgstr "<strong>Note: </strong>No exact matches found. Partial matches are displayed below."
+
+msgid "num.matching.allele.types.text"
+msgstr "# of matching allele types"
+
+msgid "enter.info.for.ngstar.profile.label"
+msgstr "Please enter information for the NG-STAR profile to add"
+
+msgid "batch.add.profile.csv.example.text"
+msgstr "Comma separated values example"
+
+msgid "batch.add.profile.upload.file.label"
+msgstr "Upload a file of NG-STAR profiles instead"
+
+msgid "batch.add.enter.ngstar.profiles.label"
+msgstr "Enter NG-STAR profiles"
+
+msgid "batch.add.profile.instructions.msg"
+msgstr "<strong>Note: </strong> The NG-STAR profile(s) that you submit must have a particular format and must end with a <strong>.txt</strong> or <strong>.csv</strong> extension. Click <a href= %1 class='alert-link'> here </a> for an example."
+
+msgid "batch.add.profile.metadata.success.msg"
+msgstr "<strong>Batch metadata for profiles added successfully!</strong>"
+
+msgid "enter.profile.metadata.in.tab.format.label"
+msgstr "Enter profile metadata in Tab format"
+
+msgid "batch.add.profile.metadata.instructions.msg"
+msgstr "<strong>Note: </strong> The input/file that you submit must have a particular format and must end with a <strong>.txt</strong> extension. Click <a href= %1 class='alert-link'> here </a> for an example."
+
+msgid "batch.add.profile.success.msg"
+msgstr "Batch profiles added successfully!"
+
+msgid "pena.format"
+msgstr "penA type format"
+
+
+#ACCOUNT
+
+msgid "signout.text"
+msgstr "Sign Out"
+
+msgid "curator.tools.text"
+msgstr "Curator Tools"
+
+msgid "admin.tools.text"
+msgstr "Admin Tools"
+
+msgid "signout.success.msg"
+msgstr "You have successfully signed out!"
+
+msgid "create.text"
+msgstr "Create"
+
+msgid "update.text"
+msgstr "Update"
+
+msgid "activate.text"
+msgstr "Activate"
+
+msgid "deactivate.text"
+msgstr "Deactivate"
+
+msgid "new.user.text"
+msgstr "New User"
+
+msgid "data.content.create.new.account"
+msgstr "Create an administrator or curator account"
+
+msgid "manage.accounts.text"
+msgstr "Manage Accounts"
+
+msgid "data.content.manage.accounts"
+msgstr "Edit and delete user accounts"
+
+msgid "please.signin.text"
+msgstr "Please sign in"
+
+msgid "curator.signin.msg"
+msgstr "You must sign in as a Curator to enable Curator functionality"
+
+msgid "invalid.credentials.msg"
+msgstr "Invalid username or password! Please try again"
+
+msgid "password.update.success.msg"
+msgstr "Your password has been successfully changed!"
+
+msgid "password.reset.instructions"
+msgstr "An email has been sent to the email address on record. Follow the instructions within the email to reset your password."
+
+msgid "please.enter.email.and.token.text"
+msgstr "Please enter your email address and reset token"
+
+msgid "step.1.text"
+msgstr "Step 1 of 4"
+
+msgid "step.3.text"
+msgstr "Step 3 of 4"
+
+msgid "step.4.text"
+msgstr "Step 4 of 4"
+
+msgid "enter.user.identifier.msg"
+msgstr "Please enter your username or email address"
+
+msgid "email.update.success.msg"
+msgstr "Your email address has been successfully changed!"
+
+msgid "update.ngstar.email.text"
+msgstr "Update your NG-STAR email"
+
+msgid "password.update.success.msg"
+msgstr "Your password has been successfully changed!"
+
+msgid "update.ngstar.password.text"
+msgstr "Update your NG-STAR password"
+
+msgid "update.password.popover.info"
+msgstr "Password must be 6-20 characters. Must contain one number, one uppercase letter,<br> one lowercase letter, and one of the characters [ period ( . ) , exclamation mark ( ! ) , <br> underscore ( _ ) , or dash ( - ) ]"
+
+msgid "username.update.success.msg"
+msgstr "Your username has been successfully changed!"
+
+msgid "update.ngstar.username.text"
+msgstr "Update your NG-STAR username"
+
+
+msgid "create.new.account.heading.1"
+msgstr "Administrator Account"
+
+msgid "create.new.account.heading.1.1"
+msgstr "Can create accounts"
+
+msgid "create.new.account.heading.1.2"
+msgstr "Can manage the NG-STAR database (add/edit/delete alleles and/or profiles)"
+
+msgid "create.new.account.heading.2"
+msgstr "Curator Account"
+
+msgid "create.new.account.heading.2.1"
+msgstr "Can manage the NG-STAR database (add/edit/delete alleles and/or profiles)"
+
+msgid "account.confirm.password.text"
+msgstr "Re-enter Password"
+
+msgid "account.status.text"
+msgstr "Status"
+
+msgid "create.account.password.instructions.text"
+msgstr "Password must be 6-20 characters. Must contain one number, one uppercase letter, one lowercase letter, and one of the characters [period, exclamation mark, underscore  and/or dash]"
+
+msgid "create.account.username.instructions.text"
+msgstr "Username must be 5-20 characters. It can contain letters, numbers, periods, underscores, and/or dashes"
+
+msgid "edit.account.note.text"
+msgstr "*If user needs password reset, advise user to use the forgot password link on the sign in page."
+
+msgid "account.reactivate.success.msg"
+msgstr "User %1 has been successfully reactivated."
+
+msgid "account.deactivate.success.msg"
+msgstr "User %1 has been successfully deactivated."
+
+msgid "account.delete.success.msg"
+msgstr "User %1 has been successfully deleted."
+
+msgid "account.update.success.msg"
+msgstr "Account information has been successfully updated for user %1."
+
+msgid "account.create.success.msg"
+msgstr "Account for user %1 created successfully!"
+
+msgid "confirm.user.delete.msg"
+msgstr "Are you sure you want to delete user:<br><br>User: %1<br>"
+
+msgid "confirm.user.deactivate.msg"
+msgstr "Are you sure you want to deactivate user:<br><br>User: %1<br>"
+
+msgid "confirm.user.reactivate.msg"
+msgstr "Are you sure you want to reactivate user:<br><br>User: %1<br>"
+
+msgid "inactive.ngstar.users.text"
+msgstr "Inactive NG-STAR Users"
+
+msgid "active.ngstar.users.text"
+msgstr "Active NG-STAR Users"
+
+msgid "inactive.text"
+msgstr "Inactive"
+
+msgid "active.text"
+msgstr "Active"
+
+msgid "login.as.admin.msg"
+msgstr "Please login as an administrator to use this feature"
+
+msgid "login.msg"
+msgstr "Please login to use this feature"
+
+msgid "enter.reset.token.msg"
+msgstr "Please enter reset token"
+
+msgid "token.text"
+msgstr "Token"
+
+msgid "check.reset.token.error.message"
+msgstr "Please enter a reset token. This field can only contain letters and numbers"
+
+msgid "new.username.text"
+msgstr "New Username"
+
+msgid "confirm.new.username.text"
+msgstr "Confirm New Username"
+
+msgid "confirm.password.text"
+msgstr "Confirm Password"
+
+msgid "confirm.email.text"
+msgstr "Confirm Email Address"
+
+msgid "new.email.address.text"
+msgstr "New Email Address"
+
+msgid "password.reset.email.subject.text"
+msgstr "Step 2 of 4: NG-STAR Reset Password"
+
+msgid "password.reset.email.body.text"
+msgstr "<p>Request to reset password for NG-STAR web application.To reset password follow these instructions</p><br>1)Go to %1.<br><p>2)Type in your email address and reset token which is provided below</p><br><p>Reset Token: %2</p><br><p>The reset token is valid for 1 hour. If you have not requested to have your password reset then disregard this email.</p>"
+
+msgid "account.locked.out.msg"
+msgstr "This account has been locked out due to too many failed sign in attempts. Please try again later."
+
+msgid "account.expired.password.msg"
+msgstr "Your password has expired. Please change your password."
+
+msgid "ngstar.user.accounts.text"
+msgstr "NG-STAR User Accounts"
+
+
+#MISC
+
+msgid "page.under.development.text"
+msgstr "This page is under development"
+
+msgid "error.text"
+msgstr "Error"
+
+msgid "text.government.of.canada"
+msgstr "Government of Canada"
+
+msgid "button.launch.ngstar"
+msgstr "Launch NG-STAR"
+
+msgid "home.page.name"
+msgstr "Home"
+
+msgid "skip.to.main.content"
+msgstr "Skip to main content"
+
+msgid "about.ngstar.text"
+msgstr "About NG-STAR"
+
+
+#BROWSER TITLES
+
+msgid "browser.title.update.email"
+msgstr "Update Account Email"
+
+msgid "browser.title.update.password"
+msgstr "Update Account Password"
+
+msgid "browser.title.update.username"
+msgstr "Update Account Username"
+
+msgid "browser.title.admin.tools"
+msgstr "Administrator Tools"
+
+msgid "browser.title.create.user"
+msgstr "Create User Account"
+
+msgid "browser.title.allele.query.results"
+msgstr "Allele Query Results"
+
+msgid "browser.title.welcome"
+msgstr "Welcome to NG-STAR (Neisseria gonorrhoeae-Sequence Typing for Antimicrobial Resistance)"
+
+msgid "browser.title.batch.add.profiles"
+msgstr "Batch Add New Profiles"
+
+msgid "browser.title.batch.add.profile.metadata"
+msgstr "Batch Add Metadata for Profiles"
+
+msgid "browser.title.batch.add.profile.metadata.example"
+msgstr "Batch Add Metadata for Profiles Example"
+
+
+#MODAL ERROR MESSAGES
+
+msgid "modal.confirm.error.1000"
+msgstr "Loci names do not match. Please make sure you are entering sequences for the selected loci."
+
+msgid "modal.confirm.error.1001"
+msgstr "You entered an allele type for an allele that is non-existent. Please add the allele first. The following alleles do not exist: <br><br>%(error_alleles)s<br>"
+
+msgid "modal.confirm.error.1002"
+msgstr "The sequence you have submitted already exists for the loci %(loci_name)s with allele type %(allele_type)s."
+
+msgid "modal.confirm.error.1003"
+msgstr "Please enter a different allele type. A sequence with type %(allele_type)s for the loci %(loci_name)s already exists."
+
+msgid "modal.confirm.error.1004"
+msgstr "The allele type you have entered is invalid for loci %(loci_name)s.<br>Allele type must be in the range 0 to 999 inclusive."
+
+msgid "modal.confirm.error.1005"
+msgstr "The loci does not exist in the system. Please select a valid loci."
+
+msgid "modal.confirm.error.1006"
+msgstr "Please enter a valid sequence.<br>penA sequence must be between 1702 and 1802 characters."
+
+msgid "modal.confirm.error.1007"
+msgstr "Please enter a valid sequence.<br>mtrR sequence must be between 658 and 758 characters."
+
+msgid "modal.confirm.error.1008"
+msgstr "Please enter a valid sequence.<br>porB sequence must be between 10 and 110 characters."
+
+msgid "modal.confirm.error.1009"
+msgstr "Please enter a valid sequence.<br>ponA sequence must be between 25 and 125 characters."
+
+msgid "modal.confirm.error.1010"
+msgstr "Please enter a valid sequence.<br>gyrA sequence must be between 214 and 314 characters."
+
+msgid "modal.confirm.error.1011"
+msgstr "Please enter a valid sequence.<br>parC sequence must be between 282 and 382 characters."
+
+msgid "modal.confirm.error.1012"
+msgstr "Please enter a valid sequence.<br>23S sequence must be between 517 and 617 characters."
+
+msgid "modal.confirm.error.1013"
+msgstr "Please enter loci name and type in valid format. Valid format consists of loci name followed by the type with no special characters."
+
+msgid "modal.confirm.error.1014"
+msgstr "Please enter a valid type. This field can only contain numbers and ( . )."
+
+msgid "modal.confirm.error.1015"
+msgstr "No alleles currently exist!"
+
+msgid "modal.confirm.error.1016"
+msgstr "No sequences were entered. Please enter at least one sequence."
+
+msgid "modal.confirm.error.1017"
+msgstr "Please enter a valid sequence. This field can only contain the letters [ A , C , T , G ]."
+
+msgid "modal.confirm.error.1018"
+msgstr "No locis found. Please try again."
+
+msgid "modal.confirm.error.1019"
+msgstr "Invalid loci name and allele type. Please select another allele."
+
+msgid "modal.confirm.error.1020"
+msgstr "No data was returned for the selected allele. Please select another allele."
+
+msgid "modal.confirm.error.1021"
+msgstr "The allele that you are attempting to add metadata for does not currently exist. Please enter the allele into the system first."
+
+msgid "modal.confirm.error.1022"
+msgstr "No %(loci_name)s alleles currently exist!"
+
+
+msgid "modal.confirm.error.2000"
+msgstr "The allele that you edited is part of an NG-STAR profile.<br>Before editing this allele, you must delete all NG-STAR profiles that contain this allele."
+
+msgid "modal.confirm.error.2001"
+msgstr "The allele that you are deleting is part of an NG-STAR profile.<br>Before deleting the allele: %(allele_to_delete_loci_name)s type %(allele_type)s, you must delete all NG-STAR profiles that contain this allele."
+
+
+msgid "modal.confirm.error.2002"
+msgstr "Please enter a different profile. This profile already exists in the database."
+
+msgid "modal.confirm.error.2003"
+msgstr "Please enter a different NG-STAR Type. A profile with this NG-STAR type already exists."
+
+msgid "modal.confirm.error.2004"
+msgstr "Invalid profile allele type entered. Please check allele types."
+
+msgid "modal.confirm.error.2005"
+msgstr "No profiles currently exist!"
+
+msgid "modal.confirm.error.2006"
+msgstr "Please enter a valid sequence type. This field can only contain numbers."
+
+msgid "modal.confirm.error.2007"
+msgstr "Invalid profile download format returned. Please try your download again."
+
+msgid "modal.confirm.error.2008"
+msgstr "Invalid profile metadata download format returned. Please try your download again."
+
+msgid "modal.confirm.error.2009"
+msgstr "No profiles were returned. Please try again."
+
+msgid "modal.confirm.error.2010"
+msgstr "Please enter profiles that follow the correct format. You can refer to the example to determine the proper format."
+
+msgid "modal.confirm.error.2011"
+msgstr "Please enter a different NG-STAR Type. A profile with this NG-STAR type already exists."
+
+msgid "modal.confirm.error.2012"
+msgstr "Please provide NG-STAR profiles before submitting."
+
+msgid "modal.confirm.error.2013"
+msgstr "Invalid profile query size returned. Please try your query again."
+
+msgid "modal.confirm.error.2014"
+msgstr "No data was returned for the selected profile. Please select another profile."
+
+msgid "modal.confirm.error.2015"
+msgstr "Invalid profile query threshold selected. Please select another threshold."
+
+msgid "modal.confirm.error.2016"
+msgstr "There were no NG-STAR profiles found for the current query. Please try your query with different sequences."
+
+msgid "modal.confirm.error.2017"
+msgstr "The profile that you are attempting to add metadata for does not currently exist. Please enter the profile into the system first."
+
+msgid "modal.confirm.error.2018"
+msgstr "Profile query input invalid. Please ensure that each allele type is on it's own line. You should have a total of 7 lines (one for each loci). No header line(s) should be included."
+
+msgid "modal.confirm.error.3000"
+msgstr "Please enter a valid date in the format YYYY-MM-DD."
+
+msgid "modal.confirm.error.3001"
+msgstr "No classifications found. Please try again."
+
+msgid "modal.confirm.error.3002"
+msgstr "No antimicrobials found. Please try again."
+
+msgid "modal.confirm.error.3003"
+msgstr "Please enter the correct number of metadata fields. If there is no information for a certain field then enter a tab in it\'s place."
+
+msgid "modal.confirm.error.3004"
+msgstr "Invalid classification code(s). Please re-enter classifications code(s)."
+
+msgid "modal.confirm.error.3005"
+msgstr "Invalid country. Please re-enter country."
+
+msgid "modal.confirm.error.3006"
+msgstr "Invalid city. Please re-enter city."
+
+msgid "modal.confirm.error.3007"
+msgstr "Invalid patient age. Please re-enter patient age."
+
+msgid "modal.confirm.error.3008"
+msgstr "Invalid patient gender. Please re-enter patient gender."
+
+msgid "modal.confirm.error.3009"
+msgstr "Invalid epidemiological data. Please re-enter epidemiological data."
+
+msgid "modal.confirm.error.3010"
+msgstr "Invalid comments. Please re-enter comments."
+
+msgid "modal.confirm.error.3011"
+msgstr "Invalid beta-lactamase. Please re-enter beta-lactamase."
+
+msgid "modal.confirm.error.3012"
+msgstr "Invalid mic comparator(s) selected. Please re-select mic comparator(s)."
+
+msgid "modal.confirm.error.3013"
+msgstr "Invalid mic values(s). Please re-enter mic value(s)."
+
+msgid "modal.confirm.error.3014"
+msgstr "Invalid mics determined by selected. Please re-select mics determined by."
+
+msgid "modal.confirm.error.3015"
+msgstr "Invalid interpretation value(s) selected. Please re-select interpretation value(s)."
+
+msgid "modal.confirm.error.3016"
+msgstr "Invalid allele type(s). Please re-enter allele type(s)."
+
+msgid "modal.confirm.error.4000"
+msgstr "The email address you have entered is invalid. Please enter your email again."
+
+msgid "modal.confirm.error.4001"
+msgstr "The email address is already in use. Please enter another email address."
+
+msgid "modal.confirm.error.4002"
+msgstr "The token you have entered does not exists. Please re-enter your token."
+
+msgid "modal.confirm.error.4003"
+msgstr "The token you have entered has expired. Please re-submit a forgot password request to get a valid token."
+
+msgid "modal.confirm.error.4004"
+msgstr "The token you have entered is invalid. Please enter the token again."
+
+msgid "modal.confirm.error.4005"
+msgstr "The username you have entered is invalid. Please enter your username again."
+
+msgid "modal.confirm.error.4006"
+msgstr "The username is already in use. Please enter another username."
+
+msgid "modal.confirm.error.4007"
+msgstr "Please enter an email address. This field cannot be left blank."
+
+msgid "modal.confirm.error.4008"
+msgstr "Please enter a reset token. This field cannot be left blank."
+
+msgid "modal.confirm.error.4009"
+msgstr "The username entered already exists. Please enter a different username."
+
+msgid "modal.confirm.error.4010"
+msgstr "The email address entered already exists. <br>If you have forgotten the password use the forgot password link on the sign in page to reset you password, otherwise please use a different email address."
+
+msgid "modal.confirm.error.4011"
+msgstr "The entered passwords do not match. Please ensure both passwords match."
+
+msgid "modal.confirm.error.4012"
+msgstr "There was an error updating your password. The specified user cannot be found."
+
+msgid "modal.confirm.error.4013"
+msgstr "This is your current username. Please enter a different username."
+
+msgid "modal.confirm.error.4014"
+msgstr "This is your current email address. Please enter a different email address."
+
+msgid "modal.confirm.error.4015"
+msgstr "You have already used this password. Please enter a different password."
+
+msgid "modal.confirm.error.4016"
+msgstr "The email address and/or token do not match. Please re-enter your email address as well as the reset token."
+
+msgid "modal.confirm.error.4017"
+msgstr "Please enter a valid password. This field must contain one uppercase letter, one lowercase letter, one number, and one of the symbols ( . ) , ( - ) , ( _ ) , and ( ! )."
+
+msgid "modal.confirm.error.4018"
+msgstr "Old password is incorrect. Please try again."
+
+msgid "modal.confirm.error.4019"
+msgstr "The entered usernames do not match. Please ensure both usernames are the same."
+
+msgid "modal.confirm.error.4020"
+msgstr "The entered email addresses do not match. Please ensure both email addresses are the same."
+
+msgid "modal.confirm.error.4021"
+msgstr "A reset token already exists and has been emailed to your email address on the account. Please use this reset token to reset password."
+
+msgid "modal.confirm.error.4022"
+msgstr "The user id is invalid. Please try again."
+
+msgid "modal.confirm.error.4023"
+msgstr "The specified user cannot be found."
+
+msgid "modal.confirm.error.4024"
+msgstr "You are currently logged into this account. Account delete failed."
+
+msgid "modal.confirm.error.4025"
+msgstr "You are currently logged into this account. Account deactivation failed."
+
+msgid "modal.confirm.error.4026"
+msgstr "No users to display."
+
+msgid "modal.confirm.error.4027"
+msgstr "No user details for the selected user were returned. Please try again."
+
+msgid "modal.confirm.error.4028"
+msgstr "The first name you have entered is invalid. Please enter the first name again."
+
+msgid "modal.confirm.error.4029"
+msgstr "The last name you have entered is invalid. Please enter the last name again."
+
+msgid "modal.confirm.error.4030"
+msgstr "Username length must be between 5 and 20 characters."
+
+msgid "modal.confirm.error.4031"
+msgstr "Password length must be between 6 and 20 characters."
+
+msgid "modal.confirm.error.4032"
+msgstr "Confirm password length must be between 6 and 20 characters."
+
+msgid "modal.confirm.error.4033"
+msgstr "Please enter a valid confirm password. This field must contain one uppercase letter, one lowercase letter, one number, and one of the symbols ( . ) , ( - ) , ( _ ) , and ( ! )."
+
+msgid "modal.confirm.error.4034"
+msgstr "The institution name you have entered is invalid. Please enter the institution name again."
+
+msgid "modal.confirm.error.4035"
+msgstr "The institution city you have entered is invalid. Please enter the institution city again."
+
+msgid "modal.confirm.error.4036"
+msgstr "The institution country you have entered is invalid. Please enter the institution country again."
+
+msgid "modal.confirm.error.5000"
+msgstr "Please enter valid input with the correct fasta formatting only."
+
+msgid "modal.confirm.error.5001"
+msgstr "Please enter metadata in TAB Separated(TSV) format."
+
+msgid "modal.confirm.error.5002"
+msgstr "Wrong file format. Only <strong>.txt</strong> files are accepted."
+
+msgid "modal.confirm.error.5003"
+msgstr "Invalid file name. Please enter a valid file name."
+
+msgid "modal.confirm.error.5004"
+msgstr "Invalid option selected. Please make another selection."
+
+msgid "modal.confirm.error.5005"
+msgstr "Invalid file download format. Please select a valid file format download option."
+
+msgid "modal.confirm.error.5006"
+msgstr "File size is too big. Please upload a file less than 5.34MB"
+
+msgid "modal.confirm.error.5007"
+msgstr "Invalid file size. Please upload a non-empty file."
+
+msgid "modal.confirm.error.5008"
+msgstr "No input provided. Please enter input into textbox or upload a file."
+
+msgid "modal.confirm.error.5009"
+msgstr "Invalid file name. File name can only contain letters, numbers, underscores, and/or dashes. File name must also end in either a .txt or .trace extension."
+
+msgid "modal.confirm.error.5010"
+msgstr "Invalid characters in fasta input. Please check the input to ensure that it only contains letters, numbers, and these special characters [ > _ . ]."
+
+msgid "modal.confirm.error.6000"
+msgstr "Invalid sample number. Sample numbers must be greater 0 with no decimals."
+
+msgid "modal.confirm.error.6001"
+msgstr "Invalid sequence in fasta input. Sequences must only include the following letters [A, C, T, G]."
+
+msgid "modal.confirm.error.6002"
+msgstr "Invalid loci in fasta input. Loci accepted: %(loci_names)s"
+
+msgid "modal.confirm.error.6003"
+msgstr "Invalid fasta header in fasta input. Please see the batch allele query example page for valid headers."
+
+
+#Isolate Classification Names
+
+msgid "Azithromycin Resistant Neisseria gonorrhoeae"
+msgstr "Azithromycin Resistant Neisseria gonorrhoeae"
+
+msgid "Neisseria gonorrhoeae with Decreased Susceptiblity to Cefixime"
+msgstr "Neisseria gonorrhoeae with Decreased Susceptiblity to Cefixime"
+
+msgid "Ciprofloxacin Resistant Neisseria gonorrhoeae"
+msgstr "Ciprofloxacin Resistant Neisseria gonorrhoeae"
+
+msgid "Chromosomal Mediated Resistant Neisseria gonorrhoeae"
+msgstr "Chromosomal Mediated Resistant Neisseria gonorrhoeae"
+
+msgid "Neisseria gonorrhoeae with Decreased Susceptiblity to Ceftriaxone"
+msgstr "Neisseria gonorrhoeae with Decreased Susceptiblity to Ceftriaxone"
+
+msgid "Erythromycin Resistant Neisseria gonorrhoeae"
+msgstr "Erythromycin Resistant Neisseria gonorrhoeae"
+
+msgid "Penicillin Resistant Neisseria gonorrhoeae"
+msgstr "Penicillin Resistant Neisseria gonorrhoeae"
+
+msgid "Penicillinase Producing Neisseria gonorrhoeae"
+msgstr "Penicillinase Producing Neisseria gonorrhoeae"
+
+msgid "Probable Chromosomal Mediated Resistant Neisseria gonorrhoeae"
+msgstr "Probable Chromosomal Mediated Resistant Neisseria gonorrhoeae"
+
+msgid "Spectinomycin Resistant Neisseria gonorrhoeae"
+msgstr "Spectinomycin Resistant Neisseria gonorrhoeae"
+
+msgid "Susceptible Isolate"
+msgstr "Susceptible Isolate"
+
+msgid "Tetracycline Resistant Neisseria gonorrhoeae"
+msgstr "Tetracycline Resistant Neisseria gonorrhoeae"
+
+
+#Anitbiotic Names
+
+msgid "Azithromycin"
+msgstr "Azithromycin"
+
+msgid "Cefixime"
+msgstr "Cefixime"
+
+msgid "Ceftriaxone"
+msgstr "Ceftriaxone"
+
+msgid "Ciprofloxacin"
+msgstr "Ciprofloxacin"
+
+msgid "Erythromycin"
+msgstr "Erythromycin"
+
+msgid "Penicillin"
+msgstr "Penicillin"
+
+msgid "Spectinomycin"
+msgstr "Spectinomycin"
+
+msgid "Tetracycline"
+msgstr "Tetracycline"
+
+
+#Modals
+
+msgid "please.confirm.text"
+msgstr "Please Confirm"
+
+msgid "delete.profile.text"
+msgstr "Delete Profile"
+
+msgid "delete.allele.text"
+msgstr "Delete Allele"
+
+msgid "batch.add.error.text"
+msgstr "Batch Add Error"
+
+msgid "batch.allele.query.fasta.entry.error.msg"
+msgstr "Please enter sequences in valid fasta format. This field only accepts letters, numbers, and these special characters [ . _ > ]"
+
+msgid "batch.allele.query.example.instructions.msg"
+msgstr "For the FASTA header you must provide the locus name and sample number (separated by an underscore) for each sequence. Valid headers are provided in the output below. Header lines begin with a >"
+
+msgid "batch.allele.query.example.header.1"
+msgstr "For the FASTA header you must provide atleast the loci name for each sequence. Valid headers are provided in the output below. Header lines begin with a >"
+
+msgid "batch.allele.query.example.header.2"
+msgstr "For the FASTA header you must provide the loci name plus the sample numbers. Sample numbers must not be 0. Valid headers are provided in the output below. Header lines begin with a >"
+
+msgid "batch.allele.query.example.header.3"
+msgstr "For the FASTA header you must provide atleast the loci name for each sequence. Valid headers are provided in the output below. Header lines begin with a >"
+
+msgid "single.loci.single.sequence.text"
+msgstr "Single Loci with Single Sequence"
+
+msgid "single.loci.multiple.sequences.text"
+msgstr "Single Loci with Multiple Sequences"
+
+msgid "multiple.loci.single.sequences.text"
+msgstr "Multiple Loci with Single Sequences"
+
+msgid "multiple.loci.multiple.sequences.text"
+msgstr "Multiple Loci with Multiple Sequences"
+
+msgid "sample.number.text"
+msgstr "Sample Number"
+
+msgid "match.type.text"
+msgstr "Match Type"
+
+msgid "not.queried.text"
+msgstr "Not Queried"
+
+msgid "legend.text"
+msgstr "Legend"
+
+
+msgid "shared.batch.profile.query.text"
+msgstr "Batch Profile Query"
+
+msgid "shared.upload.a.file.text"
+msgstr "Upload a file"
+
+msgid "enter.profiles.text"
+msgstr "Enter profiles"
+
+msgid "modal.confirm.error.2030"
+msgstr "No profiles were entered. Please enter atleast one profile to query."
+
+msgid "profile.query.details.text"
+msgstr "Profile Query Details"
+
+msgid "shared.batch.profile.query.results.text"
+msgstr "Batch Profile Query Results"
+
+msgid "shared.id.text"
+msgstr "ID"
+
+msgid "batch.profile.query.entry.error.msg"
+msgstr "Invalid characters in profiles. This field can only contain numbers and these special characters [ . , ]"
+
+msgid "modal.confirm.error.2031"
+msgstr "Batch profile query data invalid. Please make sure the input is either comma separated or tab separated and has the required number of columns. Each line must include 8 columns (1 for the ID and 7 for the 7 different loci)."
+
+msgid "shared.batch.profile.query.example.text"
+msgstr "Batch Profile Query Example"
+
+msgid "batch.profile.query.instructions.msg"
+msgstr "Input must be in either comma separated or tab separated format. Each line must contain a total of 8 columns (1 column for the ID and 7 columns for the 7 different loci."
+
+msgid "batch.profile.query.example.msg"
+msgstr "<strong>Note: </strong> The input/file that you submit must have a particular format and must end with a <strong>.txt</strong> extension. Click <a href= %1 class='alert-link'> here </a> for an example."
+
+msgid "validate.amino.acid.profile.9000"
+msgstr "Invalid amino acid profile id. The specified id was not found."
+
+msgid "validate.amino.acid.profile.9001"
+msgstr "Please enter a valid Onishi type. This field accepts letters and numbers only"
+
+msgid "validate.amino.acid.profile.9002"
+msgstr "Please enter a valid mosaic value. This field only accepts Yes, No, or Semi"
+
+msgid "validate.amino.acid.profile.9003"
+msgstr "Please enter a valid amino acid profile. This field only accepts letters and periods"
+
+msgid "validate.amino.acid.profile.9004"
+msgstr "Please enter a different Onishi type. This Onishi type already exists"
+
+msgid "validate.amino.acid.profile.9005"
+msgstr "Please enter a different amino acid profile. This amino acid profile already exists"
+
+msgid "validate.amino.acid.9006"
+msgstr "Please enter a valid amino acid. This field only accepts letters and periods."
+
+msgid "validate.amino.acid.9007"
+msgstr "Please enter a valid amino acid position. This field only accepts numbers."
+
+msgid "validate.amino.acid.9008"
+msgstr "Please enter a different amino acid and position. This amino acid at this position already exists"
+
+msgid "validate.amino.acid.9009"
+msgstr "Please enter a different amino acid position. This amino acid position already exists"
+
+msgid "shared.semi.text"
+msgstr "Semi"
+
+msgid "enter.amino.acid.profile.onishi.type.text"
+msgstr "Please enter an Onishi type"
+
+msgid "select.amino.acid.profile.mosaic.text"
+msgstr "Please select a mosaic type"
+
+msgid "enter.amino.acid.profile.text"
+msgstr "Please enter an amino acid profile"
+
+msgid "shared.manage.amino.acid.profiles.text"
+msgstr "Manage Amino Acid Profiles"
+
+msgid "shared.add.amino.acid.profile.text"
+msgstr "Add Amino Acid Profile"
+
+msgid "shared.edit.amino.acid.profile.text"
+msgstr "Edit Amino Acid Profile"
+
+msgid "shared.onishi.type.text"
+msgstr "Onishi Type"
+
+msgid "shared.mosaic.text"
+msgstr "Mosaic"
+
+msgid "shared.amino.acid.profile.text"
+msgstr "Amino Acid Profile"
+
+msgid "adding.amino.acid.profile.error.text"
+msgstr "There was an internal error adding the amino acid profile. Please try again."
+
+msgid "editing.amino.acid.profile.error.text"
+msgstr "The amino acid profile that you are editing was not found. Possible cause is that the amino acid profile was removed."
+
+msgid "deleting.amino.acid.profile.error.text"
+msgstr "The amino acid profile that you are editing was not found. Possible cause is that the amino acid profile was removed."
+
+msgid "deleting.amino.acid.profile.invalid.id.error.text"
+msgstr "Invalid amino acid profile id."
+
+msgid "amino.acid.profile.add.success.text"
+msgstr "Amino acid profile with Onishi %1 was added successfully!"
+
+msgid "amino.acid.profile.edit.success.text"
+msgstr "Amino acid profile with Onishi %1 was edited successfully!"
+
+msgid "amino.acid.profile.delete.success.text"
+msgstr "Amino acid profile was deleted successfully!"
+
+msgid "add.amino.acid.profile.text"
+msgstr "Add Amino Acid Profile"
+
+msgid "delete.amino.acid.profile.text"
+msgstr "Delete Amino Acid Profile"
+
+msgid "analyze.sequence.text"
+msgstr "Analyze Sequence"
+
+msgid "amino.acid.profile.id.not.found.error"
+msgstr "Amino acid profile %1 was not found. Please select a different amino acid profile."
+
+
+msgid "complete.protein.sequences.text"
+msgstr "Complete Protein Sequences"
+
+msgid "dna.sequences.text"
+msgstr "DNA Sequences"
+
+msgid "wild.type.text"
+msgstr "Wild Type"
+
+msgid "user.sequence.text"
+msgstr "User Sequence"
+
+msgid "difference.text"
+msgstr "Difference"
+
+msgid "sequence.analysis.text"
+msgstr "Sequence Analysis"
+
+msgid "error.no.onishi.sequences.returned.invalid.penA.sequence"
+msgstr "No Onishi sequences were returned."
+
+msgid "shared.non.mosaic.text"
+msgstr "Non-Mosaic"
+
+msgid "possible.penA.type.text"
+msgstr "Possible penA Type"
+
+msgid "amino.acid.profile.not.exist.text"
+msgstr "The amino acid profile does not exist. Please add it below."
+
+msgid "shared.manage.amino.acids.text"
+msgstr "Manage Amino Acids"
+
+msgid "shared.add.amino.acid.text"
+msgstr "Add Amino Acid"
+
+msgid "shared.amino.acid.text"
+msgstr "Amino Acid"
+
+msgid "shared.position.text"
+msgstr "Position"
+
+msgid "shared.edit.amino.acid.text"
+msgstr "Edit Amino Acid"
+
+msgid "amino.acid.add.success.text"
+msgstr "Amino acid %1 at position %2 was added successfully!"
+
+msgid "amino.acid.edit.success.text"
+msgstr "Amino acid %1 at position %2 was edited successfully!"
+
+msgid "amino.acid.delete.success.text"
+msgstr "Amino acid %1 at position %2 was deleted successfully!"
+
+msgid "adding.amino.acid.error.text"
+msgstr "There was an internal error adding the amino acid. Please try again."
+
+msgid "editing.amino.acid.error.text"
+msgstr "The amino acid that you are editing was not found. Possible cause is that the amino acid profile was removed."
+
+msgid "deleting.amino.acid.error.text"
+msgstr "The amino acid that you are editing was not found. Possible cause is that the amino acid profile was removed."
+
+msgid "deleting.amino.acid.invalid.id.error.text"
+msgstr "Invalid amino acid id."
+
+msgid "penA.profile.text"
+msgstr "penA Profile"
+
+msgid "penA.type.text"
+msgstr "penA Type"
+
+msgid "shared.curator.profile.query.text"
+msgstr "Curator Profile Query"
+
+msgid "curator.profile.query.instructions.msg"
+msgstr "<strong>Note:</strong> Enter each allele type on a newline. You should have a total of 7 lines (one for each loci). No header line is required."
+
+msgid "data.content.curator.profile.query"
+msgstr "Profile query for curators"
+
+msgid "shared.amr.markers.text"
+msgstr "AMR Markers"
+
+msgid "shared.view.profile.submission.text"
+msgstr "View Profile Submission"
+
+msgid "shared.profile.submission.report.text"
+msgstr "Profile Submission Report"
+
+msgid "shared.download.csv.text"
+msgstr "Download CSV"
+
+msgid "shared.download.tsv.text"
+msgstr "Download TSV"
+
+msgid "onishi.text"
+msgstr "Onishi"

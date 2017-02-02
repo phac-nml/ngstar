@@ -1,0 +1,245 @@
+[% true = 1 %]
+
+
+[% IF eula_already_accepted == "true" %]
+
+<nav class="breadcrumbs" property="breadcrumb">
+	<div class="container">
+		<div class="row">
+			<ol>
+				<li><a href="[% c.uri_for(c.controller("Allele").action_for("form")) %]">[% c.loc("home.page.name") | html %]</a></li>
+				<li><a class="disabled" tabindex="-1" href="#">[% c.loc("shared.terms.text") | html %]</a></li>
+			</ol>
+		</div>
+	</div>
+</nav>
+
+<main role="main" property="mainContentOfPage" class="container fade in">
+
+    <div style="font-size:16px;">
+
+        <h1 id="wb-cont">Terms and Conditions</h1>
+
+        <br>
+
+        <p>
+			THE NG-STAR WEB APPLICATION IS OWNED BY HER MAJESTY THE QUEEN IN RIGHT OF CANADA, AS REPRESENTED BY THE MINISTER OF HEALTH, ACTING THROUGH THE PUBLIC HEALTH AGENCY OF CANDA (&quot;PHAC&quot;) AND IS PROTECTED UNDER COPYRIGHT LAWS AND INTERNATIONAL COPYRIGHT TREATIES. THE NG-STAR WEB APPLICATION IS PROVIDED UNDER THE FOLLOWING LICENSE WHICH DEFINES WHAT YOU MAY DO WITH THE PRODUCT AND CONTAINS LIMITATIONS ON WARRANTIES AND/OR REMEDIES.
+        </p>
+
+        <p>
+        	IMPORTANT: CAREFULLY READ THIS LICENSE BEFORE USING THIS PRODUCT. USING THIS PRODUCT IN ANY WAY INDICATES YOUR ACKNOWLEDGMENT THAT YOU HAVE READ THIS LICENSE AND AGREE TO ITS TERMS.
+        </p>
+
+        <p>
+        <span style="font-weight:bold;">1. LICENSE:</span> PHAC (&quot;we&quot; or &quot;us&quot;) provides the user (&quot;you&quot;) with access to the NG-STAR Web Application that includes electronic components, data, and printed materials (collectively called the &quot;Product&quot;) and grants you a limited, non-exclusive license to use the Product in accordance with the terms of this License Agreement. The copyright and all other rights to the Product shall remain with us.
+        </p>
+
+        <p>
+        <span style="font-weight:bold;">2. YOU MUST NOT:</span> a) make copies of the Product; b) modify the Product or make derivative works; c) translate, reverse engineer, decompile, or disassemble the Product;
+        d) rent, lease loan, sub-license, distribute, assign, or transfer the Product or any code for the product; or e) modify the Product or merge all or any part of the Product with another program.
+        </p>
+
+        <p>
+        <span style="font-weight:bold;">3. TERM:</span> This License Agreement shall continue for as long as you use the Product. However, this License Agreement will terminate automatically without notice from PHAC if you fail to comply with any of its terms or conditions. You agree, upon termination, to destroy the Product and any copies that have been produced in violation of this License Agreement. The Limitations of Warranties and Liability set out below shall continue in force even after any termination.
+        </p>
+
+        <p>
+        <span style="font-weight:bold;">4. PRIVACY:</span> You agree not to record, place, or otherwise include any personal identifiers or other information that could identify an individual in the data or metadata, provided to the NG-STAR Web Application. You agree to allow the PHAC to store your electronic records submitted and uploaded to NG-STAR. You also allow all visitors to the NG-STAR Web Application to have access to the submitted and uploaded information.
+        </p>
+
+        <p>
+        <span style="font-weight:bold;">5. LIMITATION OF WARRANTIES AND LIABILITY:</span> THE PRODUCT IS PROVIDED ON AN &quot;AS IS&quot; BASIS, WITHOUT ANY WARRANTIES OR CONDITIONS, EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO, ANY IMPLIED WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICLULAR PURPOSE, OR ANY WARRANTY ARISING BY LAW, STATUTE, USAGE OF TRADE, OR COURSE OF DEALING. YOU ASSUME ALL RESPONSIBILITY AND RISK FOR THE USE OF THIS PRODUCT AND PHAC DISCLAIMS ALL LIABILITY FOR ANY LOSS, INJURY OR DAMAGE RESULTING FROM USE OF THIS PRODUCT, WHETHER DIRECT OR INDIRECT, AND WHETHER OR NOT PHAC HAS BEEN ADVISED OF OR HAS KNOWLEDGE OF THE POSSIBILITY OF SUCH LOSS, INJURY OR DAMAGE . IN NO EVENT SHALL PHAC HAVE ANY LIABILITY TO YOU OR ANY OTHER PERSON OR ENTITY FOR ANY DIRECT, COMPENSATORY, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES WHATSOEVER, INCLUDING, BUT NOT LIMITED TO, LOSS OF REVENUE OR PROFIT, LOST OR DAMAGED DATA OR OTHER COMMERICAL OR ECONOMIC LOSS, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES, OR THEY ARE FORESEEABLE. WE ARE ALSO NOT RESPONSIBLE FOR CLAIMS BY A THIRD PARTY. OUR MAXIMUM AGGREGATE LIABILITY TO YOU SHALL NOT EXCEED THE AMOUNT PAID BY YOU FOR THE PRODUCT. THE LIMITATIONS IN THIS SECTION SHALL APPLY WHETHER OR NOT THE ALLEGED BREACH OR DEFAULT IS A BREACH OF A FUNDAMENTAL CONDITION OR TERM OR A FUNDAMENTAL BREACH.
+        </p>
+
+        <p>
+        <span style="font-weight:bold;">6. GENERAL:</span> This License Agreement is the entire agreement between us and you, superseding any other agreement or discussions, oral or written, and may not be changed except by a signed agreement. This License Agreement shall be governed by and construed in accordance with the laws of the Province of Ontario, Canada. If any provision of this License Agreement is declared by a court of competent jurisdiction to be invalid, illegal, or unenforceable, such a provision shall be severed from the License Agreement and the other provisions shall remain in full force and effect.
+        </p>
+
+
+        <p>
+        &copy; 2016 Public Health Agency of Canada. All Rights Reserved.
+        </p>
+
+    </div>
+
+    <button type="button" class="btn btn-primary bkbtn" onClick="history.go(-1);return true;">
+        <span class="glyphicon glyphicon-arrow-left"></span> [% c.loc("shared.back.btn.text") | html %]
+    </button>
+
+    <br>
+
+    <p class="pull-right" style="position:absolute; right:0;">VERSION: [% eula_version_number | html %]</p>
+
+</main>
+
+[% ELSE %]
+
+    <DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+    <!--[if gt IE 8]><!-->
+    <html class="no-js" lang="en" dir="ltr">
+    <!--<![endif]-->
+
+        <head>
+
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta charset="utf-8">
+            <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+            <title>[% c.loc(page_title) | html %]</title>
+            <meta content="width=device-width,initial-scale=1" name="viewport">
+            <meta name="description" content="The Government of Canada website is a single point of access to all programs, services, departments, ministries and organizations of the Government of Canada.">
+            <meta name="description" lang="fr" content="Le site Web du gouvernement du Canada fournit un point d'accès complet à tous les programmes, services, départements, ministères et organismes du gouvernement du Canada.">
+            <meta name="dc.creator" content="Government of Canada, Service Canada, Citizen Service Branch, Digital Service Directorate, Web Channel">
+            <meta name="dc.creator" lang="fr" content="Gouvernement du Canada, Service Canada, Direction générale de service aux citoyens, La Direction du service numérique, Services Web">
+            <meta name="robots" content="noindex, nofollow, noarchive">
+            <meta name="dc.title" content="Canada.ca">
+            <meta name="dc.title" lang="fr" content="Canada.ca">
+            <meta name="dc.issued" title="W3CDTF" content="2013-12-13">
+            <meta name="dc.modified" title="W3CDTF" content="2015-04-09">
+            <meta name="dc.subject" content="Government of Canada, services">
+            <meta name="dc.subject" lang="fr" content="Gouvernement du Canada, services">
+            <meta name="dc.language" title="ISO639-2" content="eng">
+            <meta name="dc.language" lang="fr" title="ISO639-2" content="fra">
+
+
+
+            <!--[if gte IE 9 | !IE ]><!-->
+            <link href="/static/GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon"/>
+            <link rel="stylesheet" href="/static/GCWeb/css/theme.min.css"/>
+            <!--<![endif]-->
+        </head>
+
+        <body>
+
+			<ul id="wb-tphp" >
+				<li class="wb-slc"><a class="wb-sl" href="#wb-cont" tabindex="0">[% c.loc("skip.to.main.content") | html %]</a></li>
+			</ul>
+			<header role="banner">
+			  <div id="wb-bnr" class="container">
+				<section id="wb-lng" class="visible-md visible-lg text-right">
+				[% IF c.session.lang == "en" %]
+				  <h2 class="wb-inv">Language selection</h2>
+				  <div class="row">
+					<div class="col-md-12">
+					  <ul class="list-inline margin-bottom-none">
+						<li><a lang="fr" href="[% c.uri_for(c.controller('Root').action_for('index'), 'fr') %]" tabindex="0">Fran&#231;ais</a></li>
+					  </ul>
+					</div>
+				  </div>
+				[% ELSE %]
+				  <h2 class="wb-inv">Sélection de la langue</h2>
+				  <div class="row">
+					<div class="col-md-12">
+					  <ul class="list-inline margin-bottom-none">
+						<li><a lang="en" href="[% c.uri_for(c.controller('Root').action_for('index'), 'en') %]" tabindex="0">English</a></li>
+					  </ul>
+					</div>
+				  </div>
+				[% END %]
+				</section>
+				<div class="row">
+				  <div class="brand col-xs-8 col-sm-9 col-md-6">
+					<object type="image/svg+xml" data="/static/GCWeb/assets/sig-blk-[% c.session.lang %].svg" tabindex="0" ></object>
+					<span class="wb-inv"> [% c.loc("text.government.of.canada") | html %]</span>
+				  </div>
+				  <section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn">
+					<h2>Menu</h2>
+					<ul class="list-inline text-right chvrn">
+					  <li><a  tabindex="0" href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk" role="button"><span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list"><span class="wb-inv">Menu</span></span></span></a></li>
+					</ul>
+					<div id="mb-pnl"></div>
+				  </section>
+				</div>
+			  </div>
+			</header>
+
+			<div id="def-top" >
+				<!-- Write closure fall-back static file -->
+				<!-- /ROOT/app/cls/WET/gcweb/v4_0_18/static/top-en.html -->
+				<!--#include virtual="/app/cls/WET/gcweb/v4_0_18/static/top-en.html" -->
+			</div>
+
+
+			<main role="main" property="mainContentOfPage" class="container fade in">
+
+			    <div style="font-size:16px;">
+
+		            <h1 id="wb-cont">Terms and Conditions</h1>
+
+		            <br>
+
+		            <p>
+		            	By clicking "Agree", the user agrees to the following terms and conditions:
+		            </p>
+
+		            <p>
+						THE NG-STAR WEB APPLICATION IS OWNED BY HER MAJESTY THE QUEEN IN RIGHT OF CANADA, AS REPRESENTED BY THE MINISTER OF HEALTH, ACTING THROUGH THE PUBLIC HEALTH AGENCY OF CANDA (“PHAC”) AND IS PROTECTED UNDER COPYRIGHT LAWS AND INTERNATIONAL COPYRIGHT TREATIES. THE NG-STAR WEB APPLICATION IS PROVIDED UNDER THE FOLLOWING LICENSE WHICH DEFINES WHAT YOU MAY DO WITH THE PRODUCT AND CONTAINS LIMITATIONS ON WARRANTIES AND/OR REMEDIES.
+		            </p>
+
+		            <p>
+						IMPORTANT: CAREFULLY READ THIS LICENSE BEFORE USING THIS PRODUCT. USING THIS PRODUCT IN ANY WAY INDICATES YOUR ACKNOWLEDGMENT THAT YOU HAVE READ THIS LICENSE AND AGREE TO ITS TERMS.
+		            </p>
+
+		            <p>
+		            <span style="font-weight:bold;">1. LICENSE:</span> PHAC (&quot;we&quot; or &quot;us&quot;) provides the user (&quot;you&quot;) with access to the NG-STAR Web Application that includes electronic components, data, and printed materials (collectively called the &quot;Product&quot;) and grants you a limited, non-exclusive license to use the Product in accordance with the terms of this License Agreement. The copyright and all other rights to the Product shall remain with us.
+		            </p>
+
+		            <p>
+		            <span style="font-weight:bold;">2. YOU MUST NOT:</span> a) make copies of the Product; b) modify the Product or make derivative works; c) translate, reverse engineer, decompile, or disassemble the Product;
+		            d) rent, lease loan, sub-license, distribute, assign, or transfer the Product or any code for the product; or e) modify the Product or merge all or any part of the Product with another program.
+		            </p>
+
+		            <p>
+		            <span style="font-weight:bold;">3. TERM:</span> This License Agreement shall continue for as long as you use the Product. However, this License Agreement will terminate automatically without notice from PHAC if you fail to comply with any of its terms or conditions. You agree, upon termination, to destroy the Product and any copies that have been produced in violation of this License Agreement. The Limitations of Warranties and Liability set out below shall continue in force even after any termination.
+		            </p>
+
+		            <p>
+		            <span style="font-weight:bold;">4. PRIVACY:</span> You agree not to record, place, or otherwise include any personal identifiers or other information that could identify an individual in the data or metadata, provided to the NG-STAR Web Application. You agree to allow the PHAC to store your electronic records submitted and uploaded to NG-STAR. You also allow all visitors to the NG-STAR Web Application to have access to the submitted and uploaded information.
+		            </p>
+
+		            <p>
+		            <span style="font-weight:bold;">5. LIMITATION OF WARRANTIES AND LIABILITY:</span> THE PRODUCT IS PROVIDED ON AN &quot;AS IS&quot; BASIS, WITHOUT ANY WARRANTIES OR CONDITIONS, EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO, ANY IMPLIED WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICLULAR PURPOSE, OR ANY WARRANTY ARISING BY LAW, STATUTE, USAGE OF TRADE, OR COURSE OF DEALING. YOU ASSUME ALL RESPONSIBILITY AND RISK FOR THE USE OF THIS PRODUCT AND PHAC DISCLAIMS ALL LIABILITY FOR ANY LOSS, INJURY OR DAMAGE RESULTING FROM USE OF THIS PRODUCT, WHETHER DIRECT OR INDIRECT, AND WHETHER OR NOT PHAC HAS BEEN ADVISED OF OR HAS KNOWLEDGE OF THE POSSIBILITY OF SUCH LOSS, INJURY OR DAMAGE . IN NO EVENT SHALL PHAC HAVE ANY LIABILITY TO YOU OR ANY OTHER PERSON OR ENTITY FOR ANY DIRECT, COMPENSATORY, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES WHATSOEVER, INCLUDING, BUT NOT LIMITED TO, LOSS OF REVENUE OR PROFIT, LOST OR DAMAGED DATA OR OTHER COMMERICAL OR ECONOMIC LOSS, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES, OR THEY ARE FORESEEABLE. WE ARE ALSO NOT RESPONSIBLE FOR CLAIMS BY A THIRD PARTY. OUR MAXIMUM AGGREGATE LIABILITY TO YOU SHALL NOT EXCEED THE AMOUNT PAID BY YOU FOR THE PRODUCT. THE LIMITATIONS IN THIS SECTION SHALL APPLY WHETHER OR NOT THE ALLEGED BREACH OR DEFAULT IS A BREACH OF A FUNDAMENTAL CONDITION OR TERM OR A FUNDAMENTAL BREACH.
+		            </p>
+
+		            <p>
+		            <span style="font-weight:bold;">6. GENERAL:</span> This License Agreement is the entire agreement between us and you, superseding any other agreement or discussions, oral or written, and may not be changed except by a signed agreement. This License Agreement shall be governed by and construed in accordance with the laws of the Province of Ontario, Canada. If any provision of this License Agreement is declared by a court of competent jurisdiction to be invalid, illegal, or unenforceable, such a provision shall be severed from the License Agreement and the other provisions shall remain in full force and effect.
+		            </p>
+
+
+		            <p>
+		            &copy; 2016 Public Health Agency of Canada. All Rights Reserved.
+		            </p>
+
+		            <br>
+		                <p class="pull-right">VERSION: [% eula_version_number | html %]</p>
+		            <br>
+
+
+		            <a href="[% c.uri_for(c.controller('Welcome').action_for('eula_accepted'), true) %]" class="btn btn-primary" id= "eula_accept">
+		                [% c.loc("shared.agree.text") | html %]
+		            </a>
+
+		            <a href="[% c.uri_for(c.controller('Welcome').action_for('home'), true) %]" class="btn btn-primary">
+		                [% c.loc("shared.cancel.text") | html %]
+		            </a>
+
+	            </div>
+
+			</main>
+
+			<footer role="content-info" id="wb-info" style="margin-top:50px;">
+				<nav role="navigation" class="container visible-sm visible-md visible-lg wb-navcurr">
+					<div class="row">
+						 <div class="col-sm-2 col-lg-2">
+						 </div>
+					</div>
+				</nav>
+				<div class="brand"><div class="container"><div class="row"><div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div><div class="col-xs-6 col-md-12 text-right"><object type="image/svg+xml"   role="img" data="https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_20/GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object></div></div></div></div>
+		   </footer>
+
+
+        </body>
+
+    </html>
+
+
+[% END %]

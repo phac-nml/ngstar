@@ -1,0 +1,668 @@
+/*
+**NGSTAR.CSS
+*/
+
+
+/*APPLICATION TITLE*/
+
+.app-title {
+    padding-left: 15px;
+    height: 70px;
+}
+
+.app-title a {
+    vertical-align: middle;
+    color: black !important;
+}
+
+.app-title a:link, .app-title a:visited
+{
+    text-decoration: none;
+}
+
+.app-title a:hover
+{
+    text-decoration: underline;
+}
+
+.app-title a span
+{
+    font-size: 1.9em;
+}
+
+
+/* BREADCRUMBS*/
+
+.breadcrumbs {
+  background-color: #9ba7b5;
+}
+
+.breadcrumbs .row {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.breadcrumbs ol {
+  background-color: #9ba7b5;
+  border-radius: 0px;
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+  margin-bottom: 0 !important;
+}
+
+.breadcrumbs li {
+  float: left;
+}
+
+.breadcrumbs li a {
+  color: #000000;
+  text-decoration: none;
+  padding: 5px 20px 5px 35px;
+  position: relative;
+  display: block;
+  float: left;
+}
+
+.breadcrumbs li a:after {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 16px solid transparent;
+  border-bottom: 16px solid transparent;
+  border-left: 10px solid #9ba7b5;
+  position: absolute;
+  top: 50%;
+  margin-top: -16px;
+  left: 100%;
+  z-index: 2;
+}
+
+.breadcrumbs li a:before {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 16px solid transparent;
+  border-bottom: 16px solid transparent;
+  border-left: 10px solid #ffffff;
+  position: absolute;
+  top: 50%;
+  margin-top: -16px;
+  margin-left: 0px;
+  left: 100%;
+  z-index: 1;
+}
+
+.breadcrumbs li:first-child a {
+  padding-left: 2em;
+}
+
+.breadcrumbs li:nth-child(2) a {
+  background-color: #bbc4cf;
+}
+
+.breadcrumbs li:nth-child(2) a:after {
+  border-left-color: #bbc4cf;
+}
+
+.breadcrumbs li:nth-child(3) a {
+  background-color: #dce1e7;
+}
+
+.breadcrumbs li:nth-child(3) a:after {
+  border-left-color: #dce1e7;
+}
+
+.breadcrumbs li:last-child a {
+  pointer-events: none;
+  cursor: default;
+  background-color: #ffffff;
+  border-color: white;
+}
+
+.breadcrumbs li:last-child a:after {
+  border: 0;
+  border-left-color: #ffffff !important;
+}
+
+.breadcrumbs li a:hover:not(.disabled) {
+  background: #335075;
+  color: white;
+}
+
+.breadcrumbs li a:hover:not(.disabled):after {
+  border-left-color: #335075 !important;
+}
+
+.breadcrumbs li a.disabled:hover {
+  cursor: default;
+}
+
+.breadcrumbs li a.disabled:hover:after {
+  cursor: default;
+}
+
+.breadcrumbs li a:focus:not(.disabled) {
+  background: #335075;
+  color: white;
+}
+
+.breadcrumbs li a:focus:not(.disabled):after {
+  border-left-color: #335075 !important;
+}
+
+.breadcrumbs li a.disabled:focus {
+  cursor: default;
+}
+
+.breadcrumbs li a.disabled:focus:after {
+  cursor: default;
+}
+
+
+/*BUTTONS*/
+
+.bkbtn
+{
+    margin-top:20px !important;
+}
+
+
+.loci-selector-btn-group
+{
+    margin-top:20px !important;
+}
+
+.new-user-btn
+{
+    margin-top:20px !important;
+}
+
+#type_list_options > .btn
+{
+    margin-bottom:4px;
+}
+
+
+.dropdown-toggle
+{
+    margin-top:-3px !important;
+}
+
+.dropdown-toggle:focus
+{
+    outline: 1px dotted #F9F9F9;
+}
+
+.btn-success
+{
+    background-color:#3E7A5E;
+    color: #FFFFFF;
+}
+
+
+/* DATEPICKER */
+
+.datetimepicker table tr td.active, .datetimepicker table tr td.active:hover, .datetimepicker table tr td.active.disabled, .datetimepicker table tr td.active.disabled:hover
+{
+    background-image: none !important;
+    background-color: #335075 !important;
+}
+
+
+/*DROPDOWN SELECTIONS*/
+
+.dropdown-menu > li > a
+{
+    text-decoration: none;
+}
+
+.dropdown-menu > li > a:hover
+{
+    background-color:#CCCCCC !important;
+}
+
+
+/*FORM FIELDS*/
+
+input[type=text], input[type=password], input[type=email]
+{
+    min-height:35px;
+    height:100%;
+}
+
+input[type="text"],input[type="email"],input[type="password"],tr
+{
+    font-size:20px;
+}
+
+textarea
+{
+    font-size:20px !important;
+}
+
+label, .control-label
+{
+	font-weight:bold;
+	font-size:18px;
+    word-wrap: break-word !important;
+}
+
+.input-full
+{
+    width: 100%;
+}
+
+
+.mics_determined
+{
+    font-size:18px;
+}
+
+.help-block
+{
+	font-size:14px;
+}
+
+
+/*LINKS*/
+
+.file-link, .file-link:visited
+{
+	color: #000000;
+    font-weight: bold;
+}
+
+.file-link:hover, .file-link:focus
+{
+	color: #CC0D02;
+}
+
+
+/*LIST GROUPS*/
+
+.list-group
+{
+	margin-top:40px;
+}
+
+a.list-group-item
+{
+    text-decoration: none !important;
+}
+
+a.list-group-item:hover, a.list-group-item:focus
+{
+    background-color: #CCCCCC !important;
+}
+
+
+/*MENUS*/
+
+.wb-menu
+{
+    color:#FFFFFF !important;
+}
+
+
+/*MISC*/
+
+.obscure
+{
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.loader
+{
+    position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: rgba(0,0,0,.1) url('../../images/page-loader.gif') 50% 50% no-repeat ;
+}
+
+.uploadedFile
+{
+    margin-top:5px;
+}
+
+
+/*MODALS*/
+
+.modal-footer
+{
+    background-color:#FFFFFF !important;
+    color:#000000 !important;
+}
+.mfp-bg
+{
+    opacity: 0.7 !important;
+}
+
+.mfp-close
+{
+    background-color: #335075 !important;
+}
+
+.mfp-close:hover
+{
+    color:#335075 !important;
+    background-color:#FFF !important;
+    border:none !important;
+    box-shadow: 0 0 0 2pt #335075;
+}
+
+.modal-body-custom
+{
+
+    max-height:400px;
+    overflow:auto;
+}
+
+
+/*POPOVERS AND ALERTS*/
+
+.popover
+{
+    width:300px;
+    -moz-box-shadow:    1px 1px 1px 1px #335075;
+    -webkit-box-shadow: 1px 1px 1px 1px #335075;
+    box-shadow: 1px 1px 1px 1px #335075;
+}
+
+.popover-title
+{
+    background-color:#F9F9F9 !important;
+    color: #000000 !important;
+    border-bottom-style: solid;
+    border-color: #335075;
+    border-width:1px;
+}
+
+.popover-content, .popover-title
+{
+    word-wrap: break-word;
+    color: #000 !important;
+}
+
+.alert alert-info, .alert-dismissable
+{
+    font-size:20px;
+}
+
+.alert
+{
+	width:100%;
+	margin-top:40px;
+	font-size:18px;
+    border:none;
+}
+
+.tooltip.top .tooltip-inner
+{
+    min-width:50px !important;
+    background-color:#FFFFFF !important;
+    color: #000000 !important;
+}
+
+.tooltip-inner {
+    border: solid 5px #9ba7b5;
+}
+
+.tooltip.top .tooltip-arrow {
+      border-top-color: #335075;
+}
+
+
+/*SELECT BOXES*/
+
+select
+{
+    min-height:35px;
+    height:100%;
+}
+
+.select2-selection__choice
+{
+    font-size:18px !important;
+}
+
+
+.select2-container--default .select2-search--dropdown .select2-search__field
+{
+    font-size:18px !important;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered
+{
+    font-size:18px !important;
+    text-overflow: inherit;
+}
+.select2-container--open
+{
+    font-size:18px !important;
+    width:100% !important;
+}
+.select2-container--default .select2-results>.select2-results__options
+{
+    max-height: 500px !important;
+    overflow-y: auto !important;
+}
+.select2-dropdown--above
+{
+    margin-top:0px !important;
+}
+
+.select2-container--default .select2-selection--single
+{
+    padding-top:5px;
+        padding-bottom:5px;
+    height:100%;
+
+}
+
+.select2-selection__arrow
+{
+    top:7px !important;
+}
+
+/*Makes select2 responsive*/
+[class*="col-"] .select2-container
+{
+    width:100%!important;
+}
+[class*="col-"] .select2-container .select2-search input[type="text"]
+{
+    padding:2px 4%!important;
+    width:90%!important;
+    margin:5px 2%;
+}
+[class*="col-"] .select2-container .select2-drop
+{
+    width: 100%!important;
+}
+
+.select2-results__option--highlighted
+{
+    background-color: #CCC !important;
+    color: #000 !important;
+    outline:none;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice
+{
+    background-color: #337ab7 !important;
+    color: #FFFFFF !important;
+    border:none !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove
+{
+    color: #FFFFFF !important;
+}
+
+
+/*TABLES*/
+
+.active
+{
+	background-color:#F9F9F9 !important;
+	color: #000;
+}
+
+.inactive
+{
+	background-color:#FFFFFF !important;
+}
+
+#type_list_options
+{
+   margin-top:20px !important;
+      margin-bottom:20px !important;
+}
+
+#type_list_info
+{
+    margin-top:20px;
+}
+#type_list_length
+{
+    margin-top:10px;
+    margin-bottom:10px;
+    padding: 10px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current
+{
+    background-color: #335075 !important;
+    border-color: #335075 !important;
+    color: #FFFFFF !important;
+}
+
+table.dataTable > thead > tr > th.sorting > i.glyphicon:before
+{
+    content: "\e150";
+}
+
+table.dataTable > thead > tr > th.sorting_asc > i.glyphicon:before
+{
+    content: "\e155";
+}
+
+table.dataTable > thead > tr > th.sorting_desc > i.glyphicon:before
+{
+    content: "\e156";
+}
+
+.table-bordered
+{
+    border-bottom: 2px solid #555;
+}
+
+.non-datatable-tr-color
+{
+    background-color: #FFFFFF !important;
+}
+
+.dt-curator-comment-bg
+{
+    background-color:#FFFFFF;
+    border:none;
+}
+
+#active-users-list_length, #inactive-users-list_length
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#active-users-list_info, #inactive-users-list_info
+{
+    margin-top:10px;
+}
+
+#sequence_analysis_table_onishi > tbody>tr>td, #sequence_analysis_table_onishi>tbody>tr>th, #sequence_analysis_table_onishi>tfoot>tr>td, #sequence_analysis_table_onishi>tfoot>tr>th, #sequence_analysis_table_onishi>thead>tr>td, #sequence_analysis_table_onishi>thead>tr>th
+{
+    padding:0 !important;
+}
+
+#sequence_analysis_table_protein > tbody>tr>td, #sequence_analysis_table_protein>tbody>tr>th, #sequence_analysis_table_protein>tfoot>tr>td, #sequence_analysis_table_protein>tfoot>tr>th, #sequence_analysis_table_protein>thead>tr>td, #sequence_analysis_table_protein>thead>tr>th
+{
+    padding:0 !important;
+}
+
+#sequence_analysis_table_protein > tbody>tr>td
+{
+    min-width:175px !important;
+}
+
+#sequence_analysis_table_dna > tbody>tr>td, #sequence_analysis_table_dna>tbody>tr>th, #sequence_analysis_table_dna>tfoot>tr>td, #sequence_analysis_table_dna>tfoot>tr>th, #sequence_analysis_table_dna>thead>tr>td, #sequence_analysis_table_dna>thead>tr>th
+{
+    padding:0 !important;
+}
+
+#sequence_analysis_table_dna > tbody>tr>td
+{
+    min-width:175px !important;
+}
+
+
+/*TEXT ENHANCEMENTS*/
+
+.italic
+{
+	font-style:italic;
+}
+
+.bold
+{
+	font-weight:bold;
+}
+
+.underline-txt
+{
+	text-decoration:underline;
+}
+
+.break-word
+{
+    word-wrap: break-word !important
+}
+
+.details_labels
+{
+    font-weight: bold;
+    font-size: 18px;
+    word-wrap: break-word !important;
+}
+
+.listgroup-txt
+{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.para-headings
+{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.monospace{
+  font-family:monospace,monospace;
+  font-size:0.8em;
+  letter-spacing:1px;
+}
+
+.not-found-text
+{
+    font-weight:bold !important;
+    color: #CC0D02 !important;
+}

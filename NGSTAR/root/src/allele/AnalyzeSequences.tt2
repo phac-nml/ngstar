@@ -1,0 +1,169 @@
+[% USE Math %]
+[% no_onishi_seq = 0 %]
+
+<nav class="breadcrumbs" property="breadcrumb">
+	<div class="container">
+		<div class="row">
+			<ol>
+				<li><a href="[% c.uri_for(c.controller("Allele").action_for("form")) %]">[% c.loc("home.page.name") %]</a></li>
+				<li><a class="disabled" tabindex="-1" href="#">[% c.loc("sequence.analysis.text") | html %]</a></li>
+			</ol>
+		</div>
+	</div>
+</nav>
+
+<div class="pull-right">
+    <div class="loader" ></div>
+</div>
+<main role="main" property="mainContentOfPage" class="container fade in">
+
+    [% IF non_onishi_seq == "false" %]
+
+		<h1 id="wb-cont">[% c.loc("sequence.analysis.text") | html %]</h1>
+
+        <h2>[% c.loc("penA.profile.text") | html %]</h2>
+
+		[% IF is_valid != 0 %]
+	        <table id="sequence_analysis_table_onishi" class="table hidden">
+	            [% count = 0 %]
+	            <thead>
+	                <tr>
+                        <th class="col-sm-2"></th>
+                        <th class="col-sm-10"></th>
+	                </tr>
+	            </thead>
+
+	            <tbody id="itemContainer">
+					<tr style="background-color:#f9f9f9 !important;">
+						<td></td><td><p class="monospace" id="onishi-positions">[% onishi_pos_marks %]</p></td>
+					</tr>
+					<tr>
+						<td><span class="details_labels">[% c.loc("wild.type.text") | html %]:</span></td><td><p class="monospace" id="onishi-wt">[% onishi_wt %]</p></td>
+					</tr>
+
+					<tr>
+						<td><span class="details_labels">[% c.loc("user.sequence.text") | html %]:</span></td><td><p class="monospace" id="onishi-us">[% onishi_us %]</p></td>
+					</tr>
+
+					<tr>
+						<td><span class="details_labels">[% c.loc("difference.text") | html %]:</span></td><td><p class="monospace" id="onishi_diff">[% onishi_diff %]</p></td>
+					</tr>
+
+	            </tbody>
+
+	        </table>
+
+		[% ELSE %]
+			<p id="sequence_analysis_no_onishi_found" class="details-labels hidden">[% c.loc("error.no.onishi.sequences.returned.invalid.penA.sequence") | html %]</p>
+			[% no_onishi_seq = 1 %]
+		[% END %]
+
+		<div id="sequence_analysis_additional_info" class="hidden" style="margin-top:30px;">
+
+		[% IF no_onishi_seq != 1 %]
+			[% IF allele_type == -1 OR allele_type == "Not found"  %]
+				<p class="details_labels">[% c.loc("penA.type.text") | html %]: [% c.loc("not.found.text") | html %]</p>
+			[% ELSE %]
+				[% IF probable_penA_type == 1 %]
+					<p class="details_labels">[% c.loc("possible.penA.type.text") | html %]: [% allele_type %]</p>
+				[% ELSE %]
+					<p class="details_labels">[% c.loc("penA.type.text") | html %]: [% Math.int(allele_type) %]</p>
+				[% END %]
+			[% END %]
+
+			[% IF non_onishi_seq == "false" AND allele_type != -1 AND allele_type != "Not found" %]
+				[% IF is_mosaic == 1 %]
+					<p class="details_labels">[% c.loc("shared.mosaic.text") | html %]</p>
+				[% ELSE %]
+					<p class="details_labels">[% c.loc("shared.non.mosaic.text") | html %]</p>
+				[% END %]
+			[% END %]
+
+		[% ELSE %]
+			<p class="details_labels">[% c.loc("penA.type.text") | html %]: [% c.loc("not.found.text") | html %]</p>
+		[% END %]
+
+		</div>
+
+	[% ELSE %]
+		<h1 id="wb-cont">[% loci_name %] [% c.loc("sequence.analysis.text") | html %]</h1>
+    [% END %]
+
+	<ul class="list-unstyled">
+		<li style="margin-top:30px;">
+			[% IF non_onishi_seq == "false" %]
+				<details>
+			[% ELSE %]
+				<details open="open">
+			[% END %]
+				<summary><h2>[% c.loc("complete.protein.sequences.text") | html %]</h2></summary>
+				<table id="sequence_analysis_table_protein" class="table hidden">
+					[% count = 0 %]
+					<thead>
+						<tr>
+							<th class="col-sm-2"></th>
+							<th class="col-sm-10"></th>
+						</tr>
+					</thead>
+					<tbody id="itemContainer">
+						<tr style="background-color:#f9f9f9 !important;">
+							<td></td><td><p class="monospace" id="protein-positions">[% protein_pos_marks %]</p></td>
+						</tr>
+						<tr>
+							<td><span class="details_labels">[% c.loc("wild.type.text") | html %]:</span></td><td><p class="monospace" id="protein-wt">[% protein_wt %]</p></td>
+						</tr>
+						<tr>
+							<td><span class="details_labels">[% c.loc("user.sequence.text") | html %]:</span></td><td><p class="monospace" id="protein-us">[% protein_us %]</p></td>
+						</tr>
+						<tr>
+							<td><span class="details_labels">[% c.loc("difference.text") | html %]:</span></td><td><p class="monospace" id="protein-diff">[% protein_diff %]</p></td>
+						</tr>
+					</tbody>
+				</table>
+			</details>
+		</li>
+		<li style="margin-top:30px;">
+			<details>
+				<summary><h2>[% c.loc("dna.sequences.text") | html %]</h2></summary>
+			    <table id="sequence_analysis_table_dna" class="table hidden">
+			        [% count = 0 %]
+			        <thead>
+						<tr>
+							<th class="col-sm-2"></th>
+							<th class="col-sm-10"></th>
+						</tr>
+			        </thead>
+			        <tbody id="itemContainer">
+						<tr style="background-color:#f9f9f9 !important;">
+							<td></td><td><p class="monospace" id="dna-positions">[% dna_pos_marks %]</p></td>
+						</tr>
+						<tr>
+							<td><span class="details_labels">[% c.loc("wild.type.text") | html %]:</span></td><td><p class="monospace" id="dna-wt">[% dna_wt %]</p></td>
+						</tr>
+						<tr>
+							<td><span class="details_labels">[% c.loc("user.sequence.text") | html %]:</span></td><td><p class="monospace" id="dna-us">[% dna_us %]</p></td>
+						</tr>
+						<tr>
+							<td><span class="details_labels">[% c.loc("difference.text") | html %]:</span></td><td><p class="monospace" id="dna-diff">[% dna_diff %]</p></td>
+						</tr>
+			        </tbody>
+			    </table>
+			</details>
+		</li>
+	</ul>
+
+
+	[% IF non_onishi_seq != "false" %]
+		<div id="sequence_analysis_additional_info" class="hidden" style="margin-top:30px;">
+
+			[% IF allele_type == -1 %]
+				<p class="details_labels">[% c.loc("shared.allele.type.text") | html %]: [% c.loc("not.found.text") | html %]</p>
+			[% ELSE %]
+				<p class="details_labels">[% c.loc("shared.allele.type.text") | html %]: [% allele_type %]</p>
+			[% END %]
+		</div>
+	[% END %]
+
+    <button type="button" class="btn btn-primary bkbtn" onClick="history.go(-1);return true;" ><span class="glyphicon glyphicon-arrow-left"></span> [% c.loc("shared.back.btn.text") %]</button>
+
+</main>

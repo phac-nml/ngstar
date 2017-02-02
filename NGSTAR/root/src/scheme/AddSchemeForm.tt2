@@ -1,0 +1,25 @@
+<div class="well">
+    <form class="form-horizontal" role="form" method="post">
+        <br>
+        <div class="form-group">
+            <div class="col-sm-offset-2">
+                <label>Please enter information for the scheme to add:</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="scheme_name" class="col-sm-2 control-label">Scheme Name:</label>
+            <div class="col-sm-1">
+                [% form.field('scheme_name').render %]
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2">
+                <button type="submit" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-save"></span> Submit
+                </button>
+                <button type="button" id="reset" onclick="clearAddSchemeForm(); return false;" class="btn btn-info">Clear</button>
+                <button type="button" class="btn btn-default" onClick="history.go(-1);return true;">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>

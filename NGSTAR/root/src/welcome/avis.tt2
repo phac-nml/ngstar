@@ -1,0 +1,239 @@
+[% true = 1 %]
+
+[% IF eula_already_accepted == "true"%]
+
+<nav class="breadcrumbs" property="breadcrumb">
+	<div class="container">
+		<div class="row">
+			<ol>
+				<li><a href="[% c.uri_for(c.controller("Allele").action_for("form")) %]">[% c.loc("home.page.name") | html %]</a></li>
+				<li><a class="disabled" tabindex="-1" href="#">[% c.loc("shared.terms.text") | html %]</a></li>
+			</ol>
+		</div>
+	</div>
+</nav>
+
+<main role="main" property="mainContentOfPage" class="container fade in">
+
+    <div style="font-size:16px;">
+
+    <h1 id="wb-cont">Modalités</h1>
+
+    <br>
+
+    <p>
+		L'APPLICATION NG-STAR WEB EST LA PROPRIÉTÉ DE SA MAJESTÉ LA REINE DU CHEF DU CANADA, REPRÉSENTÉE PAR LE MINISTRE DE LA SANTÉ, AGISSANT PAR L'ENTREMISE DE L'AGENCE DE LA SANTÉ PUBLIQUE DU CANADA (« ASPC »), ET EST PROTÉGÉE PAR LES LOIS SUR LE DROIT D'AUTEUR ET LES TRAITÉS INTERNATIONAUX SUR LE DROIT D'AUTEUR. L'APPICATION NG-STAR WEB EST FOURNIE EN VERTU DE LA LICENCE SUIVANTE, QUI PRÉCISE CE QUE L'UTILISATEUR EST AUTORISÉ À FAIRE AVEC LE PRODUIT AINSI QUE LES LIMITATIONS DES GARANTIES OU DES RECOURS.
+    </p>
+
+    <p>
+		IMPORTANT : VEUILLEZ LIRE ATTENTIVEMENT LA PRÉSENTE LICENCE AVANT D'UTILISER LE PRODUIT. UTILISER CE PRODUIT D'UNE QUELCONQUE FAÇON SIGNIFIE QUE VOUS RECONNAISSEZ AVOIR LU ET ACCEPTÉ LES CONDITIONS DE LA PRÉSENTE LICENCE.
+    </p>
+
+    <p>
+    	<span style="font-weight:bold;">1. LICENCE:</span> L'ASPC (« nous ») donne à l'utilisateur (« vous ») accès à l'application NG-STAR Web, qui comprend des composantes électroniques, des données, du matériel imprimé (collectivement appelé « produit »); elle vous accorde également une licence non exclusive limitée permettant d'utiliser le produit conformément aux modalités du contrat de licence. Les droits d'auteurs et les autres droits liés au produit demeurent notre propriété.
+    </p>
+
+    <p>
+    	<span style="font-weight:bold;">2. VOUS NE DEVEZ PAS:</span> a) faire des copies du produit; b) modifier le produit ou en faire des produits dérivés; c) traduire, désosser, décompiler ou démonter le produit; d) louer, céder, prêter, distribuer, assigner ou transférer le produit ou son code ni accorder des sous-licences pour celui-ci ou e) modifier le produit ou le fusionner, entier ou en partie, à un autre programme.
+    </p>
+
+    <p>
+    	<span style="font-weight:bold;">3. DURÉE:</span> La présente convention de droits d'utilisation se poursuivra tant que vous utiliserez le produit. Toutefois, la convention de droits d'utilisation prendra fin automatiquement sans préavis de l'ASPC si vous n'en respectez pas les modalités. Vous devez accepter de détruire le produit ainsi que toutes les copies ayant été faites en violation de la convention de droits d'utilisation. Les limitations des garanties et de la responsabilité stipulées ci-dessous resteront en vigueur même si vous cessez de l'utiliser.
+    </p>
+
+    <p>
+    	<span style="font-weight:bold;">4. PROTECTION DES RENSEIGNEMENTS PERSONNELS:</span> Vous convenez de ne pas enregistrer, placer ou autrement inclure des identifiants personnels ou d'autres renseignements pouvant permettre d'identifier une personne dans les données ou métadonnées sur le séquençage dans l'application NG-STAR Web. Vous acceptez de permettre à l'ASPC pour stocker vos documents électroniques soumis et téléchargées sur NG-STAR. Vous permettre également tous les visiteurs de l'application NG-STAR Web d'avoir accès à des informations soumis et téléchargées.
+    </p>
+
+    <p>
+    	<span style="font-weight:bold;">5. LIMITATION DES GARANTIES ET DE LA RESPONSABILITÉ:</span> LE PRODUIT EST FOURNI « EN L'ÉTAT » SANS AUTRE GARANTIE OU CONDITION, EXPRESSE OU TACITE, NOTAMMENT LA GARANTIE IMPLICITE DE LA QUALITÉ MARCHANDE OU D'APTITUDE À UN USAGE PARTICULIER OU CELLES QUI EXISTENT PAR LA LOI, L'USAGE OU LES HABITUDES COMMERCIALES ÉTABLIES. VOUS ASSUMEZ TOUS LES RISQUES ET LES RESPONSABILITÉS LIÉS À L'UTILISATION DU PRODUIT, ET L'ASPC DÉCLINE TOUTE RESPONSABILITÉ À L'ÉGARD DES PERTES, DES PRÉJUDICES OU DES DOMMAGES LIÉS À L'UTILISATION DU PRODUIT, QU'ILS SOIENT DIRECTS OU INDIRECTS ET QUE L'ASPC AIT ÉTÉ OU NON AVISÉE OU AU COURANT DES POSSIBILITÉS DE PERTES, PRÉJUDICES OU DOMMAGES. L'ASPC NE SERA EN AUCUN CAS TENUE RESPONSABLE ENVERS VOUS OU TOUTE AUTRE PERSONNE OU PERSONNE MORALE DE QUELQUE DOMMAGE QUE CE SOIT, QU'IL SOIT COMPENSATOIRE, DIRECT, INDIRECT, SECONDAIRE, PARTICULIER, CONSÉCUTIF OU EXEMPLAIRE, NOTAMMENT LA PERTE DE REVENUS OU DE PROFITS, L'ALTÉRATION OU LA PERTE DE DONNÉES, OU AUTRE PERTE COMMERCIALE OU ÉCONOMIQUE, MÊME SI NOUS AVONS ÉTÉ INFORMÉS DE LA POSSIBILITÉ DESDITS DOMMAGES OU S'ILS SONT PRÉVISIBLES. NOUS NE SERONS ÉGALEMENT PAS TENUS RESPONSABLES DES DEMANDES DE TIERS. NOTRE OBLIGATION GLOBALE MAXIMALE ENVERS VOUS NE POURRA DÉPASSER LA SOMME QUE VOUS AUREZ DÉBOURSÉE POUR LE PRODUIT. LES LIMITATIONS ÉNONCÉES DANS LA PRÉSENTE SECTION S'APPLIQUENT, QUE LA CONTRAVENTION OU LE DÉFAUT PRÉTENDUS CONSTITUE UNE CONTRAVENTION D'UNE CONDITION OU D'UNE MODALITÉ FONDAMENTALE OU UNE CONTRAVENTION FONDAMENTALE.
+    </p>
+    
+	<p>
+		<span style="font-weight:bold;">6. GÉNÉRALITÉS:</span> La présente convention de droits d'utilisation constitue l'intégralité de la convention passée entre nous. Elle annule et remplace toute autre convention ou discussion, orale ou écrite, et ne peut être modifiée sauf par accord écrit. La présente convention de droits d'utilisation doit être régie et interprétée en vertu des lois en vigueur dans la province de l'Ontario, Canada. Si l'une des dispositions de la présente convention de droits d'utilisation est déclarée nulle, illégale ou inapplicable par un tribunal compétent, ladite disposition sera retirée de la présente convention de droits d'utilisation et les autres dispositions demeureront en vigueur.
+    </p>
+
+
+    <p>
+		&copy; 2016 Agence de la santé publique du Canada. Tous droits réservés.
+    </p>
+
+
+    </div>
+
+    <button type="button" class="btn btn-primary bkbtn" onClick="history.go(-1);return true;">
+        <span class="glyphicon glyphicon-arrow-left"></span> [% c.loc("shared.back.btn.text") | html %]
+    </button>
+
+    <br>
+
+    <p class="pull-right" style="position:absolute; right:0;">VERSION: [% eula_version_number | html %]</p>
+
+</main>
+
+[% ELSE %]
+
+    <DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+    <!--[if gt IE 8]><!-->
+    <html class="no-js" lang="en" dir="ltr">
+    <!--<![endif]-->
+
+        <head>
+
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta charset="utf-8">
+            <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+            <title>[% c.loc(page_title) | html %]</title>
+            <meta content="width=device-width,initial-scale=1" name="viewport">
+            <meta name="description" content="The Government of Canada website is a single point of access to all programs, services, departments, ministries and organizations of the Government of Canada.">
+            <meta name="description" lang="fr" content="Le site Web du gouvernement du Canada fournit un point d'accès complet à tous les programmes, services, départements, ministères et organismes du gouvernement du Canada.">
+            <meta name="dc.creator" content="Government of Canada, Service Canada, Citizen Service Branch, Digital Service Directorate, Web Channel">
+            <meta name="dc.creator" lang="fr" content="Gouvernement du Canada, Service Canada, Direction générale de service aux citoyens, La Direction du service numérique, Services Web">
+            <meta name="robots" content="noindex, nofollow, noarchive">
+            <meta name="dc.title" content="Canada.ca">
+            <meta name="dc.title" lang="fr" content="Canada.ca">
+            <meta name="dc.issued" title="W3CDTF" content="2013-12-13">
+            <meta name="dc.modified" title="W3CDTF" content="2015-04-09">
+            <meta name="dc.subject" content="Government of Canada, services">
+            <meta name="dc.subject" lang="fr" content="Gouvernement du Canada, services">
+            <meta name="dc.language" title="ISO639-2" content="eng">
+            <meta name="dc.language" lang="fr" title="ISO639-2" content="fra">
+
+
+
+            <!--[if gte IE 9 | !IE ]><!-->
+            <link href="/static/GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon"/>
+            <link rel="stylesheet" href="/static/GCWeb/css/theme.min.css"/>
+            <!--<![endif]-->
+
+        </head>
+
+        <body>
+
+			<ul id="wb-tphp" >
+				<li class="wb-slc"><a class="wb-sl" href="#wb-cont" tabindex="0">[% c.loc("skip.to.main.content") | html %]</a></li>
+			</ul>
+			<header role="banner">
+			  <div id="wb-bnr" class="container">
+				<section id="wb-lng" class="visible-md visible-lg text-right">
+				[% IF c.session.lang == "en" %]
+				  <h2 class="wb-inv">Language selection</h2>
+				  <div class="row">
+					<div class="col-md-12">
+					  <ul class="list-inline margin-bottom-none">
+						<li><a lang="fr" href="[% c.uri_for(c.controller('Root').action_for('index'), 'fr') %]" tabindex="0">Fran&#231;ais</a></li>
+					  </ul>
+					</div>
+				  </div>
+				[% ELSE %]
+				  <h2 class="wb-inv">Sélection de la langue</h2>
+				  <div class="row">
+					<div class="col-md-12">
+					  <ul class="list-inline margin-bottom-none">
+						<li><a lang="en" href="[% c.uri_for(c.controller('Root').action_for('index'), 'en') %]" tabindex="0">English</a></li>
+					  </ul>
+					</div>
+				  </div>
+				[% END %]
+				</section>
+				<div class="row">
+				  <div class="brand col-xs-8 col-sm-9 col-md-6">
+					<object type="image/svg+xml" data="/static/GCWeb/assets/sig-blk-[% c.session.lang %].svg" tabindex="0" ></object>
+					<span class="wb-inv"> [% c.loc("text.government.of.canada") | html %]</span>
+				  </div>
+				  <section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn">
+					<h2>Menu</h2>
+					<ul class="list-inline text-right chvrn">
+					  <li><a  tabindex="0" href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk" role="button"><span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list"><span class="wb-inv">Menu</span></span></span></a></li>
+					</ul>
+					<div id="mb-pnl"></div>
+				  </section>
+				</div>
+			  </div>
+			</header>
+
+			<div id="def-top" >
+				<!-- Write closure fall-back static file -->
+				<!-- /ROOT/app/cls/WET/gcweb/v4_0_18/static/top-en.html -->
+				<!--#include virtual="/app/cls/WET/gcweb/v4_0_18/static/top-en.html" -->
+			</div>
+
+			
+			<main role="main" property="mainContentOfPage" class="container fade in">
+		        <div style="font-size:16px;">
+
+		        <h1 id="wb-cont">Modalités</h1>
+
+		        <br>
+
+		        <p>
+		        En cliquant sur « J'ACCEPTE », l'utilisateur accepte les modalités suivantes:
+		        </p>
+
+		        <p>
+					L'APPLICATION NG-STAR WEB EST LA PROPRIÉTÉ DE SA MAJESTÉ LA REINE DU CHEF DU CANADA, REPRÉSENTÉE PAR LE MINISTRE DE LA SANTÉ, AGISSANT PAR L'ENTREMISE DE L'AGENCE DE LA SANTÉ PUBLIQUE DU CANADA (« ASPC »), ET EST PROTÉGÉE PAR LES LOIS SUR LE DROIT D'AUTEUR ET LES TRAITÉS INTERNATIONAUX SUR LE DROIT D'AUTEUR. L'APPICATION NG-STAR WEB EST FOURNIE EN VERTU DE LA LICENCE SUIVANTE, QUI PRÉCISE CE QUE L'UTILISATEUR EST AUTORISÉ À FAIRE AVEC LE PRODUIT AINSI QUE LES LIMITATIONS DES GARANTIES OU DES RECOURS.
+		        </p>
+
+		        <p>
+					IMPORTANT : VEUILLEZ LIRE ATTENTIVEMENT LA PRÉSENTE LICENCE AVANT D'UTILISER LE PRODUIT. UTILISER CE PRODUIT D'UNE QUELCONQUE FAÇON SIGNIFIE QUE VOUS RECONNAISSEZ AVOIR LU ET ACCEPTÉ LES CONDITIONS DE LA PRÉSENTE LICENCE.
+		        </p>
+
+		        <p>
+    				<span style="font-weight:bold;">1. LICENCE:</span> L'ASPC (« nous ») donne à l'utilisateur (« vous ») accès à l'application NG-STAR Web, qui comprend des composantes électroniques, des données, du matériel imprimé (collectivement appelé « produit »); elle vous accorde également une licence non exclusive limitée permettant d'utiliser le produit conformément aux modalités du contrat de licence. Les droits d'auteurs et les autres droits liés au produit demeurent notre propriété.
+		        </p>
+
+		        <p>
+    				<span style="font-weight:bold;">2. VOUS NE DEVEZ PAS:</span> a) faire des copies du produit; b) modifier le produit ou en faire des produits dérivés; c) traduire, désosser, décompiler ou démonter le produit; d) louer, céder, prêter, distribuer, assigner ou transférer le produit ou son code ni accorder des sous-licences pour celui-ci ou e) modifier le produit ou le fusionner, entier ou en partie, à un autre programme.
+		        </p>
+
+		        <p>
+    				<span style="font-weight:bold;">3. DURÉE:</span> La présente convention de droits d'utilisation se poursuivra tant que vous utiliserez le produit. Toutefois, la convention de droits d'utilisation prendra fin automatiquement sans préavis de l'ASPC si vous n'en respectez pas les modalités. Vous devez accepter de détruire le produit ainsi que toutes les copies ayant été faites en violation de la convention de droits d'utilisation. Les limitations des garanties et de la responsabilité stipulées ci-dessous resteront en vigueur même si vous cessez de l'utiliser.
+		        </p>
+
+		        <p>
+    				<span style="font-weight:bold;">4. PROTECTION DES RENSEIGNEMENTS PERSONNELS:</span> Vous convenez de ne pas enregistrer, placer ou autrement inclure des identifiants personnels ou d'autres renseignements pouvant permettre d'identifier une personne dans les données ou métadonnées sur le séquençage dans l'application NG-STAR Web. Vous acceptez de permettre à l'ASPC pour stocker vos documents électroniques soumis et téléchargées sur NG-STAR. Vous permettre également tous les visiteurs de l'application NG-STAR Web d'avoir accès à des informations soumis et téléchargées.
+		        </p>
+
+		        <p>
+    				<span style="font-weight:bold;">5. LIMITATION DES GARANTIES ET DE LA RESPONSABILITÉ:</span> LE PRODUIT EST FOURNI « EN L'ÉTAT » SANS AUTRE GARANTIE OU CONDITION, EXPRESSE OU TACITE, NOTAMMENT LA GARANTIE IMPLICITE DE LA QUALITÉ MARCHANDE OU D'APTITUDE À UN USAGE PARTICULIER OU CELLES QUI EXISTENT PAR LA LOI, L'USAGE OU LES HABITUDES COMMERCIALES ÉTABLIES. VOUS ASSUMEZ TOUS LES RISQUES ET LES RESPONSABILITÉS LIÉS À L'UTILISATION DU PRODUIT, ET L'ASPC DÉCLINE TOUTE RESPONSABILITÉ À L'ÉGARD DES PERTES, DES PRÉJUDICES OU DES DOMMAGES LIÉS À L'UTILISATION DU PRODUIT, QU'ILS SOIENT DIRECTS OU INDIRECTS ET QUE L'ASPC AIT ÉTÉ OU NON AVISÉE OU AU COURANT DES POSSIBILITÉS DE PERTES, PRÉJUDICES OU DOMMAGES. L'ASPC NE SERA EN AUCUN CAS TENUE RESPONSABLE ENVERS VOUS OU TOUTE AUTRE PERSONNE OU PERSONNE MORALE DE QUELQUE DOMMAGE QUE CE SOIT, QU'IL SOIT COMPENSATOIRE, DIRECT, INDIRECT, SECONDAIRE, PARTICULIER, CONSÉCUTIF OU EXEMPLAIRE, NOTAMMENT LA PERTE DE REVENUS OU DE PROFITS, L'ALTÉRATION OU LA PERTE DE DONNÉES, OU AUTRE PERTE COMMERCIALE OU ÉCONOMIQUE, MÊME SI NOUS AVONS ÉTÉ INFORMÉS DE LA POSSIBILITÉ DESDITS DOMMAGES OU S'ILS SONT PRÉVISIBLES. NOUS NE SERONS ÉGALEMENT PAS TENUS RESPONSABLES DES DEMANDES DE TIERS. NOTRE OBLIGATION GLOBALE MAXIMALE ENVERS VOUS NE POURRA DÉPASSER LA SOMME QUE VOUS AUREZ DÉBOURSÉE POUR LE PRODUIT. LES LIMITATIONS ÉNONCÉES DANS LA PRÉSENTE SECTION S'APPLIQUENT, QUE LA CONTRAVENTION OU LE DÉFAUT PRÉTENDUS CONSTITUE UNE CONTRAVENTION D'UNE CONDITION OU D'UNE MODALITÉ FONDAMENTALE OU UNE CONTRAVENTION FONDAMENTALE.
+		        </p>
+
+				<p>
+					<span style="font-weight:bold;">6. GÉNÉRALITÉS:</span> La présente convention de droits d'utilisation constitue l'intégralité de la convention passée entre nous. Elle annule et remplace toute autre convention ou discussion, orale ou écrite, et ne peut être modifiée sauf par accord écrit. La présente convention de droits d'utilisation doit être régie et interprétée en vertu des lois en vigueur dans la province de l'Ontario, Canada. Si l'une des dispositions de la présente convention de droits d'utilisation est déclarée nulle, illégale ou inapplicable par un tribunal compétent, ladite disposition sera retirée de la présente convention de droits d'utilisation et les autres dispositions demeureront en vigueur.
+		        </p>
+
+
+		        <p>
+			        &copy; 2016 Agence de la santé publique du Canada. Tous droits réservés.
+		        </p>
+
+		        <br>
+		            <p class="pull-right">VERSION: [% eula_version_number | html %]</p>
+		        <br>
+
+		        <a href="[% c.uri_for(c.controller('Welcome').action_for('eula_accepted'), true) %]" id= "eula_accept" class="btn btn-primary">
+		            [% c.loc("shared.agree.text") | html %]
+		        </a>
+		        <a href="[% c.uri_for(c.controller('Welcome').action_for('home'), true) %]" class="btn btn-primary">
+		            [% c.loc("shared.cancel.text") | html %]
+		        </a>
+
+		        </div>
+
+			</main>
+
+			<footer role="content-info" id="wb-info" style="margin-top:50px;">
+				<nav role="navigation" class="container visible-sm visible-md visible-lg wb-navcurr">
+					<div class="row">
+						 <div class="col-sm-2 col-lg-2">
+						 </div>
+					</div>
+				</nav>
+				<div class="brand"><div class="container"><div class="row"><div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div><div class="col-xs-6 col-md-12 text-right"><object type="image/svg+xml"   role="img" data="https://ssl-templates.services.gc.ca/app/cls/WET/gcweb/v4_0_20/GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object></div></div></div></div>
+		   </footer>
+
+        </body>
+
+    </html>
+
+[% END %]

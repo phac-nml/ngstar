@@ -1,0 +1,79 @@
+<nav class="breadcrumbs" property="breadcrumb">
+	<div class="container">
+		<div class="row">
+			<ol>
+    			<li><a href="[% c.uri_for(c.controller("Allele").action_for("form")) %]">[% c.loc("home.page.name") %]</a></li>
+                <li><a href="[% c.uri_for(c.controller("Curator").action_for("settings")) %]">[% c.loc("curator.tools.text") %]</a></li>
+                <li><a href="[% c.uri_for(c.controller("Curator").action_for("manage_amino_acid_profiles")) %]">[% c.loc("shared.manage.amino.acid.profiles.text") %]</a></li>
+                <li><a class="disabled" tabindex="-1" href="#">[% c.loc("shared.edit.amino.acid.profile.text") %]</a></li>
+			</ol>
+		</div>
+	</div>
+</nav>
+
+<main role="main" property="mainContentOfPage" class="container fade in">
+
+	[% is_integer_type = 0 %]
+	[% FOREACH loci_in_list IN loci_int_type_set %]
+		[% IF loci_in_list.key == loci_name %]
+	    		[% is_integer_type = 1 %]
+		[% END %]
+	[% END %]
+
+	<h1 id="wb-cont">[% c.loc("shared.edit.amino.acid.profile.text") %]</h1>
+
+	[% IF edit_notification %]
+	    <div id="allele_list_alert" class="alert alert-warning alert-dismissable">
+	        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+			<span class="glyphicon glyphicon-ok"></span>
+			[% IF is_integer_type != 1 %]
+				<strong>[% c.loc("allele.edited.success.msg", allele_type ) %]</strong>
+		    [% ELSE %]
+				<strong>[% c.loc("allele.edited.success.msg", Math.int(allele_type)) %]</strong>
+		    [% END %]
+			<br>
+			<strong>The amino acid profile does not exist. Please add it below.</strong>
+		</div>
+	[% END %]
+
+    <form action ="[% c.uri_for(c.controller("Curator").action_for("edit_amino_acid_profile"),aa_profile_db_id) %]">
+
+		<br>
+		<div class="form-group">
+			<div>
+				<p class="details_labels"><span style="color:#CC0D02;">*</span> [% c.loc("shared.required.field.text") %]</p>
+			</div>
+		</div>
+		<br>
+        <div class="form-group row">
+            <div class="col-sm-12">
+                <label class="control-label">[% c.loc("shared.onishi.type.text") %] <span style="color:#CC0D02;">*</span></label>
+                    [% form.field('onishi_type').render %]
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-12">
+                <label class="control-label">[% c.loc("shared.mosaic.text") %] <span style="color:#CC0D02;">*</span></label>
+                    [% form.field('mosaic').render %]
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-12">
+                <label class="control-label">[% c.loc("shared.amino.acid.profile.text") %] <span style="color:#CC0D02;">*</span></label>
+                    [% form.field('amino_acid_profile').render %]
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-3">
+                <button id="submit" class="btn btn-lg btn-primary" type="submit">[% c.loc("shared.save.text") %]</button>
+                <button id="reset" class="btn btn-lg btn-info" type="reset">[% c.loc("shared.clear.text") %]</button>
+            </div>
+        </div>
+
+    </form>
+
+
+    <button type="button" class="btn btn-primary bkbtn" onClick="history.go(-1);return true;"><span class="glyphicon glyphicon-arrow-left"></span> [% c.loc("shared.back.btn.text") %]</button>
+
+</main>
